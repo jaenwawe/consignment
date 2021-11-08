@@ -5,7 +5,19 @@ class UsersController < ApplicationController
     def index    
       render json: User.all, each_serializer: UserIndexSerializer  
     end
-  
+
+    def signup 
+        user=User.new(user_params)
+        if user.save
+          render json: user.name
+        if test
+           render json: {error: ""}, status: 40
+        else
+          
+        end
+        end
+    end
+
     def show
       if current_user
          render json: current_user, status: :ok
