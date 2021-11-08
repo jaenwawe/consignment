@@ -1,7 +1,16 @@
 .App {
-  text-align: center;
-}
+  /* text-align: center; */
 
+}
+NavBar {
+
+  align-items: center;
+
+
+}
+#about img {
+  max-height: 50%;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -17,16 +26,13 @@
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
+
 
 @keyframes App-logo-spin {
   from {
@@ -35,4 +41,84 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+* {
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+
+  justify-content: left;
+  align-items: left;
+
+  font-family: "Playfair Display", serif;
+  margin-bottom: 1em;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+nav a {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  margin: 0 1rem;
+  text-decoration: none;
+  font-size: 1.2em;
+  color: firebrick;
+  border-bottom: 2px solid firebrick;
+  transition: 0.1s;
+}
+
+nav a:hover,
+nav a:active {
+  color: tomato;
+  border-bottom: 2px solid tomato;
+}
+
+.About{display:flex; flex-direction:row;}
+
+#home,
+#about {
+  display:flex;
+  
+  justify-content: space-evenly;
+  flex-direction: row;
+  text-align: left;
+  height: 5vh;
+  min-height: 2px;
+  padding: 1rem;
+}
+
+.inline-flex {
+  display: inline-flex;
+}
+
+#container {    
+  border: solid 1px #000;
+  display: flex;    
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
+  height: 50px;
+}
+
+.item {
+  width: 20%;
+  border: solid 1px #000;
+  text-align: center;
 }
