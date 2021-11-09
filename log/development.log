@@ -9238,3 +9238,2937 @@ Filter chain halted as :confirm_authentication rendered or redirected
 Completed 401 Unauthorized in 9ms (Views: 2.9ms | ActiveRecord: 0.4ms | Allocations: 1872)
 
 
+Started GET "/users" for 127.0.0.1 at 2021-11-08 11:23:46 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.38ms)
+Filter chain halted as :confirm_authentication rendered or redirected
+Completed 401 Unauthorized in 150ms (Views: 4.7ms | ActiveRecord: 24.2ms | Allocations: 5101)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-11-08 11:25:10 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.05ms)
+Filter chain halted as :confirm_authentication rendered or redirected
+Completed 401 Unauthorized in 6ms (Views: 1.6ms | ActiveRecord: 0.2ms | Allocations: 1872)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-11-08 11:25:57 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Filter chain halted as :confirm_authentication rendered or redirected
+Completed 401 Unauthorized in 12ms (Views: 3.5ms | ActiveRecord: 1.4ms | Allocations: 1872)
+
+
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 11:29:54 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/users" for 127.0.0.1 at 2021-11-08 11:29:55 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Filter chain halted as :confirm_authentication rendered or redirected
+Completed 401 Unauthorized in 7ms (Views: 1.7ms | ActiveRecord: 0.2ms | Allocations: 1872)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-11-08 11:32:09 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.16ms)
+Filter chain halted as :confirm_authentication rendered or redirected
+Completed 401 Unauthorized in 10ms (Views: 3.3ms | ActiveRecord: 0.8ms | Allocations: 1872)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-11-08 11:32:52 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Filter chain halted as :confirm_authentication rendered or redirected
+Completed 401 Unauthorized in 12ms (Views: 4.2ms | ActiveRecord: 0.4ms | Allocations: 1872)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-11-08 12:06:27 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (25.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.21ms)
+Filter chain halted as :confirm_authentication rendered or redirected
+Completed 401 Unauthorized in 98ms (Views: 3.1ms | ActiveRecord: 64.7ms | Allocations: 5044)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-11-08 12:06:32 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Filter chain halted as :confirm_authentication rendered or redirected
+Completed 401 Unauthorized in 13ms (Views: 4.6ms | ActiveRecord: 2.0ms | Allocations: 1875)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-11-08 12:06:59 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.11ms)
+Filter chain halted as :confirm_authentication rendered or redirected
+Completed 401 Unauthorized in 31ms (Views: 24.8ms | ActiveRecord: 0.3ms | Allocations: 1872)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-11-08 12:07:00 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Filter chain halted as :confirm_authentication rendered or redirected
+Completed 401 Unauthorized in 8ms (Views: 2.6ms | ActiveRecord: 0.7ms | Allocations: 1872)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-11-08 12:07:56 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.19ms)
+Filter chain halted as :confirm_authentication rendered or redirected
+Completed 401 Unauthorized in 8ms (Views: 4.0ms | ActiveRecord: 0.4ms | Allocations: 1872)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-11-08 12:08:34 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Filter chain halted as :confirm_authentication rendered or redirected
+Completed 401 Unauthorized in 12ms (Views: 6.5ms | ActiveRecord: 0.2ms | Allocations: 1872)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-11-08 12:10:20 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Filter chain halted as :confirm_authentication rendered or redirected
+Completed 401 Unauthorized in 36ms (Views: 2.9ms | ActiveRecord: 2.0ms | Allocations: 1873)
+
+
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 12:31:09 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 12:31:09 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 12:32:33 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 12:32:58 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 12:33:43 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 12:34:18 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 12:34:29 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 12:34:46 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 12:35:08 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 13:01:50 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 13:02:14 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 13:10:03 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 13:15:26 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 13:15:26 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 13:15:27 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 13:15:27 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 13:20:00 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 13:20:25 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 13:20:25 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 13:20:26 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 13:21:27 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 13:21:27 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 13:21:28 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 13:21:28 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 13:21:28 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 13:21:28 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 13:21:40 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 13:23:28 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 13:23:40 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 13:23:40 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 13:23:41 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 13:23:49 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 13:24:30 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 13:24:50 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 13:24:50 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 13:29:07 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 13:29:07 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 13:29:08 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 13:29:36 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 13:29:38 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 13:30:46 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 13:31:15 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 13:31:15 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 13:33:22 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 13:33:23 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 13:33:55 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 13:34:15 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 13:34:19 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 13:34:22 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 13:34:27 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 13:35:04 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 13:35:12 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 13:35:14 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 13:35:23 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 13:35:28 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 13:35:33 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 13:35:35 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 13:35:40 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 13:36:06 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 13:36:08 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 13:36:43 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 13:36:49 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 13:36:56 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 13:37:00 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 13:37:07 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 13:38:02 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 13:38:20 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 13:38:25 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 13:39:30 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 13:40:01 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 13:40:16 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 13:41:16 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 13:41:54 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 13:41:58 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 13:42:04 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 13:42:10 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 13:42:13 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 13:42:18 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 13:42:22 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 13:42:35 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 13:42:43 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 13:42:46 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 13:42:48 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 13:42:54 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 13:43:07 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 13:43:12 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 13:43:14 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 13:43:14 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 13:43:25 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 13:43:25 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 13:43:25 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 13:43:26 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 13:43:35 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 13:43:35 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 13:43:48 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 13:45:28 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 13:45:29 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 13:45:37 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 13:46:10 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 13:46:29 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 13:46:35 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 13:46:39 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 13:46:45 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 13:46:47 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 13:50:30 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 13:50:32 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 13:50:47 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 13:50:50 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 13:51:05 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 13:51:08 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 13:51:09 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 13:51:12 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 13:51:21 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 13:51:22 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 13:51:29 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 13:51:36 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 13:51:41 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 13:52:09 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 13:52:10 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 13:52:14 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 13:52:46 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 13:52:50 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 13:52:53 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 13:52:56 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 13:53:05 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 13:53:27 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 13:53:31 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 13:53:32 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 13:53:44 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 13:53:59 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 13:54:12 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 13:54:26 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 13:54:29 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 13:54:31 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 13:54:38 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 13:54:45 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 13:54:50 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 13:54:54 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 13:55:05 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 13:55:08 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 13:55:09 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 13:55:14 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 13:55:16 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 13:55:19 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 13:55:22 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 13:55:23 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 13:55:39 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 13:55:41 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 13:56:32 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 13:56:36 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 13:56:41 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 13:56:45 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 14:00:06 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 14:00:19 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 14:00:23 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 14:00:23 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 14:00:43 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 14:00:46 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 14:00:47 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 14:00:51 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 14:00:51 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 14:00:55 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 14:00:56 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 14:00:59 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 14:01:01 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 14:01:34 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 14:01:46 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 14:02:15 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 14:03:06 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 14:03:37 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 14:03:48 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 14:03:55 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 14:03:57 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 14:03:58 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 14:04:10 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 14:04:12 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 14:04:54 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 14:08:50 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 14:12:15 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 14:12:33 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 14:12:42 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 14:12:53 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 14:13:03 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 14:13:04 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 14:13:10 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 14:13:13 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 14:13:58 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 14:14:07 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 14:14:26 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 14:14:40 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 14:14:57 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 14:15:00 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 14:15:11 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 14:15:13 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 14:19:55 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 14:20:48 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 14:21:45 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 14:21:48 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 14:23:00 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 14:23:19 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 14:23:29 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 14:23:29 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 14:24:17 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 14:24:17 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 14:24:17 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 14:24:19 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 14:24:23 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 14:29:06 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 14:47:09 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 14:47:18 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 14:47:19 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 17:20:09 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 17:20:20 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 17:20:24 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 17:20:40 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 17:20:44 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 17:21:05 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 17:21:05 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 17:21:40 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 17:21:40 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 17:22:00 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 17:22:01 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 17:22:01 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 17:22:01 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 17:22:09 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 17:22:09 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 17:25:24 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 17:26:17 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 17:26:33 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 17:26:33 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 17:26:33 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 17:26:33 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 17:26:34 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 17:26:34 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 17:26:34 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 17:26:34 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 17:26:34 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 17:26:34 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 17:26:34 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 17:26:34 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 17:26:47 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 17:28:41 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 17:28:41 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 17:28:41 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 17:28:43 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 17:28:43 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 17:28:43 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 17:28:51 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 17:28:51 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 17:28:51 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 17:28:53 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 17:28:53 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 17:28:53 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 17:28:56 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 17:28:57 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 17:28:57 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 17:29:18 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 17:29:18 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 17:29:18 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 17:30:05 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 17:30:05 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 17:30:05 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 17:36:10 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 17:36:10 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 17:36:10 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 17:36:11 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 17:36:11 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 17:36:11 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 17:36:11 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 17:36:11 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 17:36:11 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 17:36:11 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 17:36:11 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 17:36:11 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 17:36:14 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 17:36:14 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 17:36:15 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 17:37:14 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 18:56:51 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 18:57:07 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 19:14:35 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 19:14:35 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 19:14:35 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 19:14:36 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 19:14:36 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 19:14:36 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 19:14:36 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 19:14:36 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 19:14:37 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 19:14:37 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 19:14:37 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 19:14:37 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 19:14:37 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 19:14:37 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 19:14:37 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 19:14:37 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 19:14:37 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 19:14:38 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 19:14:38 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 19:14:38 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 19:14:38 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 19:14:38 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 19:14:38 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 19:14:38 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 19:14:39 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 19:14:54 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 19:14:54 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 19:18:23 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 19:18:23 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 19:18:23 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 19:18:23 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 19:18:23 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 19:18:23 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 19:18:23 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 19:18:23 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 19:18:23 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 19:18:23 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 19:18:23 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 19:18:23 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 19:18:24 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 19:18:25 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 19:18:25 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 19:18:27 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 19:18:27 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 19:18:27 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 19:19:17 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 19:19:20 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 19:20:36 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 19:20:37 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 19:20:37 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 19:20:47 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 19:20:47 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 19:20:47 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 19:22:19 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 19:22:20 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 19:22:20 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 19:22:20 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 19:22:20 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 19:22:20 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:09:02 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:14:21 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:27:15 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:31:33 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:31:53 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 20:33:33 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 20:35:09 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:36:17 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:36:17 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:36:17 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:36:17 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:36:17 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:36:17 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:36:17 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:36:17 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:36:18 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:36:18 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:36:18 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:36:18 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:36:18 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:36:18 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:36:18 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:36:18 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:36:18 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:36:18 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:36:18 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:36:18 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:36:18 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:36:18 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:36:18 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:36:18 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:36:18 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:36:18 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:36:19 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:36:19 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:36:20 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:36:20 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:36:20 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:36:20 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:36:20 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:36:21 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:36:21 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:36:21 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:36:21 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:36:21 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:36:21 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:36:21 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:36:21 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:36:21 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:36:21 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:36:21 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:36:21 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:36:22 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:36:22 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:36:22 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:36:22 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:36:22 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:36:23 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:36:23 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:36:23 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:36:23 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:36:23 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:36:24 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:36:24 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:36:24 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:36:24 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:36:24 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:36:24 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:36:24 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:36:24 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:36:24 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:36:25 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:36:25 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:36:25 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:36:25 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:36:25 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:36:25 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 20:36:26 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:39:26 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:39:26 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:41:48 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:41:48 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:42:03 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:42:03 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:43:29 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:43:29 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:45:11 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:45:11 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:45:38 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:45:38 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:47:01 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:47:01 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:48:23 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:48:23 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:48:43 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:48:43 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:49:01 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:49:01 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:49:49 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:49:49 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:50:23 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:50:23 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:50:23 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:50:23 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:53:05 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:53:05 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:59:53 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:59:53 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:59:53 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:59:53 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:59:53 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:59:53 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:59:53 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:59:53 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:59:54 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:59:54 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:59:54 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:59:54 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:59:54 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:59:54 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:59:54 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:59:54 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:59:54 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:59:54 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:59:54 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:59:54 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:59:54 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:59:54 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:59:54 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:59:54 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:59:54 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:59:54 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:59:55 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:59:55 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:59:55 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:59:55 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:59:55 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:59:55 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:59:55 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:59:55 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:59:55 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:59:55 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:59:55 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:59:55 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:59:55 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 20:59:55 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 21:04:51 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 21:04:51 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 21:08:41 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 21:08:41 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 21:08:47 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 21:09:23 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 21:09:23 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 21:09:26 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 21:09:35 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 21:09:35 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 21:09:44 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 21:09:44 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 21:09:48 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 21:09:48 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 21:11:39 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 21:11:39 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 21:11:58 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 21:11:58 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 21:12:00 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 21:12:00 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 21:12:03 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 21:12:03 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 21:12:04 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 21:12:05 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started POST "/login" for 127.0.0.1 at 2021-11-08 21:13:50 -0600
+  
+ActionController::RoutingError (No route matches [POST] "/login"):
+  
+Started POST "/login" for 127.0.0.1 at 2021-11-08 21:14:06 -0600
+  
+ActionController::RoutingError (No route matches [POST] "/login"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 21:15:35 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 21:15:35 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 21:17:09 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 21:17:09 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 21:17:09 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 21:17:09 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 21:17:44 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 21:17:44 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 21:17:55 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 21:17:55 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 21:17:55 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 21:17:55 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 21:18:44 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 21:18:44 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 21:18:44 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 21:18:45 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 21:18:52 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 21:19:37 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 21:19:40 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 21:21:41 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 21:21:41 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 21:21:41 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 21:21:41 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 22:29:44 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 22:31:10 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/7:15)%20Missed%20semicolon" for 127.0.0.1 at 2021-11-08 22:32:15 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/7:15)%20Missed%20semicolon"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 22:32:34 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 22:33:26 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 22:36:11 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 22:36:59 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 22:36:59 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 22:37:00 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 22:37:00 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-08 22:37:00 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 22:37:08 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 22:37:54 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 22:37:55 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 22:39:05 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 22:39:06 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 22:39:21 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 22:39:22 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 22:39:42 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-08 22:41:07 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/products" for ::1 at 2021-11-09 13:33:51 -0600
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for ProductsController):
+  
+actionpack (6.1.4.1) lib/abstract_controller/base.rb:160:in `process'
+actionpack (6.1.4.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.4.1) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.1.4.1) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.4.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.1.4.1) lib/rails/engine.rb:539:in `call'
+puma (5.5.2) lib/puma/configuration.rb:249:in `call'
+puma (5.5.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.5.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.5.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.5.2) lib/puma/server.rb:447:in `process_client'
+puma (5.5.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/products" for ::1 at 2021-11-09 13:34:48 -0600
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.56ms)
+Filter chain halted as :confirm_authentication rendered or redirected
+Completed 401 Unauthorized in 24ms (Views: 3.9ms | ActiveRecord: 1.9ms | Allocations: 6660)
+
+
+Started GET "/products" for ::1 at 2021-11-09 13:37:23 -0600
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Filter chain halted as :confirm_authentication rendered or redirected
+Completed 401 Unauthorized in 10ms (Views: 1.3ms | ActiveRecord: 1.6ms | Allocations: 4734)
+
+
+Started GET "/products" for ::1 at 2021-11-09 13:37:24 -0600
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.05ms)
+Filter chain halted as :confirm_authentication rendered or redirected
+Completed 401 Unauthorized in 4ms (Views: 1.1ms | ActiveRecord: 0.2ms | Allocations: 1886)
+
+
+Started GET "/products" for ::1 at 2021-11-09 13:41:03 -0600
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Filter chain halted as :confirm_authentication rendered or redirected
+Completed 401 Unauthorized in 14ms (Views: 1.8ms | ActiveRecord: 2.0ms | Allocations: 4744)
+
+
+Started GET "/products" for ::1 at 2021-11-09 13:41:03 -0600
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Filter chain halted as :confirm_authentication rendered or redirected
+Completed 401 Unauthorized in 4ms (Views: 1.6ms | ActiveRecord: 0.3ms | Allocations: 1863)
+
+
+Started GET "/products" for ::1 at 2021-11-09 13:42:35 -0600
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.05ms)
+Filter chain halted as :confirm_authentication rendered or redirected
+Completed 401 Unauthorized in 9ms (Views: 1.1ms | ActiveRecord: 1.1ms | Allocations: 4738)
+
+
+Started GET "/products" for ::1 at 2021-11-09 13:43:38 -0600
+Processing by ProductsController#index as HTML
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms | Allocations: 3519)
+
+
+  
+NameError (uninitialized constant ProductsController::ProductIndexSerializer
+Did you mean?  ProductSerializer):
+  
+app/controllers/products_controller.rb:6:in `index'
+Started GET "/products" for ::1 at 2021-11-09 13:44:44 -0600
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mProduct Load (5.8ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.72ms)
+Completed 200 OK in 42ms (Views: 23.6ms | ActiveRecord: 12.6ms | Allocations: 14045)
+
+
+Started GET "/users" for ::1 at 2021-11-09 13:50:05 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+Started GET "/login" for ::1 at 2021-11-09 13:50:50 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/login"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-09 14:24:52 -0600
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-09 14:24:54 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-09 15:16:27 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-09 15:22:08 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-09 15:22:08 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-09 15:22:09 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-09 15:22:09 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-09 15:41:18 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-09 15:48:20 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-09 15:53:21 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-09 15:58:34 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-09 16:07:20 -0600
+Processing by UsersController#show as */*
+  [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.17ms)
+Filter chain halted as :confirm_authentication rendered or redirected
+Completed 401 Unauthorized in 75ms (Views: 4.5ms | ActiveRecord: 38.3ms | Allocations: 9719)
+
+
+Started GET "/me" for 127.0.0.1 at 2021-11-09 16:08:11 -0600
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Filter chain halted as :confirm_authentication rendered or redirected
+Completed 401 Unauthorized in 4ms (Views: 1.3ms | ActiveRecord: 0.3ms | Allocations: 1893)
+
+
+Started GET "/me" for 127.0.0.1 at 2021-11-09 16:13:40 -0600
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Filter chain halted as :confirm_authentication rendered or redirected
+Completed 401 Unauthorized in 7ms (Views: 2.4ms | ActiveRecord: 0.4ms | Allocations: 1893)
+
+
+Started GET "/me" for 127.0.0.1 at 2021-11-09 16:15:10 -0600
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Filter chain halted as :confirm_authentication rendered or redirected
+Completed 401 Unauthorized in 8ms (Views: 1.2ms | ActiveRecord: 0.3ms | Allocations: 1894)
+
+
+Started GET "/me" for 127.0.0.1 at 2021-11-09 16:15:11 -0600
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Filter chain halted as :confirm_authentication rendered or redirected
+Completed 401 Unauthorized in 17ms (Views: 1.9ms | ActiveRecord: 0.5ms | Allocations: 1872)
+
+
+Started GET "/me" for 127.0.0.1 at 2021-11-09 16:15:14 -0600
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Filter chain halted as :confirm_authentication rendered or redirected
+Completed 401 Unauthorized in 5ms (Views: 1.9ms | ActiveRecord: 0.2ms | Allocations: 1872)
+
+
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-09 16:17:41 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-11-09 16:31:27 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/me" for 127.0.0.1 at 2021-11-09 16:31:29 -0600
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Filter chain halted as :confirm_authentication rendered or redirected
+Completed 401 Unauthorized in 20ms (Views: 1.4ms | ActiveRecord: 10.3ms | Allocations: 5043)
+
+
+Started GET "/me" for 127.0.0.1 at 2021-11-09 16:31:53 -0600
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Filter chain halted as :confirm_authentication rendered or redirected
+Completed 401 Unauthorized in 3ms (Views: 1.1ms | ActiveRecord: 0.2ms | Allocations: 1875)
+
+
+Started GET "/me" for 127.0.0.1 at 2021-11-09 16:31:56 -0600
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Filter chain halted as :confirm_authentication rendered or redirected
+Completed 401 Unauthorized in 4ms (Views: 1.7ms | ActiveRecord: 0.2ms | Allocations: 1872)
+
+
+Started GET "/me" for 127.0.0.1 at 2021-11-09 16:32:00 -0600
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Filter chain halted as :confirm_authentication rendered or redirected
+Completed 401 Unauthorized in 14ms (Views: 2.0ms | ActiveRecord: 0.9ms | Allocations: 1872)
+
+
+Started GET "/me" for 127.0.0.1 at 2021-11-09 16:32:02 -0600
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Filter chain halted as :confirm_authentication rendered or redirected
+Completed 401 Unauthorized in 55ms (Views: 1.3ms | ActiveRecord: 0.2ms | Allocations: 1873)
+
+
+Started GET "/me" for 127.0.0.1 at 2021-11-09 16:32:06 -0600
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Filter chain halted as :confirm_authentication rendered or redirected
+Completed 401 Unauthorized in 4ms (Views: 1.2ms | ActiveRecord: 0.3ms | Allocations: 1872)
+
+
+Started GET "/me" for 127.0.0.1 at 2021-11-09 16:32:06 -0600
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Filter chain halted as :confirm_authentication rendered or redirected
+Completed 401 Unauthorized in 8ms (Views: 2.5ms | ActiveRecord: 0.2ms | Allocations: 1872)
+
+
+Started GET "/me" for 127.0.0.1 at 2021-11-09 16:32:13 -0600
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Filter chain halted as :confirm_authentication rendered or redirected
+Completed 401 Unauthorized in 6ms (Views: 2.6ms | ActiveRecord: 0.4ms | Allocations: 1872)
+
+
+Started GET "/me" for 127.0.0.1 at 2021-11-09 16:32:26 -0600
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Filter chain halted as :confirm_authentication rendered or redirected
+Completed 401 Unauthorized in 5ms (Views: 1.6ms | ActiveRecord: 0.2ms | Allocations: 1872)
+
+
+Started GET "/me" for 127.0.0.1 at 2021-11-09 16:32:29 -0600
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.12ms)
+Filter chain halted as :confirm_authentication rendered or redirected
+Completed 401 Unauthorized in 7ms (Views: 2.9ms | ActiveRecord: 0.3ms | Allocations: 1875)
+
+
+Started GET "/me" for 127.0.0.1 at 2021-11-09 16:32:30 -0600
+Processing by UsersController#show as */*
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.19ms)
+Filter chain halted as :confirm_authentication rendered or redirected
+Completed 401 Unauthorized in 10ms (Views: 2.8ms | ActiveRecord: 2.4ms | Allocations: 1872)
+
+
+Started GET "/me" for 127.0.0.1 at 2021-11-09 16:32:40 -0600
+Processing by UsersController#show as */*
+  [1m[36mUser Load (9.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Filter chain halted as :confirm_authentication rendered or redirected
+Completed 401 Unauthorized in 25ms (Views: 2.8ms | ActiveRecord: 10.0ms | Allocations: 1872)
+
+
+Started GET "/me" for 127.0.0.1 at 2021-11-09 16:32:42 -0600
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.17ms)
+Filter chain halted as :confirm_authentication rendered or redirected
+Completed 401 Unauthorized in 6ms (Views: 2.9ms | ActiveRecord: 0.3ms | Allocations: 1872)
+
+
+Started GET "/me" for 127.0.0.1 at 2021-11-09 16:32:46 -0600
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Filter chain halted as :confirm_authentication rendered or redirected
+Completed 401 Unauthorized in 5ms (Views: 1.9ms | ActiveRecord: 0.2ms | Allocations: 1872)
+
+
+Started GET "/me" for 127.0.0.1 at 2021-11-09 16:32:52 -0600
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Filter chain halted as :confirm_authentication rendered or redirected
+Completed 401 Unauthorized in 8ms (Views: 1.7ms | ActiveRecord: 0.6ms | Allocations: 1872)
+
+
+Started GET "/me" for 127.0.0.1 at 2021-11-09 16:32:55 -0600
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Filter chain halted as :confirm_authentication rendered or redirected
+Completed 401 Unauthorized in 4ms (Views: 1.5ms | ActiveRecord: 0.2ms | Allocations: 1872)
+
+
+Started GET "/me" for 127.0.0.1 at 2021-11-09 16:32:58 -0600
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Filter chain halted as :confirm_authentication rendered or redirected
+Completed 401 Unauthorized in 6ms (Views: 2.1ms | ActiveRecord: 0.3ms | Allocations: 1872)
+
+
+Started GET "/me" for 127.0.0.1 at 2021-11-09 16:33:02 -0600
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.12ms)
+Filter chain halted as :confirm_authentication rendered or redirected
+Completed 401 Unauthorized in 6ms (Views: 2.2ms | ActiveRecord: 0.2ms | Allocations: 1872)
+
+
+Started GET "/me" for 127.0.0.1 at 2021-11-09 16:33:06 -0600
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Filter chain halted as :confirm_authentication rendered or redirected
+Completed 401 Unauthorized in 44ms (Views: 21.4ms | ActiveRecord: 0.2ms | Allocations: 1872)
+
+
+Started GET "/me" for 127.0.0.1 at 2021-11-09 16:33:10 -0600
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Filter chain halted as :confirm_authentication rendered or redirected
+Completed 401 Unauthorized in 24ms (Views: 2.3ms | ActiveRecord: 0.3ms | Allocations: 1872)
+
+
+Started GET "/me" for 127.0.0.1 at 2021-11-09 16:33:21 -0600
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Filter chain halted as :confirm_authentication rendered or redirected
+Completed 401 Unauthorized in 6ms (Views: 1.8ms | ActiveRecord: 0.3ms | Allocations: 1872)
+
+
+Started GET "/me" for 127.0.0.1 at 2021-11-09 16:33:26 -0600
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.13ms)
+Filter chain halted as :confirm_authentication rendered or redirected
+Completed 401 Unauthorized in 7ms (Views: 4.7ms | ActiveRecord: 0.2ms | Allocations: 1873)
+
+
+Started GET "/me" for 127.0.0.1 at 2021-11-09 16:33:32 -0600
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.13ms)
+Filter chain halted as :confirm_authentication rendered or redirected
+Completed 401 Unauthorized in 6ms (Views: 2.7ms | ActiveRecord: 0.2ms | Allocations: 1873)
+
+
+Started GET "/me" for 127.0.0.1 at 2021-11-09 16:33:37 -0600
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Filter chain halted as :confirm_authentication rendered or redirected
+Completed 401 Unauthorized in 5ms (Views: 1.6ms | ActiveRecord: 0.3ms | Allocations: 1875)
+
+
+Started GET "/me" for 127.0.0.1 at 2021-11-09 16:33:42 -0600
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Filter chain halted as :confirm_authentication rendered or redirected
+Completed 401 Unauthorized in 5ms (Views: 1.9ms | ActiveRecord: 0.2ms | Allocations: 1872)
+
+
+Started GET "/me" for 127.0.0.1 at 2021-11-09 16:33:47 -0600
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.04ms)
+Filter chain halted as :confirm_authentication rendered or redirected
+Completed 401 Unauthorized in 13ms (Views: 1.1ms | ActiveRecord: 0.1ms | Allocations: 1872)
+
+
+Started GET "/me" for 127.0.0.1 at 2021-11-09 16:33:52 -0600
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Filter chain halted as :confirm_authentication rendered or redirected
+Completed 401 Unauthorized in 5ms (Views: 1.5ms | ActiveRecord: 0.2ms | Allocations: 1872)
+
+
+Started GET "/me" for 127.0.0.1 at 2021-11-09 16:33:56 -0600
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.04ms)
+Filter chain halted as :confirm_authentication rendered or redirected
+Completed 401 Unauthorized in 4ms (Views: 1.1ms | ActiveRecord: 0.2ms | Allocations: 1872)
+
+

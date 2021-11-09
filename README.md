@@ -22,3 +22,11 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+
+Advanced State Updates: Arrays
+These are some common strategies for updating arrays in state without mutating the original array.
+
+adding an item: use spread operator - setItems([...items, newItem])
+removing an item: use filter - setItems(items.filter(i => i.id !== id))
+updating an item: use map - setItems(items.map(i => i.id === newItem.id ? newItem : item))
