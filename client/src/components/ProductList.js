@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import ProductCard from './ProductCard';
 
 
 
 
-function ProductList() {
+function ProductList(props) {
  
     const [products, setProductArr] = useState([]);
     // products => props object
@@ -22,9 +22,9 @@ useEffect(() => {
 
     
     return (
+        
         <div className="product-list">
-             <h1>Product List</h1>  
-            <br />
+            <h1>{props.title}</h1>
             {
                 products.map(product => 
                 {

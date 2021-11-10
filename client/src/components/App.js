@@ -1,9 +1,10 @@
-import { useState, useEffect } from "react";
+import {useState, useEffect } from "react";
 import '../style/App.css';
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Bar from './Bar';
 import ProductList from './ProductList';
 import Register from "./Register";
+import Profile from "./Profile";
 import "../style/index.css";
 
 
@@ -21,6 +22,8 @@ import "../style/index.css";
 function App() {
   const [currentUser, setCurrentUser] = useState(null)
   const [authChecked, setAuthChecked] = useState(false)
+  const [title, setTitle] = useState("Welcome to styles")
+
 
   useEffect(() => {
     fetch("/me")
@@ -45,7 +48,7 @@ function App() {
           </Route>
   
           <Route path="/me">
-            <h1>Profile</h1>
+            <Profile/>
           </Route>
           </div>
           )
@@ -65,20 +68,23 @@ function App() {
     <div className="App">  
     <div className="app-body">
       <header className="App-header">
-      <Bar/>
+      <Bar title={title} setTitle={setTitle}/>
       </header>
 
       <BrowserRouter>
         <Switch>
         <Route exact path="/">
-            <h1>Home Page</h1>
+            <ProductList title={title} setTitle={setTitle}/>
         </Route>
         <Route path="/products">
-            <ProductList/>
+            <ProductList title={"Deals on Styles"} setTitle={setTitle}/>
         </Route>
           {loggedin}
           <Route path="/wholesale">
             <h1>Wholesale</h1>
+          </Route>
+          <Route path="/profile">
+            <Profile/>
           </Route>
 
           <Route path="/deals">
