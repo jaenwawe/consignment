@@ -27,11 +27,11 @@ gender = ["M", "F"] #User
 r=rand(1..50) #randome price in Procducts
 random_boolean = [true, false].sample
 
-same = rand(0..3) #random hash in type array
+# same = rand(0..3) #random hash in type array
 type = [
     { "suit" => "https://tinyurl.com/6k2fmt3x"},
-   {"shirt"=> "https://tinyurl.com/3mpkvr9u"},
-    {"pants"=>"https://tinyurl.com/37mmaa97"}, 
+   {"shirt"=> "https://bit.ly/3F7twvT"},
+    {"pants"=>"https://bit.ly/3wxiInA"}, 
     {"jacket"=>"https://tinyurl.com/8sycvdcv"} 
 ]
 
@@ -60,12 +60,13 @@ end
 
     puts "Seeding products"
     10.times do 
+        same = rand(0..3) #random hash in type array
     p= Product.create!(
         user_id: users.sample.id,
-        category: type[same].keys[0],
+        category: type[same].keys.join,
         size: rand(0..15),
         price: rand(10..50),
-        photo:  type[same].values[0],
+        photo:  type[same].values.join,
         review_stars: rand(1..5),
         review: Faker::Restaurant.review  
     )

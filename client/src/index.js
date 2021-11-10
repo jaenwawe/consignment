@@ -2,7 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './components/App';
 import reportWebVitals from './reportWebVitals';
-import './index.css';
+import "jquery";
+import "react-popper";
+import "bootstrap/dist/js/bootstrap"
+import "bootstrap/dist/css/bootstrap.css"
+// import 'styles/index.css';
+import './style/index.css';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 ReactDOM.render(

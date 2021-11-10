@@ -1,19 +1,22 @@
-import React from 'react';
+import React, {useState} from 'react';
 
-function ProductCard(props) {
-    // props = { title: "My Title" }
-    // props.title => "My Title"
+function ProductCard( {category = "deals",photo= "https://tinyurl.com/u4ffc999",review = "N/A",price}) {
+    //  const[product, setProduct]= useState("")
+    //  debugger
+    // setProduct(props); 
     
     return (
         <div className="product">
-                         <h1>Title: {props.title}</h1>
-                         <img src={props.product.photo}  alt="product"
-                         />
-            <h2 className="component-name">Product Component</h2>
-   
-            <p>Price: {props.price}</p>
+            <h5 className="component-name">{category}</h5>
+                         <img src={photo} alt={"change name to text"}/>
+                         <p>{review}</p>
+
+
+                    <p>Price: {price}</p>
+                    <br/>
         </div>
     );
 }
+
 
 export default ProductCard;

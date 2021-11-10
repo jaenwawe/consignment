@@ -1,22 +1,22 @@
 import { useState, useEffect } from "react";
 import '../style/App.css';
 import { BrowserRouter, Switch, Route } from "react-router-dom";
+import Bar from './Bar';
+import ProductList from './ProductList';
+import Register from "./Register";
+import "../style/index.css";
 
-// import { Router, Route, withRouter, Switch, Redirect } from "react-router-dom";
-import Bar from '../Bar';
-import Profile from './Profile';
 
 // Data
-import ProductList from './ProductList';
-import {ProductCard} from './ProductCard';
-
-import Register from "../Register";
-
-  
+// import Profile from './Profile';
+// import Register from "../Register";
+// import {ProductCard} from './ProductCard';
 // import Home from './Home';
 // import About from './About';
 // import AuthenticatedApp from "./components/AuthenticatedApp";
 // import UnauthenticatedApp from "./components/UnauthenticatedApp";
+ 
+
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null)
@@ -36,25 +36,47 @@ function App() {
       })
   }, []);
 
-  return (
-    <div className="App">
-    <header className="App-header">
-    <Bar/>
-  </header>
-  <BrowserRouter>
-        <Switch>
-        <Route path="/products">
-            <h1>For Sale</h1>
-          </Route>
-
+  var loggedin = (currentUser) => {
+    if (currentUser.isAuthenticated())
+      return (
+          <div>
           <Route path="/orders">
           <h1>View Orders</h1>
           </Route>
-
-          <Route path="/">
-            <h1>Home Page</h1>
+  
+          <Route path="/me">
+            <h1>Profile</h1>
           </Route>
+          </div>
+          )
+        else
+        return (
+          <>
+            <Route path="/signup">
+              <h1>Join</h1>
+              <Register/>
+            </Route>
+          </>)
+    }
 
+
+
+  return (
+    <div className="App">  
+    <div className="app-body">
+      <header className="App-header">
+      <Bar/>
+      </header>
+
+      <BrowserRouter>
+        <Switch>
+        <Route exact path="/">
+            <h1>Home Page</h1>
+        </Route>
+        <Route path="/products">
+            <ProductList/>
+        </Route>
+          {loggedin}
           <Route path="/wholesale">
             <h1>Wholesale</h1>
           </Route>
@@ -63,18 +85,14 @@ function App() {
             <h1>Deals</h1>
           </Route>
 
-          <Route path="/me">
-            <h1>Profile</h1>
-          </Route>
-
         </Switch>
     </BrowserRouter>
-      <div className="product-id"></div>
-      <Register/>
+    
+     
+ </div>
  </div>
    );
-  }
-
+}
 
 export default App;
 

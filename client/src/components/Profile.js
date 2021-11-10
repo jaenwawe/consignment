@@ -1,3 +1,19 @@
+import React from "react";
+import {made_image} from "../data/Mock"
+
+
+function Profile () {
+    return (<div>
+
+     
+              <h2>Profile</h2>
+   
+  </div>    
+    );
+  }
+export default Profile;
+
+
 // // import the useContext hook
 // import React, { useContext } from "react";
 // // import the UserContext we created

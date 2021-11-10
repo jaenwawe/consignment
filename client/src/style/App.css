@@ -2,6 +2,20 @@
 
 .App {}
 
+body, html {
+
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* your class for the div should have 100% height and width */
+.app-body {
+  background-color: rgb(142, 182, 233);
+  height: 100%;
+}
+
+
   .center{
     margin-top: 5%;
     padding-left:40%;
@@ -21,10 +35,15 @@
   flex-direction: row;
   align-items: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  
 }
 
 
+/* 
+#header {
+  text-align: center;
+  margin: 0 auto;
+} */
 
 
 @media (prefers-reduced-motion: no-preference) {
@@ -32,8 +51,6 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
-
 
 @keyframes App-logo-spin {
   from {
@@ -44,11 +61,6 @@
   }
 }
 
-
-#header {
-  text-align: center;
-  margin: 0 auto;
-}
 
 #title {
   color: rgb(0, 0, 0);
@@ -144,6 +156,8 @@ label {
   background-color: pink;
 }
 
-
+.row {
+  margin-left: auto;
+}
 
 

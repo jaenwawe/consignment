@@ -25,4 +25,5 @@ function CommentContainer()
       );
     }
   }
+  export default CommentContainer;
   

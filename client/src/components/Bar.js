@@ -1,8 +1,8 @@
 import Home from "./Home";
-import About from "./components/About";
-import {username} from "./data/Mock"
+import About from "./About";
+import {username} from "../data/Mock"
 import Button from 'react-bootstrap/Button';
-import logo from './logo.png';
+import logo from '../data/logo.png';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -19,6 +19,7 @@ function Bar() {
     <Container className="center-horizontal">
       <Row >
               <Col>  
+              <button className="btn btn-danger">Bootstrap</button>
                 <Button variant="primary">Home</Button>{' '}
                 <Button variant="info"> <img src={logo} className="App-logo" alt="logo" /></Button>{' '}
                 <Button variant="warning">Join</Button>{' '}

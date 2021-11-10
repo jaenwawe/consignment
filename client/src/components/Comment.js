@@ -2,11 +2,11 @@ import React from "react";
 import {made_image} from "../data/Mock"
 
 
-function Form() {
+function Comment() {
     return (
     <div>
       <img src={made_image} alt="I made this" />
-          <h2>Form</h2>
+          <h2>Comment</h2>
                 
       </div>    
     );
@@ -16,4 +16,4 @@ function Form() {
 
   //index.js or index.html on in public folder  index.css
   
-  export default Form;
+  export default Comment;
