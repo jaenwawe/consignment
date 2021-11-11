@@ -5,23 +5,18 @@ import { useHistory } from 'react-router-dom'
 
 function Register({setCurrentUser}) {
   const history = useHistory()
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
+  const [first_name, setFirstName] = useState("");
+  const [last_name, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [username, setUsername] = useState("");
-  const [number, setNumber] = useState("");
+  const [phone_number, setNumber] = useState("");
   const [address, setAddress] = useState("");
   const [state, setState] = useState("");
-  const [zip, setZip] = useState("");
+  const [zipcode, setZip] = useState("");
   const [gender, setGender] = useState("");
   const [store_name, setStoreName] = useState("");
-  const [isStore, setIsStore] = useState(false);
-
-
-  //needs to login for this state
-  // const [current_user,setCurrentUser]= useState("");
-
+  const [store, setIsStore] = useState(false);
 
   const handleSubmit = (event) => 
   {
@@ -32,18 +27,18 @@ function Register({setCurrentUser}) {
           'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        firstName,
-        lastName,
+        first_name,
+        last_name,
         email, 
         password,
         username,
-        number,
+        phone_number,
         address,
         state,
-        zip,
+        zipcode,
         gender,
         store_name,
-        isStore
+        store
        })
       })
           .then(res => {
@@ -113,25 +108,28 @@ function Register({setCurrentUser}) {
 
   return (
 
-   <form className="center-form" onSubmit={handleSubmit}>
+   <form name="signup/register"  className="center-form" onSubmit={handleSubmit}>
     <label className="form-label" for="formBasicPassword">First Name</label>
       <input 
       type="text"
-      name = "firstName"
-      value={firstName} 
+      value={first_name} 
+      onChange={(e) => setFirstName(e.target.value)}   
+      name = "first_name"
       placeholder="First name" 
-      onChange={setFirstName} 
-      className="form-label"></input>
+      className="form-label"
+      >
+
+      </input>
     <br/>
     <br/>
     
     <label className="form-label" for="formBasicPassword">Last Name</label>    
       <input 
       type="text"
-      name = "lastName" 
-      value={lastName}
+      name = "last_name" 
+      value={last_name}
       placeholder="Last name"  
-      onChange={setLastName} 
+      onChange={(e) => setLastName(e.target.value)} 
       className="form-label"></input>
     <br/>
     <br/>
@@ -139,11 +137,14 @@ function Register({setCurrentUser}) {
     <label className="form-label">Email address  </label>
     <input 
       type="email"
-      name = "email" 
+      // name = "email" 
       value={email}  
       placeholder="Email@message.com" 
-      onChange={setEmail} 
-      className="form-label"></input>
+      onChange={(e) => setEmail(e.target.value)} 
+      // className="form-label"
+      >
+
+      </input>
     <br/>
     <br/>
   
@@ -154,7 +155,7 @@ function Register({setCurrentUser}) {
       name = "password"
       value={password}  
       placeholder="Shhh...Password"  
-      onChange={setEmail} 
+      onChange={(e) => setPassword(e.target.value)} 
       className="form-label"></input>
     <br/>
     <br/>
@@ -167,7 +168,7 @@ function Register({setCurrentUser}) {
       name = "username"  
       placeholder="Username"  
       value={username}
-      onChange={setUsername} 
+      onChange={(e) => setUsername(e.target.value)} 
       className="form-label"></input>
     <br/>
     <br/>
@@ -175,10 +176,10 @@ function Register({setCurrentUser}) {
     <label className="form-label">Phone Number</label>
     <input 
       type="text"
-      name = "number" 
-      value={number} 
+      name = "phone_number" 
+      value={phone_number} 
       placeholder="595-340-5555"  
-      onChange={setNumber} 
+      onChange={(e) => setNumber(e.target.value)} 
       className="form-label"></input>
    <br/>
    <br/>
@@ -189,7 +190,7 @@ function Register({setCurrentUser}) {
       name = "address" 
       value={address}
       placeholder="Address and Suite No."  
-      onChange={setAddress} 
+      onChange={(e) => setAddress(e.target.value)} 
       className="form-label"></input>
     <br/>
     <br/>
@@ -200,7 +201,7 @@ function Register({setCurrentUser}) {
       name = "state" 
       value={state} 
       placeholder="State" 
-      onChange={setState} 
+      onChange={(e) => setState(e.target.value)} 
       className="form-label"></input>
     <br/>
     <br/>
@@ -208,11 +209,10 @@ function Register({setCurrentUser}) {
     <label htmlFor="exampleZipChange" className="form-label">ZipCode</label>
     <input 
         type="text"
-        name = "zip" 
-        value={zip}
+        name = "zipcode" 
+        value={zipcode}
         placeholder="Zipcode"  
-        onChange={setZip} 
-        
+        onChange={(e) => setZip(e.target.value)} 
         className="form-label"></input>
         <br/>
         <br/>
@@ -233,25 +233,20 @@ function Register({setCurrentUser}) {
     <input
         type="text"
         name = "store_name" 
-        value= {store_name}
+        value = {store_name}
         placeholder="Type Store Name" 
         onChange={(e) => setStoreName(e.target.value)}
         className="form-label"></input>
        
         
-   <br/>
-   <br/>
-    <label className="form-label" for="formBasicPassword">Already a retail Merchant?</label>
+     <label className="form-label" for="formBasicPassword">Already a retail Merchant?</label>
     <input
     type="radio"
-    name="isStore"
-    value={isStore}
+    name="store"
+    value={store}
     onChange={(e) => setIsStore(e.target.value)}
-    checked={true}
-    className="form-label"></input>
-    <br/>
-    <br/>
-
+    checked={false}
+    className="form-label"></input> 
 
       <button type="submit" className="btn btn-primary">Submit</button>
     </form>

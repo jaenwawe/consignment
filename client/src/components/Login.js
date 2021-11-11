@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useHistory } from 'react-router-dom'
 
-function Login({setCurrentUser }) {
+function Login({currentUser, setCurrentUser }) {
   const history = useHistory()
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
@@ -30,10 +30,12 @@ function Login({setCurrentUser }) {
   }
   
   return (
-    <form onSubmit={handleSubmit}>
+    <form  onSubmit={handleSubmit}>
         <div className="mb-3">
-            <label htmlFor="exampleInputEmail1" className="form-label">Email address
-                <input type="email" name="email" value={email}
+            <label htmlFor="exampleInputEmail1" className="form-label">Login Email address
+                <input type="email" 
+                name="email" 
+                value={email}
             onChange={(e) => setEmail(e.target.value)} className="form-control" id="exampleInputEmail" aria-describedby="emailHelp"></input>
             </label>
             <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
@@ -53,4 +55,4 @@ function Login({setCurrentUser }) {
   )
 }
 
-export default Login
+export default Login;

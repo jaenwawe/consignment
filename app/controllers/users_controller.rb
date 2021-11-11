@@ -79,7 +79,7 @@ class UsersController < ApplicationController
   
   private
         def user_params
-          params.permit(:username, :password, :password_confirmation :email, :first_name, :last_name, :phone_number, :address, :state, :zipcode, :store)        
+          params.permit(:first_name, :last_name, :username, :password, :password_confirmation, :email,  :phone_number, :address, :state, :zipcode, :gender, :store_name, :store)        
         end
         
         def not_current_user
@@ -94,7 +94,4 @@ class UsersController < ApplicationController
         def set_user
           @user = User.find(params[:id])
         end
-      
       end
-      
-  

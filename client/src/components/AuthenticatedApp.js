@@ -8,7 +8,7 @@ import { BrowserRouter,
 
 
 import Bar from './Bar';
-import Register from "./Register";
+import Registered from "./Login";
 import ProductList from './ProductList';
 import Login from './Login';
 
@@ -89,15 +89,18 @@ function AuthenticatedApp({ currentUser, setCurrentUser }) {
       <header className="App-header">
       <Bar title={title} setTitle={setTitle}/>
       </header>
-      <Register setCurrentUser={setCurrentUser} currentUser = {currentUser}/>
-      <Login/>
+        <Login/>
   
 
 
       <Switch>
         <Route exact path="/" component={ProductList}/>
         <Route>
-          <Login setCurrentUser={setCurrentUser} currentUser = {currentUser}/>
+          <Registered setCurrentUser={setCurrentUser} currentUser = {currentUser}/>
+         </Route>
+         
+           <Route>
+          {/* <Login setCurrentUser={setCurrentUser} currentUser = {currentUser}/> */}
          </Route>
 
         <Route path="/products">

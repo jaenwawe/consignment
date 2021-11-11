@@ -24,8 +24,8 @@ import UnauthenticatedApp from "./UnAuthenticatedApp";
 
 
 function App() {
-  
-  const [currentUser, setCurrentUser] = useState(null)
+
+  const [currentUser, setCurrentUser] = useState("")
   const [authChecked, setAuthChecked] = useState(false)
 
   useEffect(() => {
