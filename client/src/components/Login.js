@@ -1,34 +1,56 @@
-import React, { Component } from "react";
+import { useState } from 'react'
+import { useHistory } from 'react-router-dom'
 
-export default class Login extends Component {
-    render() {
-        return (
-            <form>
-
-                <h3>Log in</h3>
-
-                <div className="form-group">
-                    <label>Email</label>
-                    <input type="email" className="form-control" placeholder="Enter email" />
-                </div>
-
-                <div className="form-group">
-                    <label>Password</label>
-                    <input type="password" className="form-control" placeholder="Enter password" />
-                </div>
-
-                <div className="form-group">
-                    <div className="custom-control custom-checkbox">
-                        <input type="checkbox" className="custom-control-input" id="customCheck1" />
-                        <label className="custom-control-label" htmlFor="customCheck1">Remember me</label>
-                    </div>
-                </div>
-
-                <button type="submit" className="btn btn-dark btn-lg btn-block">Sign in</button>
-                <p className="forgot-password text-right">
-                    Forgot <a href="#">password?</a>
-                </p>
-            </form>
-        );
-    }
+function Login({setCurrentUser }) {
+  const history = useHistory()
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+  
+  const handleSubmit = (event) => {
+    event.preventDefault()
+    fetch('/login', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({email, password})
+    })
+      .then(res => {
+        if (res.ok) {
+          res.json().then(user => {
+            setCurrentUser(user)
+            history.push('/')
+          })
+        } else {
+          res.json().then(errors => {
+            console.error(errors)
+          })
+        }
+      })
+  }
+  
+  return (
+    <form onSubmit={handleSubmit}>
+        <div className="mb-3">
+            <label htmlFor="exampleInputEmail1" className="form-label">Email address
+                <input type="email" name="email" value={email}
+            onChange={(e) => setEmail(e.target.value)} className="form-control" id="exampleInputEmail" aria-describedby="emailHelp"></input>
+            </label>
+            <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
+        </div>
+        <div className="mb-3">
+            <label htmlFor="exampleInputPassword1" className="form-label">Password
+                <input type="password" name="password" value={password}
+            onChange={(e) => setPassword(e.target.value)} className="form-control" id="exampleInputPassword1"></input>
+            </label>
+        </div>
+        {/* <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        </div> */}
+        <button type="submit" className="btn btn-primary">Submit</button>
+    </form>
+  )
 }
+
+export default Login
