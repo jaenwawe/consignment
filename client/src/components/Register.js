@@ -3,7 +3,7 @@ import { useHistory } from 'react-router-dom'
 
 
 
-function Register({setCurrentUser}) {
+function Register({setCurrentUser, currentUser}) {
   const history = useHistory()
   const [first_name, setFirstName] = useState("");
   const [last_name, setLastName] = useState("");

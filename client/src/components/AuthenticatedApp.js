@@ -21,8 +21,8 @@ import OrdersPage from "./OrdersPage";
 import Cart from "./Cart";
 
 
-function AuthenticatedApp({ currentUser, setCurrentUser }) {
-    const [title, setTitle] = useState(null)
+function AuthenticatedApp({ currentUser, setCurrentUser, title, setTitle}) {
+
     const [orderArr, setOrdersArr] = useState([])
     const [isOrderAdded, setIsOrderAdded] = useState(false)
     const [isOrderDeleted, setIsOrderDeleted] = useState(false)
@@ -87,9 +87,9 @@ function AuthenticatedApp({ currentUser, setCurrentUser }) {
     <div className="App">  
     <div className="app-body">
       <header className="App-header">
-      <Bar title={title} setTitle={setTitle}/>
+      {/* <Bar title={title} setTitle={setTitle}/> */}
       </header>
-        <Login/>
+     
   
 
 

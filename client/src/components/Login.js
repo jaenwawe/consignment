@@ -1,5 +1,7 @@
+import Button from '@restart/ui/esm/Button'
 import { useState } from 'react'
 import { useHistory } from 'react-router-dom'
+import  Register from './Register'
 
 function Login({currentUser, setCurrentUser }) {
   const history = useHistory()
@@ -30,9 +32,11 @@ function Login({currentUser, setCurrentUser }) {
   }
   
   return (
+    <div>
+      <h1>Login</h1>
     <form  onSubmit={handleSubmit}>
         <div className="mb-3">
-            <label htmlFor="exampleInputEmail1" className="form-label">Login Email address
+            <label htmlFor="exampleInputEmail1" className="form-label">Email address
                 <input type="email" 
                 name="email" 
                 value={email}
@@ -52,6 +56,11 @@ function Login({currentUser, setCurrentUser }) {
         </div> */}
         <button type="submit" className="btn btn-primary">Submit</button>
     </form>
+    <h1> Click here to become a member </h1>
+    <Button onClick={ <Register currentUser={currentUser} setCurrentUser={setCurrentUser}/>
+
+}>Sign Up</Button>
+    </div>
   )
 }
 
