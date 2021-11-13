@@ -85,11 +85,12 @@ function AuthenticatedApp({ currentUser, setCurrentUser, title= "Authenticated A
 
   return (
     <BrowserRouter>
-    <h1>Authenticated Site</h1>
+    <h1>Welcome {currentUser.first_name} </h1>
+    {console.log(currentUser)}
     <div className="App">  
     <div className="app-body">
       <header className="App-header">
-      {/* <Bar title={title} setTitle={setTitle}/> */}
+       <Bar title={title} setTitle={setTitle}/> 
       </header>
      
   

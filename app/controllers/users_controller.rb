@@ -2,9 +2,9 @@ class UsersController < ApplicationController
     skip_before_action :confirm_authentication, only: [:create]
     before_action :set_user, only: [:show, :update, :destroy]
     
-    def index    
-      render json: User.all, each_serializer: UserSerializer  
-    end
+    # def index    
+    #   render json: User.all, each_serializer: UserSerializer  
+    # end
 
     def signup 
         user=User.new(user_params)
@@ -23,6 +23,7 @@ class UsersController < ApplicationController
          render json: current_user, status: :ok
       else
         not_current_user
+        # render json: {error: "No active session"}, status: :unauthorized
       end 
     end
 

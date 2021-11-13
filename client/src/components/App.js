@@ -42,6 +42,7 @@ function App() {
         
         <BrowserRouter>
             <Route path="/">
+            {console.log(currentUser)}
             {currentUser ? 
               (<AuthenticatedApp setCurrentUser={setCurrentUser} currentUser={currentUser}/>) 
               : 

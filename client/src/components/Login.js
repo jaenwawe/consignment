@@ -20,6 +20,7 @@ function Login({currentUser, setCurrentUser }) {
       .then(res => {
         if (res.ok) {
           res.json().then(user => {
+            console.log(user)
             setCurrentUser(user)
             history.push('/')
           })
@@ -57,9 +58,8 @@ function Login({currentUser, setCurrentUser }) {
         <button type="submit" className="btn btn-primary">Submit</button>
     </form>
     <h1> Click here to become a member </h1>
-    <Button onClick={ <Register currentUser={currentUser} setCurrentUser={setCurrentUser}/>
-
-}>Sign Up</Button>
+    {/* <Button onClick={ <Register currentUser={currentUser} setCurrentUser={setCurrentUser}/>
+}>Sign Up</Button> */}
     </div>
   )
 }
