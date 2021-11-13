@@ -1,3 +1,5 @@
+import React from "react"
+
 import {
   BrowserRouter,
   ReactDOM,
@@ -7,10 +9,9 @@ import {
   withRouter,
   useHistory } 
   from "react-router-dom";
-
+  import { Navbar, Nav, Form, FormControl, Button, NavItem } from 'react-bootstrap';
 // import { Route ,Link, withRouter} from 'react-router-dom';
-import {username} from "../data/Mock"
-import Button from 'react-bootstrap/Button';
+
 import logo from '../data/logo.png';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -26,10 +27,6 @@ import Login from "./Login";
 // import UnauthenticatedApp from "./components/UnauthenticatedApp";
 // Data
 import ProductList from './ProductList';
-
-const test=()=>
-console.log("testing")
-
 
 
 function Bar({ currentUser, setCurrentUser }) {
@@ -58,26 +55,42 @@ function Bar({ currentUser, setCurrentUser }) {
         }
 
 
+      function print(test)
+      {
+        console.log(test)
+      }
+
   return (
       <Container className="center-horizontal">
             <Row >
                     <Col>    
 
-                    <a className="btn btn-danger" href="/">    Home    </a>
+                    {/* <a className="btn btn-danger" href="/">    Home    </a> */}
+                 
+                    
 
                       {/* <Button className="dark" type="button" onClick={routeChange} >Home</Button>{' '} */}
                       <Button variant="info"> <img src={logo} className="App-logo" alt="logo" /></Button>{' '}
-                      <Button variant="warning" onClick={test}  >Join</Button>{' '}
-                      <Button variant="info" onClick={test}>About Us</Button>
+                      
+                      <a className="btn btn-danger"  href="/register" onClick= {print("/register")}>    Join Link  </a>
+                      
+                      
+                      <Button variant="info" onClick={print('about us')}>About Us</Button>
                       <Button variant="success">Shop</Button>{' '}
                   
                       {/* <Button variant="danger"onClick={routeDealsChange}>Deals</Button> {' '} */}
                       <Button variant="warning">Sale2Stores2</Button>{' '}
                       <Button variant="dark">Stores</Button>{' '}
-                      <Button variant="success">Customer Service</Button>{' '}
-                      <Button variant="info" href="#">{username}</Button> 
+                      <Button variant="success">Customer Service</Button>
+                    
                       {/* <Button variant="info" href="#">"UserName"</Button>  */}
                       {/* <Button type="submit">{authorized}</Button> */}
+                
+                      {/* (currentUser ? 
+                      <Button variant="info" href="/me">{currentUser.first_name}</Button> 
+                      :
+                      <Button variant="warning" onClick={print('join')} > Join </Button>{' '}) 
+               */}
                       <Button type="submit">AddState</Button>
                     </Col>
             </Row>

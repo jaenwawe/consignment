@@ -1,16 +1,15 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { useState , useEffect} from "react";
 import '../style/App.css';
 import "../style/index.css";
-import MainRoutes from "./MainRoutes"
+
 import AuthenticatedApp from "./AuthenticatedApp"
 import UnauthenticatedApp from "./UnAuthenticatedApp";
-import ProductList from "./ProductList"
-import About from "./About"
-import Login from "./Login"
-import Register from "./Register";
+
+
+
+
 import Bar from "./Bar"
 import Profile from "./Profile"
 import OrdersPage from "./OrdersPage"
@@ -35,53 +34,22 @@ function App() {
       })
   }, []);
 
-  if(!authChecked) { return <UnauthenticatedApp setCurrentUser={setCurrentUser}/> }
+  if(!authChecked) { return <></> }
   return (
-    <div>
-        <Bar currentUser={currentUser}  setCurrentUser={setCurrentUser}/>
-        <Login currentUser={currentUser} setCurrentUser={setCurrentUser} />
+  
+        // <Bar currentUser={currentUser}  setCurrentUser={setCurrentUser}/>
+
         
         <BrowserRouter>
-        <Route path="/about">
-              <About />
-            </Route>
-          
-          <Route path="/">
-          {currentUser ? 
+            <Route path="/">
+            {currentUser ? 
               (<AuthenticatedApp setCurrentUser={setCurrentUser} currentUser={currentUser}/>) 
               : 
-              (<UnauthenticatedApp setCurrentUser={setCurrentUser}/>)
+              (<UnauthenticatedApp title={title}  setTitle={setTitle}  setCurrentUser={setCurrentUser}/>)
             }
-          </Route>
-          <Route path="/login">
-              <Login />
-
               </Route>
-                <Route path="/profile">
-              <Profile />
-             
-              </Route>
-                <Route path="/orders">
-              <OrdersPage />
-
-            </Route>
-
-            <Route path="/register">
-              <Register />
-
-           
-            </Route>
-          
-
       </BrowserRouter>
 
-
-
-
-      {/* <MainRoutes currentUser={currentUser} setCurrentUser = {setCurrentUser} /> */}
-      <ProductList title={"Welcome to Styles"} setTitle={setTitle}/>
-    </div>
-    
     );
   }
   export default App;

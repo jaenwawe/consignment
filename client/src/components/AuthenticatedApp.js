@@ -21,7 +21,7 @@ import OrdersPage from "./OrdersPage";
 import Cart from "./Cart";
 
 
-function AuthenticatedApp({ currentUser, setCurrentUser, title, setTitle}) {
+function AuthenticatedApp({ currentUser, setCurrentUser, title= "Authenticated App", setTitle}) {
 
     const [orderArr, setOrdersArr] = useState([])
     const [isOrderAdded, setIsOrderAdded] = useState(false)
@@ -84,6 +84,8 @@ function AuthenticatedApp({ currentUser, setCurrentUser, title, setTitle}) {
 
 
   return (
+    <BrowserRouter>
+    <h1>Authenticated Site</h1>
     <div className="App">  
     <div className="app-body">
       <header className="App-header">
@@ -93,21 +95,25 @@ function AuthenticatedApp({ currentUser, setCurrentUser, title, setTitle}) {
   
 
 
-      <Switch>
+
         <Route exact path="/" component={ProductList}/>
         <Route>
           <Registered setCurrentUser={setCurrentUser} currentUser = {currentUser}/>
          </Route>
-         
            <Route>
           {/* <Login setCurrentUser={setCurrentUser} currentUser = {currentUser}/> */}
          </Route>
-
         <Route path="/products">
             <ProductList title={"Deals on Styles"} setTitle={setTitle}/>
         </Route>
+        <Route path="/profile">
+              <Profile />
+              </Route>
+                <Route path="/orders">
+              <OrdersPage />
+            </Route>
 
-        </Switch>
+
 
 
      
@@ -123,10 +129,10 @@ function AuthenticatedApp({ currentUser, setCurrentUser, title, setTitle}) {
 
  </div>
  </div>
+ </BrowserRouter>
     )
 }
 
 
 
 export default AuthenticatedApp;
-

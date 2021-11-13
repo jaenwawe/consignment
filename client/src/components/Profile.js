@@ -1,7 +1,7 @@
 import {made_image} from "../data/Mock"
 
 
-function Profile () {
+function Profile ({currentUser, setCurrentUser }) {
     return (<div>
 
      
