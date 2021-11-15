@@ -78,12 +78,16 @@ puts "Done seeding products"
 puts "Seeding Orders"
 10.times do
     o = Order.create!(      
-            total: rand(3..600),
+            total: rand(0..600),
             pay_method: payments_accepted.sample,
             user_id: users.sample.id
    
     )
     orders<<o
+
+ 
+
+
 end
 
 puts "Seeding orders done!"

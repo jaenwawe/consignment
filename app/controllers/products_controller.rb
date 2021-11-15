@@ -79,7 +79,7 @@ class ProductsController < ApplicationController
       
       private
             def product_params
-              params.permit(:Productname, :password, :email, :first_name, :last_name, :phone_number, :address, :state, :zipcode, :store)        
+              params.permit(:user_id, :order_item, :category, :size, :price, :photo, :review_stars, :review)        
             end
             
             def not_current_product

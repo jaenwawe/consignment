@@ -4,7 +4,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 
 
-function Login({currentUser, setCurrentUser, handleLogin, setEmail, email, setPassword, password }) {
+function Login({currentUser, setCurrentUser, handleLogin, setEmail, email, setPassword, password, order, setOrder }) {
   const history = useHistory()
       
   return (
@@ -17,7 +17,7 @@ function Login({currentUser, setCurrentUser, handleLogin, setEmail, email, setPa
                 <input type="email" 
                 name="email" 
                 value={email}
-                onChange={(e) => setEmail(e.target.value)} className="form-control" id="inputEmail" ></input>
+                onChange={(e) => setEmail(e.target.value)} className="form-control" id="inputemail" ></input>
             </label>
             <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
         </div>
@@ -25,7 +25,7 @@ function Login({currentUser, setCurrentUser, handleLogin, setEmail, email, setPa
             <label  className="form-label">Password
                 <input type="password" name="password" 
                 value={password}
-              onChange={(e) => setPassword(e.target.value)} className="form-control" id="inputpassword"></input>
+                onChange={(e) => setPassword(e.target.value)} className="form-control" id="inputpassword"></input>
             </label>
         </div>
         {/* <div class="mb-3 form-check">

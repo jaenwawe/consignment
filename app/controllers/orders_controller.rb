@@ -1,6 +1,6 @@
 class OrdersController < ApplicationController
     skip_before_action :confirm_authentication, only: [:create]
-    before_action :set_order, only: [:show, :update, :destroy]
+    # before_action :set_order, only: [:show, :update, :destroy]
     
     def index    
       render json: Order.all, each_serializer: OrderSerializer  
@@ -69,7 +69,7 @@ class OrdersController < ApplicationController
   
   private
         def order_params
-          params.permit(:first_name, :last_name, :ordername, :password, :password_confirmation, :email,  :phone_number, :address, :state, :zipcode, :gender, :store_name, :store)        
+          params.permit(:user_id, :pay_method, :total)        
         end
         
         def not_current_order

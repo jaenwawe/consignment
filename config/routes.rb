@@ -16,13 +16,17 @@ Rails.application.routes.draw do
   post "/register", to: "users#create"
   delete "/logout", to: "sessions#destroy"
   get "/orders", to: "orders#index"
-  
+ 
+  post "/orders", to: "orders#index"
   post "/orders", to: "orders#create"
   patch "/orders", to: "orders#update"
   delete "/orders", to: "orders#destroy"
   get "/orders", to: "orders#current_order"
 
-  post "/sale", to: "products#create" 
+  # post "/sale", to: "products#create" 
+  post "/products/add", to: "products#create" 
+
+  
   get "sale/:id", to: "products#show"
 
 end

@@ -17,7 +17,7 @@ function AddProduct({ productArr,setProductArr, user_id, order_id}) {
   const handleAddProduct = (event) => 
   {
       event.preventDefault()
-      fetch('/sale', {
+      fetch('/products/add', {
       method: 'POST',
       headers: {
           'Content-Type': 'application/json'
@@ -47,7 +47,7 @@ function AddProduct({ productArr,setProductArr, user_id, order_id}) {
 
   return (
 
-    <form name="/sale"  className="center-form" onSubmit={handleAddProduct}>
+    <form name=""  className="center-form" onSubmit={handleAddProduct}>
    
     <label className="form-label" for="formBasicCategory">Category</label>
       <input 

@@ -1,6 +1,11 @@
 import React from "react";
 import { useState , useEffect} from "react";
+import { BrowserRouter as Router } from "react-router-dom";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { useHistory } from "react-router-dom";
+//import { Route , withRouter} from 'react-router-dom';
+
+
 
 import '../style/App.css'
 import "../style/index.css"
@@ -8,22 +13,24 @@ import "../style/index.css"
 import AuthenticatedApp from "./AuthenticatedApp"
 import UnauthenticatedApp from "./UnAuthenticatedApp"
 
-import { useHistory } from 'react-router-dom'
+
 
 function App() {
 
-  const [currentUser, setCurrentUser] = useState("")
+  const [currentUser, setCurrentUser] = useState(null)
   const [authChecked, setAuthChecked] = useState(false)
   const [title, setTitle] = useState("")
-  const [currentOrder, setCurrentOrder] = useState("")
+  const [orderArr, setorderArr] = useState("")
   const [productArr, setProductArr]=useState([])
   const [productAdded, setProductAdded] = useState(null)
-  const history = useHistory()
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
+  const [order, setOrder]= useState(null)
+  const [pay_method, setPay_method] = useState('')
+  const [total, setTotal] = useState(0)
 
-  let currentUserID = currentUser.id
-  let currentProductID = currentOrder.currentProductid
+
+  const history = useHistory()
 
 
   useEffect(() => {
@@ -33,7 +40,7 @@ function App() {
           resp.json().then(user => {
             setCurrentUser(user)
             setAuthChecked(true)
-            setCurrentOrder(currentOrder)
+            setOrder(order)
           })
         } else {
           setAuthChecked(true)
@@ -56,7 +63,13 @@ function App() {
           res.json().then(user => {
             console.log(user)
             setCurrentUser(user)
-            // history.push("/")   causes type error
+           // user_id = user.id
+            createOrder(total, pay_method, user.id)         
+             history.push("/")  // causes type error
+
+
+
+
           })
         } else {
           res.json().then(errors => {
@@ -65,6 +78,45 @@ function App() {
         }
       })
   }
+
+
+ function createOrder(total, pay_method, user_id)
+ {
+  console.log(user_id)
+  console.log(pay_method)
+  console.log(total)
+
+    // event.preventDefault()
+    // useEffect(() => {
+    fetch('/orders', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        total,
+        pay_method,
+        user_id 
+      })
+    })
+      .then(res => {
+        if (res.ok) {
+          res.json().then(order => {
+            console.log(order)
+            setOrder(order.id)
+          })
+        } else {
+          res.json().then(errors => 
+          console.error(errors)
+          )
+          // })
+        }
+        // },[])
+    })
+   }
+  
+    
+
 
     
   function handleLogOut(currentUserId) {
@@ -134,5 +186,26 @@ useEffect(() => {
       
     )
 }
+
+
+
+//Login will work sometimes, but always has this error
+
+// Unhandled Rejection (TypeError): Cannot read properties of undefined (reading 'push')
+// (anonymous function)
+// src/components/App.js:63
+//   60 |   res.json().then(user => {
+//   61 |     console.log(user)
+//   62 |     setCurrentUser(user)
+// > 63 |      history.push("/")  // causes type error
+//      | ^  64 |   })
+//   65 | } else {
+//   66 |   res.json().then(errors => {
+
+
+  //https://stackoverflow.com/questions/44009618/uncaught-typeerror-cannot-read-property-push-of-undefined-react-router-dom
+  //export default withRouter(App); 
   
+
+
   export default App;

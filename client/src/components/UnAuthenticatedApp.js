@@ -19,8 +19,17 @@ import logo from '../data/logo.png';
 function UnAuthenticatedApp ({ title= "Unauthenticated Site", setTitle, currentUser, setCurrentUser, handleLogin, setEmail, email, setPassword, password, productArr, setProductArr }){
     return(
     <BrowserRouter>
-      <Switch>
-    
+      <div id= 'Navbar-container'>
+        <NavBar currentUser={currentUser} setCurrentUser={setCurrentUser} title={title} setTitle={setTitle} />
+        <h1>Welcome to Styles!</h1>
+        <Login currentUser={currentUser} setCurrentUser={setCurrentUser} handleLogin={handleLogin} setEmail={setEmail} email={email} password={password} setPassword={setPassword}/>
+        <ProductList title={"Welcome to Styles"} setProductArr={productArr}productArr={productArr}/>
+    </div>
+    <Switch>
+    <Route path="/about">
+            <About />
+          </Route>
+
           <Route path="/about">
             <About />
           </Route>
@@ -36,15 +45,7 @@ function UnAuthenticatedApp ({ title= "Unauthenticated Site", setTitle, currentU
               <ProductList title={"Deals on Styles"} />
             </Route>
 
-    <div id='Homeish'>
-      <div id= 'Navbar-container'>
-        <NavBar currentUser={currentUser} setCurrentUser={setCurrentUser} title={title} setTitle={setTitle} />
-      </div>
-      <h1>Unauthenticated Site</h1>
-      <Login currentUser={currentUser} setCurrentUser={setCurrentUser} handleLogin={handleLogin} setEmail={setEmail} email={email} password={password} setPassword={setPassword}/>
-      <ProductList title={"Welcome to Styles"} setProductArr={productArr}productArr={productArr}/>
  
-    </div>
       </Switch>
     </BrowserRouter>
     )

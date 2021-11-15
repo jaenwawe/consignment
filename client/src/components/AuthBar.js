@@ -42,14 +42,14 @@ function AuthBar(title,setTitle, setCurrentUser, currentUser,handleLogout) {
             About
         </NavLink>
 
-        <NavLink
+        {/* <NavLink
           to="/register"
           style={linkStyles}
           activeStyle={{
             background: "darkblue",
           }}>
             Sign Up
-        </NavLink>
+        </NavLink> */}
     
         <NavLink
           to="/sale"

@@ -10,14 +10,16 @@ import Logout from './Logout';
 import About from "./About"
 import OrdersBooked from "./OrdersBooked";
 import Cart from "./Cart";import Order from "./OrdersCard.js";
+import App from "./App";
 
 
 
 
-function AuthenticatedApp({productArr, setProductArr,currentUser, setCurrentUser, title, setTitle, handleLogOut, handleLogin, setEmail, email, password, setPassword}) {
+function AuthenticatedApp({productArr, setProductArr,currentUser, setCurrentUser, title, setTitle, handleLogOut, handleLogin, setEmail, email, password, setPassword,order, setOrder}) {
 
 
     const [product, setProduct] = useState(null)
+   // const[order, setOrder]= useState("") move to App where login in
     const [cartProductsArr, setCartProductsArr] = useState([])
     const [orderArr, setOrdersArr] = useState([])
     const [isOrderAdded, setIsOrderAdded] = useState(false)
@@ -87,16 +89,16 @@ function AuthenticatedApp({productArr, setProductArr,currentUser, setCurrentUser
 
   return (
     <BrowserRouter>
-      <Switch>
-        <div id='Homeish'>
+       <div id='Homeish'>
                 <div id= 'Navbar-container'>
                     <AuthBar currentUser={currentUser} setCurrentUser={setCurrentUser} title={title} setTitle={setTitle} handleLogOut={handleLogOut}/>
                 </div>
                 <h1>Welcome {currentUser.first_name} </h1>
                 <ProductList title={`Welcome to Styles ${currentUser.first_name}`}  productArr={productArr} />
         </div>
+      <Switch>
+        <Route exact path="/" component={App}/>
         
-        <Route exact path="/" component={ProductList}/>
         <Route>
             <Registered setCurrentUser={setCurrentUser} currentUser = {currentUser}/>
         </Route>
@@ -122,7 +124,7 @@ function AuthenticatedApp({productArr, setProductArr,currentUser, setCurrentUser
         
         
     
-        <Route path="/sale">
+        <Route path="/products/add">
             <AddProduct 
             productArr={productArr}  
             setProductArr={setProductArr}  
@@ -130,6 +132,15 @@ function AuthenticatedApp({productArr, setProductArr,currentUser, setCurrentUser
             order_id={order_id} 
             />
         </Route>
+
+        {/* <Route path="/products/:id">
+            <ProductDetails
+            productArr={productArr}  
+            setProductArr={setProductArr}  
+            user_id={user_id} 
+            order_id={order_id} 
+            />
+        </Route> */}
 
         
         <Route path="/orders">
