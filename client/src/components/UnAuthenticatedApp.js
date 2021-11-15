@@ -1,46 +1,52 @@
+import React, { useState, useEffect } from "react";
+import { BrowserRouter, Route, Switch, useHistory } from "react-router-dom";
 import ReactDOM from "react-dom";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
-import { useState , useEffect} from "react";
 import Button from "@restart/ui/esm/Button";
 
 
 
 import Login from "./Login";
+import Logout from "./Logout"
 import Register from "./Register";
 import About from "./About"
-import Bar from "./Bar";
+import NavBar from "./NavBar";
 import ProductList from './ProductList';
+import logo from '../data/logo.png';
 
-function UnAuthenticatedApp ({ title= "Unauthenticated Site", setTitle, currentUser, setCurrentUser }){
+
+
+
+function UnAuthenticatedApp ({ title= "Unauthenticated Site", setTitle, currentUser, setCurrentUser, handleLogin, setEmail, email, setPassword, password, productArr, setProductArr }){
     return(
-<BrowserRouter>
-<Login currentUser={currentUser} setCurrentUser={setCurrentUser} />
-<h1>Unauthenticated Site</h1>
-        <Route path="/about">
-              <About />
-            </Route>
+    <BrowserRouter>
+      <Switch>
+    
+          <Route path="/about">
+            <About />
+          </Route>
           <Route path="/login">
               <Login />
             </Route>
 
             <Route path="/register">
               <Register />
-            </Route>           
-            <Route path="/login">
-              <Login />
+            </Route>      
+          
+            <Route path="/styles">
+              <ProductList title={"Deals on Styles"} />
             </Route>
-            <Route path="/register">
-              <Register />
-            </Route>
-            <Route path="/products">
-            <ProductList title={"Deals on Styles"} setTitle={setTitle}/>
-        </Route>
 
-
-            <ProductList title={"Welcome to Styles"} setTitle={setTitle}/>
-
-      </BrowserRouter>
-
+    <div id='Homeish'>
+      <div id= 'Navbar-container'>
+        <NavBar currentUser={currentUser} setCurrentUser={setCurrentUser} title={title} setTitle={setTitle} />
+      </div>
+      <h1>Unauthenticated Site</h1>
+      <Login currentUser={currentUser} setCurrentUser={setCurrentUser} handleLogin={handleLogin} setEmail={setEmail} email={email} password={password} setPassword={setPassword}/>
+      <ProductList title={"Welcome to Styles"} setProductArr={productArr}productArr={productArr}/>
+ 
+    </div>
+      </Switch>
+    </BrowserRouter>
     )
 };
 export default UnAuthenticatedApp;

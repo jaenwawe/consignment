@@ -23,6 +23,9 @@ body, html {
   }
 
 
+.Navbar-container{
+  display: "inline-block";
+}
 .App-logo {
   line-height: 1.5;
   max-height: 2.5vmin;

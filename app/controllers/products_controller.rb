@@ -1,6 +1,6 @@
 class ProductsController < ApplicationController
         skip_before_action :confirm_authentication, only: [:index, :create, :update, :destroy]
-        before_action :set_product, only: [:show, :update, :destroy]
+        # before_action :set_product, only: [:show, :update, :destroy]
         
         def index    
           render json: Product.all, each_serializer: ProductSerializer  

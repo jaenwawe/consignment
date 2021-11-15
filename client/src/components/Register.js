@@ -1,6 +1,6 @@
-import { useState } from 'react'
-import { useHistory } from 'react-router-dom'
 
+import { useHistory } from 'react-router-dom'
+import { useState,useEffect } from 'react'
 
 
 function Register({setCurrentUser, currentUser}) {
@@ -18,7 +18,7 @@ function Register({setCurrentUser, currentUser}) {
   const [store_name, setStoreName] = useState("");
   const [store, setIsStore] = useState(false);
 
-  const handleSubmit = (event) => 
+  const handleRegister = (event) => 
   {
       event.preventDefault()
       fetch('/register', {
@@ -41,74 +41,22 @@ function Register({setCurrentUser, currentUser}) {
         store
        })
       })
-          .then(res => {
-              if (res.ok) {
-              res.json().then(user => {
-                  setCurrentUser(user)
-                  history.push("/")
-             
-              })
-              } else {
-                res.json().then(errors => {
-                  console.error(errors)
-              })
-              }
+        .then(res => {
+          if (res.ok) {
+          res.json().then(user => {
+              setCurrentUser(user)
+              history.push("/")
           })
+          } else {
+            res.json().then(errors => {console.error(errors)})
+            }
+        })
       }
-
-  // function handleGenderChange(event) {
-  //   setGender(event.target.value);
-  // }
-
-  // function handleStoreStatusChange(event) {
-  //   setIsStore(event.target.value);
-  // }
-
-  // function handleStoreNameChange(event) {
-  //   setStoreName(event.target.value);
-  // }
-
-
-
-  //   function handleFirstNameChange(event) {
-  //       setFirstName(event.target.value);
-  //     }
-    
-  //     function handleLastNameChange(event) {
-  //       setLastName(event.target.value);
-  //     }
-    
-  //     function handleEmailChange(event) {
-  //       setEmail(event.target.value);
-  //     }
-    
-  //     function handlePasswordChange(event) {
-  //       setPassword(event.target.value);
-  //     }
-    
-  //     function handleUserNameChange(event) {
-  //       setUsername(event.target.value);
-  //     }
-    
-  //     function handleNumberChange(event) {
-  //       setNumber(event.target.value);
-  //     }
-    
-  //     function handleAddressChange(event) {
-  //       setAddress(event.target.value);
-  //     }
-    
-  //     function handleStateChange(event) {
-  //       setState(event.target.value);
-  //     }
-    
-  //     function handleZipChange(event) {
-  //       setZip(event.target.value);
-  //     }
 
   return (
 
-   <form name="signup/register"  className="center-form" onSubmit={handleSubmit}>
+   <form name="signup/register"  className="center-form" onSubmit={handleRegister}>
+   
     <label className="form-label" for="formBasicPassword">First Name</label>
       <input 
       type="text"
@@ -117,9 +65,7 @@ function Register({setCurrentUser, currentUser}) {
       name = "first_name"
       placeholder="First name" 
       className="form-label"
-      >
-
-      </input>
+      ></input>
     <br/>
     <br/>
     
@@ -142,13 +88,10 @@ function Register({setCurrentUser, currentUser}) {
       placeholder="Email@message.com" 
       onChange={(e) => setEmail(e.target.value)} 
       // className="form-label"
-      >
-
-      </input>
+      ></input>
     <br/>
     <br/>
   
-
     <label className="form-label" for="formBasicPassword">Password</label>
     <input 
       type="password"
@@ -159,9 +102,7 @@ function Register({setCurrentUser, currentUser}) {
       className="form-label"></input>
     <br/>
     <br/>
-    <br/>
-    <br/>
-
+    
     <label className="form-label" for="formBasicPassword">User Name</label>
     <input 
       type="text"

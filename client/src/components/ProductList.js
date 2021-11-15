@@ -4,9 +4,9 @@ import ProductCard from './ProductCard';
 
 
 
-function ProductList(props) {
+function ProductList({productArr, setProductArr, title}) {
  
-    const [products, setProductArr] = useState([]);
+    // const [products, setProductArr] = useState([]);
     // products => props object
     // { products } => props.products
     
@@ -15,18 +15,18 @@ function ProductList(props) {
 
     
 useEffect(() => {
-    fetch("/products")
+    fetch("/styles")
       .then((response) => response.json())
-      .then((productArr) => setProductArr(productArr))
+      .then((products) => setProductArr)
       },[])
 
     
     return (
         
         <div className="product-list">
-            <h1>{props.title}</h1>
+        
             {
-                products.map(product => 
+                productArr.map(product => 
                 {
                     return (
                         <ProductCard 
@@ -34,10 +34,11 @@ useEffect(() => {
                         category={product.category}
                         photo={product.photo}
                         review={product.review}
-                        price={product.price}              />
-                        );
-                    })}
-                </div>
+                        price={product.price}/>         
+                    )
+                    })}  
+        </div>
+             
             );
         }
 

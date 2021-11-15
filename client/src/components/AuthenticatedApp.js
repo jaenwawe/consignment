@@ -1,34 +1,49 @@
-
-import React, { useState, 
-    useEffect } from "react";
-import { BrowserRouter, 
-    Route, 
-    Switch, 
-    useHistory } from "react-router-dom";
-
-
-import Bar from './Bar';
-import Registered from "./Login";
+import React, { useState, useEffect } from "react";
+import { BrowserRouter, Route, Switch, useHistory } from "react-router-dom";
+import AuthBar from './AuthBar';
+import Registered from "./Register";
 import ProductList from './ProductList';
-import Login from './Login';
-
-import ReactDOM  from "react-dom";
-import Profile from "./Profile";
-import Order from "./OrdersPage.js";
-// import Header from "./Header";
+import AddProduct from './AddProduct';
+import Profile from "./Profile"
+import OrdersPage from "./OrdersCard"
+import Logout from './Logout';
+import About from "./About"
 import OrdersBooked from "./OrdersBooked";
-import OrdersPage from "./OrdersPage";
-import Cart from "./Cart";
+import Cart from "./Cart";import Order from "./OrdersCard.js";
 
 
-function AuthenticatedApp({ currentUser, setCurrentUser, title= "Authenticated App", setTitle}) {
 
+
+function AuthenticatedApp({productArr, setProductArr,currentUser, setCurrentUser, title, setTitle, handleLogOut, handleLogin, setEmail, email, password, setPassword}) {
+
+
+    const [product, setProduct] = useState(null)
+    const [cartProductsArr, setCartProductsArr] = useState([])
     const [orderArr, setOrdersArr] = useState([])
     const [isOrderAdded, setIsOrderAdded] = useState(false)
     const [isOrderDeleted, setIsOrderDeleted] = useState(false)
     const [errorMessages, setErrorMessages] = useState([])
     const history = useHistory()
+    const user_id= currentUser.id
+    let order_id=Order.id
+ 
 
+
+    // function handleLogOut(currentUserID) {
+    //         fetch(`/logout/${currentUserID}`,{
+    //         method: "DELETE"
+    //     })
+    //     .then(resp => {
+    //         if (resp.ok) {
+    //             console.log(currentUser)
+    //             setCurrentUser(null)
+    //             history.push("/")
+    //         }
+    //     })
+    // }
+    
+    
+    
     useEffect(() => {
         fetch("/orders")
         .then(resp => resp.json())
@@ -66,71 +81,64 @@ function AuthenticatedApp({ currentUser, setCurrentUser, title= "Authenticated A
         })
         .then(data => setIsOrderDeleted(!isOrderDeleted))
     }
-    function handleLogout() {
-        fetch("/logout", {
-            method: "DELETE"
-        })
-        .then(resp => {
-            if (resp.ok) {
-                setCurrentUser(null)
-                history.push("/")
-            }
-        })
-    }
-
-
 
 
 
 
   return (
     <BrowserRouter>
-    <h1>Welcome {currentUser.first_name} </h1>
-    {console.log(currentUser)}
-    <div className="App">  
-    <div className="app-body">
-      <header className="App-header">
-       <Bar title={title} setTitle={setTitle}/> 
-      </header>
-     
-  
-
-
-
+      <Switch>
+        <div id='Homeish'>
+                <div id= 'Navbar-container'>
+                    <AuthBar currentUser={currentUser} setCurrentUser={setCurrentUser} title={title} setTitle={setTitle} handleLogOut={handleLogOut}/>
+                </div>
+                <h1>Welcome {currentUser.first_name} </h1>
+                <ProductList title={`Welcome to Styles ${currentUser.first_name}`}  productArr={productArr} />
+        </div>
+        
         <Route exact path="/" component={ProductList}/>
         <Route>
-          <Registered setCurrentUser={setCurrentUser} currentUser = {currentUser}/>
-         </Route>
-           <Route>
-          {/* <Login setCurrentUser={setCurrentUser} currentUser = {currentUser}/> */}
-         </Route>
-        <Route path="/products">
-            <ProductList title={"Deals on Styles"} setTitle={setTitle}/>
+            <Registered setCurrentUser={setCurrentUser} currentUser = {currentUser}/>
+        </Route>
+        <Route path="/logout" >
+            <Logout setCurrentUser={setCurrentUser} currentUser = {currentUser} handleLogOut={handleLogOut}  handleLogOut={handleLogOut} user_id={user_id}/>
+        </Route> 
+        <Route path="/about">
+            <About />
+        </Route>
+
+        <Route path="/styles">
+            <ProductList title={"Deals on Styles"} setProductArr={productArr}productArr={productArr}/>
+        </Route>
+            <Route path="/sale">
+            <AddProduct title={"Deals on Styles"} setTitle={setTitle}/>
+
+    
+    
         </Route>
         <Route path="/profile">
-              <Profile />
-              </Route>
-                <Route path="/orders">
-              <OrdersPage />
-            </Route>
-
-
-
-
-     
-       
-      {/* one tag get routerProperties
-      if two tags */}
-       {/* <Route exact path="/">
-          router propety  
-            <ProductList title={title} setTitle={setTitle}/>
-        </Route> */}
- 
+            <Profile />
+        </Route>
+        
+        
     
+        <Route path="/sale">
+            <AddProduct 
+            productArr={productArr}  
+            setProductArr={setProductArr}  
+            user_id={user_id} 
+            order_id={order_id} 
+            />
+        </Route>
 
- </div>
- </div>
- </BrowserRouter>
+        
+        <Route path="/orders">
+            <OrdersPage />
+        </Route>
+            
+        
+        </Switch>
+    </BrowserRouter>
     )
 }
 
