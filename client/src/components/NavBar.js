@@ -1,8 +1,13 @@
 import React from "react";
 import { NavLink} from "react-router-dom";
-import Button from 'react-bootstrap/Button'
+import { Route, Link, Switch, BrowserRouter as Router } from "react-router-dom";
+import { createBrowserHistory } from 'history';
 
+import Button from 'react-bootstrap/Button'
 import logo from '../data/logo.png';
+
+
+
 const linkStyles = {
     display: "inline-block",
   width: "120px",
@@ -13,7 +18,9 @@ const linkStyles = {
   color: "white",
 };
 
-function NavBar(title,setTitle, setCurrentUser, currentUser) {
+const history = createBrowserHistory();
+
+function NavBar({title,setTitle, setCurrentUser, currentUser,handleRegister}) {
   return (
     <div>
     <Button variant="info"> <img src={logo} className="App-logo" alt="logo" /></Button>{' '}
@@ -27,18 +34,17 @@ function NavBar(title,setTitle, setCurrentUser, currentUser) {
         /* add prop for activeStyle */
         activeStyle={{
           background: "darkblue",
-        }}
-      >
+        }}>
         Home
       </NavLink>
+
       <NavLink
         to="/about"
         exact
         style={linkStyles}
         activeStyle={{
           background: "darkblue",
-        }}
-      >
+        }}>
         About
       </NavLink>
 
@@ -48,10 +54,10 @@ function NavBar(title,setTitle, setCurrentUser, currentUser) {
         style={linkStyles}
         activeStyle={{
           background: "darkblue",
-        }}
-      >
+        }}>
         Sign Up
       </NavLink>
+      
       <NavLink
         to="/login"
         exact
@@ -61,15 +67,8 @@ function NavBar(title,setTitle, setCurrentUser, currentUser) {
         }}>
           Login
       </NavLink>
-      <NavLink
-        to="/about"
-        exact
-        style={linkStyles}
-        activeStyle={{
-          background: "darkblue",
-        }}>
-        Sale2Stores2
-      </NavLink>
+      
+        <Link to="/register" onClick={handleRegister}>Sign Up</Link> 
     
     </div>
   );

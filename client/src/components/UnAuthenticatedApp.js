@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter, Route, Switch, useHistory } from "react-router-dom";
+import { BrowserRouter, Route, Switch,Redirect, useHistory } from "react-router-dom";
 import ReactDOM from "react-dom";
 import Button from "@restart/ui/esm/Button";
 
@@ -11,8 +11,17 @@ import Register from "./Register";
 import About from "./About"
 import NavBar from "./NavBar";
 import ProductList from './ProductList';
-import logo from '../data/logo.png';
+import AddProduct from './AddProduct'
 
+import AuthBar from './AuthBar';
+import Profile from "./Profile"
+import OrdersPage from "./OrdersCard"
+import Order from "./OrdersCard.js";
+
+import OrdersBooked from "./OrdersBooked";
+import Cart from "./Cart";
+import App from "./App";
+import logo from '../data/logo.png';
 
 
 
@@ -22,31 +31,30 @@ function UnAuthenticatedApp ({ title= "Unauthenticated Site", setTitle, currentU
       <div id= 'Navbar-container'>
         <NavBar currentUser={currentUser} setCurrentUser={setCurrentUser} title={title} setTitle={setTitle} />
         <h1>Welcome to Styles!</h1>
-        <Login currentUser={currentUser} setCurrentUser={setCurrentUser} handleLogin={handleLogin} setEmail={setEmail} email={email} password={password} setPassword={setPassword}/>
-        <ProductList title={"Welcome to Styles"} setProductArr={productArr}productArr={productArr}/>
-    </div>
+      </div>
+   
     <Switch>
-    <Route path="/about">
-            <About />
-          </Route>
+    <Route 
+      exact path="/login" 
+      render={props => <Login setEmail={setEmail} setPassword={setPassword} handleLogin={handleLogin}/>} />
+    
+    <Route path="/register" component={Register} />
 
-          <Route path="/about">
-            <About />
-          </Route>
-          <Route path="/login">
-              <Login />
-            </Route>
 
-            <Route path="/register">
-              <Register />
-            </Route>      
-          
-            <Route path="/styles">
-              <ProductList title={"Deals on Styles"} />
-            </Route>
+       {/* <Route>
+            <Register setCurrentUser={setCurrentUser} currentUser = {currentUser}/>
+        </Route> */}
 
+      <Route path="/about" component={About} />
+
+          <Route path="/logout" component={Logout} />
+
+          <Route path="/sale">
+            <AddProduct title={"Deals on Styles"} setTitle={setTitle}/>
+        </Route>
  
       </Switch>
+      <ProductList title={"Welcome to Styles"} setProductArr={productArr}productArr={productArr}/>
     </BrowserRouter>
     )
 };
