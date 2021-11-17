@@ -14,8 +14,9 @@ function AddProduct({ productArr,setProductArr, user_id, order_id}) {
   const [review_stars, setReviewStars] = useState("");
   const [review, setReview] = useState("");
   
-  const handleAddProduct = (event) => 
+  const handleAddProduct = (event)=> 
   {
+    
       event.preventDefault()
       fetch('/products/add', {
       method: 'POST',
@@ -36,7 +37,8 @@ function AddProduct({ productArr,setProductArr, user_id, order_id}) {
         .then(res => {
           if (res.ok) {
           res.json().then(product => {
-            handleAddProduct(product)
+       
+            setProductArr([...productArr,product])
               history.push("/sale")
           })
           } else {
@@ -115,8 +117,8 @@ function AddProduct({ productArr,setProductArr, user_id, order_id}) {
       onChange={(e) => setReview(e.target.value)} 
       className="form-label"></input>
     <br/>
-    
-      <button type="submit" className="btn btn-primary">Submit</button>
+
+        <button type="submit" className="btn btn-primary">Submit</button>
     </form>
 
   )

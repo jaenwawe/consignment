@@ -119,8 +119,10 @@ function App() {
 
 
     
-  function handleLogOut(currentUserId) {
-        fetch(`/logout/${currentUserId}`,{
+  function handleLogOut(event) {
+
+
+        fetch(`/logout/${currentUser.id}`,{
         method: "DELETE"
     })
     .then(resp => {

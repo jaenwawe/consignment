@@ -67,9 +67,6 @@ function NavBar({title,setTitle, setCurrentUser, currentUser,handleRegister}) {
         }}>
           Login
       </NavLink>
-      
-        <Link to="/register" onClick={handleRegister}>Sign Up</Link> 
-    
     </div>
   );
 }

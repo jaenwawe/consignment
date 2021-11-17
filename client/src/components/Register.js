@@ -20,7 +20,7 @@ function Register({setCurrentUser, currentUser}) {
 
   const handleRegister = (event) => 
   {
-      event.preventDefault()
+   
       fetch('/register', {
       method: 'POST',
       headers: {
@@ -53,6 +53,7 @@ function Register({setCurrentUser, currentUser}) {
         })
       }
 
+      
   return (
 
    <form name="signup/register"  className="center-form" onSubmit={handleRegister}>
@@ -189,6 +190,8 @@ function Register({setCurrentUser, currentUser}) {
     checked={false}
     className="form-label"></input> 
 
+   {/* <Button onClick={ <Register currentUser={currentUser} setCurrentUser={setCurrentUser}/>
+}>Sign Up</Button> */}
       <button type="submit" className="btn btn-primary">Submit</button>
     </form>
 

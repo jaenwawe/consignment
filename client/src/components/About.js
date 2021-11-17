@@ -6,7 +6,7 @@ function About() {
     return (
 <div>
 
-     
+            console.log(About)
               <h2>About</h2>
               <h2>About Me</h2>
               <img src={made_image} alt="I made this" />

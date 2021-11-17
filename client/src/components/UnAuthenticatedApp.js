@@ -13,19 +13,8 @@ import NavBar from "./NavBar";
 import ProductList from './ProductList';
 import AddProduct from './AddProduct'
 
-import AuthBar from './AuthBar';
-import Profile from "./Profile"
-import OrdersPage from "./OrdersCard"
-import Order from "./OrdersCard.js";
 
-import OrdersBooked from "./OrdersBooked";
-import Cart from "./Cart";
-import App from "./App";
-import logo from '../data/logo.png';
-
-
-
-function UnAuthenticatedApp ({ title= "Unauthenticated Site", setTitle, currentUser, setCurrentUser, handleLogin, setEmail, email, setPassword, password, productArr, setProductArr }){
+function UnAuthenticatedApp ({ title= "Unauthenticated Site", setTitle, currentUser, setCurrentUser, handleLogin, setEmail, email, setPassword, password, productArr}){
     return(
     <BrowserRouter>
       <div id= 'Navbar-container'>
@@ -41,20 +30,25 @@ function UnAuthenticatedApp ({ title= "Unauthenticated Site", setTitle, currentU
     <Route path="/register" component={Register} />
 
 
-       {/* <Route>
+
+        <Route>
             <Register setCurrentUser={setCurrentUser} currentUser = {currentUser}/>
-        </Route> */}
+        </Route> 
 
       <Route path="/about" component={About} />
+      <ProductList title={"Welcome to Styles"} setProductArr={productArr}productArr={productArr}/>
 
-          <Route path="/logout" component={Logout} />
 
           <Route path="/sale">
             <AddProduct title={"Deals on Styles"} setTitle={setTitle}/>
+        
+
         </Route>
  
       </Switch>
       <ProductList title={"Welcome to Styles"} setProductArr={productArr}productArr={productArr}/>
+
+
     </BrowserRouter>
     )
 };

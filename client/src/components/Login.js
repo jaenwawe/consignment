@@ -35,8 +35,7 @@ function Login({currentUser, setCurrentUser, handleLogin, setEmail, email, setPa
         <button type="submit" className="btn btn-primary">Submit</button>
     </form>
     <h1> Click here to become a member </h1>
-    {/* <Button onClick={ <Register currentUser={currentUser} setCurrentUser={setCurrentUser}/>
-}>Sign Up</Button> */}
+ 
     </div>
     </BrowserRouter>
   )

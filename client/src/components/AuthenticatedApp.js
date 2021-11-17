@@ -4,12 +4,9 @@ import ReactDOM from "react-dom";
 import Button from "@restart/ui/esm/Button";
 
 
-
-import Login from "./Login";
 import Logout from "./Logout"
 import Register from "./Register";
 import About from "./About"
-import NavBar from "./NavBar";
 import ProductList from './ProductList';
 import AddProduct from './AddProduct'
 
@@ -18,10 +15,6 @@ import Profile from "./Profile"
 import OrdersPage from "./OrdersCard"
 import Order from "./OrdersCard.js";
 
-import OrdersBooked from "./OrdersBooked";
-import Cart from "./Cart";
-import App from "./App";
-import logo from '../data/logo.png';
 
 function AuthenticatedApp({productArr, setProductArr,currentUser, setCurrentUser, title, setTitle, handleLogOut, handleLogin, setEmail, email, password, setPassword,order, setOrder}) {
    const [product, setProduct] = useState(null)
@@ -73,8 +66,6 @@ function AuthenticatedApp({productArr, setProductArr,currentUser, setCurrentUser
         })
         .then(data => setIsOrderDeleted(!isOrderDeleted))
     }
-
-
 
 
   return (
