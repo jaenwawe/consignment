@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter, Route, Switch,Redirect, useHistory } from "react-router-dom";
 import ReactDOM from "react-dom";
-import Button from "@restart/ui/esm/Button";
 
 
 
 import Login from "./Login";
-import Logout from "./Logout"
 import Register from "./Register";
 import About from "./About"
 import NavBar from "./NavBar";

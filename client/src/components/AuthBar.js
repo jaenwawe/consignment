@@ -18,7 +18,7 @@ const linkStyles = {
   color: "white",
 };
 
-// const history = createBrowserHistory();
+ const history = createBrowserHistory();
 
 
 
@@ -26,41 +26,11 @@ const linkStyles = {
 
 
 
-function AuthBar(title,setTitle, setCurrentUser, currentUser,handleLogout) {
+function AuthBar(title,setTitle, setCurrentUser, currentUser,handleLogOut) {
 // function AuthBar(title,setTitle, setCurrentUser, currentUser,handleLogout, isLoggedIn) {
   
 const history = useHistory()
 
-
-
-
-  function handleLogOut(event) 
-  {
-      console.log(currentUser.id)
-       event.preventDefault()
-      let user_id = currentUser.id
-  
-      fetch('/logout/:user_id', {
-       method: 'DELETE',
-       headers: {
-       'Content-Type': 'application/json'
-       },
-       body: JSON.stringify(user_id)
-   })
-     .then(res => {
-       if (res.ok) {
-         res.json().then(user => {
-           console.log(`${user_id}` + ' ' + "logged out")
-           setCurrentUser(null)
-            history.push("/");
-         })
-       }else {
-           res.json().then(errors => {
-           console.error(errors)
-           })
-       }
-     })
-   }
 
    
    
@@ -69,7 +39,7 @@ const history = useHistory()
       <Button variant="info"> <img src={logo} className="App-logo" alt="logo" /></Button>{' '}
                   
         <NavLink
-          to="/"
+          to="/me"
           /* set exact so it knows to only set activeStyle when route is deeply equal to link */
           exact
           /* add styling to Navlink */
@@ -110,7 +80,10 @@ const history = useHistory()
             Logout
           </NavLink> */}
 
-        <Link to="/logout" onClick={handleLogOut}> Logout </Link> 
+        <Link to="/" onClick={handleLogOut}> Logout </Link> 
+          <button onClick= {handleLogOut}>Logout</button>
+          
+
 
       </div>
      

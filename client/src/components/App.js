@@ -1,7 +1,7 @@
 import React from "react";
+import ReactDOM from 'react-dom'
 import { useState , useEffect} from "react";
-import { BrowserRouter as Router } from "react-router-dom";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import {BrowserRouter, Route, Switch } from "react-router-dom";
 import { useHistory } from "react-router-dom";
 //import { Route , withRouter} from 'react-router-dom';
 
@@ -65,7 +65,8 @@ function App() {
             setCurrentUser(user)
            // user_id = user.id
             createOrder(total, pay_method, user.id)         
-             history.push("/")  // causes type error
+            //  history.push("/")  // causes type error
+             ReactDOM.render(<App/>, document.getElementById('root'))
 
 
 
@@ -113,6 +114,8 @@ function App() {
         }
         // },[])
     })
+
+    
    }
   
     
@@ -121,31 +124,27 @@ function App() {
     
   function handleLogOut(event) {
 
-
         fetch(`/logout/${currentUser.id}`,{
         method: "DELETE"
     })
     .then(resp => {
         if (resp.ok) {
-            console.log(currentUser)
-            setCurrentUser(null)
+       
+            setCurrentUser({})
             history.push("/")
         }else {
         resp.json().then(errors => {
           console.error(errors)
+          homeButton()
         })
       }
   })
 }
 
 
-
-
-
-// products => props object
-// { products } => props.products
-
-// http://localhost:3000/products
+function homeButton() {
+    history.push("/home");
+}
 
 
 

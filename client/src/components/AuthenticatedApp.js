@@ -14,6 +14,7 @@ import AuthBar from './AuthBar';
 import Profile from "./Profile"
 import OrdersPage from "./OrdersCard"
 import Order from "./OrdersCard.js";
+import App from "./App"
 
 
 function AuthenticatedApp({productArr, setProductArr,currentUser, setCurrentUser, title, setTitle, handleLogOut, handleLogin, setEmail, email, password, setPassword,order, setOrder}) {
@@ -70,20 +71,27 @@ function AuthenticatedApp({productArr, setProductArr,currentUser, setCurrentUser
 
   return (
     <BrowserRouter>
+    {currentUser 
+    ?
        <div id= 'Navbar-container'>
             <AuthBar currentUser={currentUser} setCurrentUser={setCurrentUser} title={title} setTitle={setTitle} handleLogOut={handleLogOut}/>
             <h1>Welcome {currentUser.first_name} </h1>
         </div>
+    : <App/>
+        }
       <Switch>
 
+
+
         <Route exact path="/logout" >
-            <Logout setCurrentUser={setCurrentUser}  user_id={currentUser.id}/>
+            <Redirect to="/" /> 
         </Route> 
 
         <Route path="/about" component={About} />
      
 
-        <Route path="/styles">
+        <Route path="/me">
+            <Profile />
             <ProductList title={"Deals on Styles"} setProductArr={productArr}productArr={productArr}/>
         </Route>
 
