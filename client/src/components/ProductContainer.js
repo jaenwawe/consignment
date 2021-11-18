@@ -3,7 +3,7 @@ import ProductCard from "./ProductCard";
 
 function ProductContainer({ products, renderUpdatedProduct }) {
   return (
-    <div id="product-collection">{products.map(product => <ProductCard product={product} renderUpdatedProduct={renderUpdatedProduct}/>)}</div>
+    <div className="grid-collection">{products.map(product => <ProductCard product={product} renderUpdatedProduct={renderUpdatedProduct}/>)}</div>
   );
 }
 

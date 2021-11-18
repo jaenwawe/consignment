@@ -83,9 +83,11 @@ function AuthenticatedApp({productArr, setProductArr,currentUser, setCurrentUser
 
 
 
-        <Route exact path="/logout" >
-            <Redirect to="/" /> 
+        <Route path="/logout" >
+            <Logout />
+            {/* <Redirect to="/" />  */}
         </Route> 
+        {/* <Route path="/logout" component={About} /> */}
 
         <Route path="/about" component={About} />
      

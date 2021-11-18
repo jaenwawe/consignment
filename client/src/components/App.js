@@ -114,8 +114,6 @@ function App() {
         }
         // },[])
     })
-
-    
    }
   
     
@@ -124,12 +122,13 @@ function App() {
     
   function handleLogOut(event) {
 
-        fetch(`/logout/${currentUser.id}`,{
+        // fetch(`/logout/${currentUser.id}`,{
+          fetch(`/logout`,{
         method: "DELETE"
     })
     .then(resp => {
         if (resp.ok) {
-       
+            // setCurrentUser(null)
             setCurrentUser({})
             history.push("/")
         }else {

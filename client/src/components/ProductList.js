@@ -12,7 +12,7 @@ function ProductList({productArr, setProductArr, title}) {
     
     // http://localhost:3000/products
     
-
+      // filter what has been added to cart product!=selectedProduct line 28
     
 useEffect(() => {
     fetch("/styles")
@@ -24,17 +24,17 @@ useEffect(() => {
     return (
         
         <div className="product-list">
-        
             {
                 productArr.map(product => 
                 {
                     return (
                         <ProductCard 
-                        key={product.id} 
+                        product_id={product.id} 
                         category={product.category}
                         photo={product.photo}
                         review={product.review}
-                        price={product.price}/>         
+                        price={product.price}
+                        />         
                     )
                     })}  
         </div>

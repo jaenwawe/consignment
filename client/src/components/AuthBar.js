@@ -70,6 +70,19 @@ const history = useHistory()
             Sale2
           </NavLink>
 
+
+          <NavLink
+            to="/logout"
+            style={linkStyles}
+            onClick= {handleLogOut}
+            activeStyle={{
+              background: "darkblue",
+            }}>
+            Logout
+          </NavLink>
+
+
+
           {/* <NavLink
             to="/logout"
             style={linkStyles}
@@ -80,8 +93,14 @@ const history = useHistory()
             Logout
           </NavLink> */}
 
-        <Link to="/" onClick={handleLogOut}> Logout </Link> 
-          <button onClick= {handleLogOut}>Logout</button>
+
+   
+
+{/* 
+        // <Link to="/" onClick={handleLogOut}> Logout </Link> 
+          <button onClick= {handleLogOut}>Logout</button> */}
+
+        {/* <a href=“#Logout” data-method=“delete” rel=“nofollow”/> */}
           
 
 
