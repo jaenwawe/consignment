@@ -14,7 +14,7 @@ import ProductList from './ProductList';
 import AddProduct from './AddProduct'
 
 
-function UnAuthenticatedApp ({ title= "Unauthenticated Site", setTitle, currentUser, setCurrentUser, handleLogin, setEmail, email, setPassword, password, productArr}){
+function UnAuthenticatedApp ({ title= "Unauthenticated Site", setTitle, currentUser, setCurrentUser, handleLogin, setEmail, setPassword, productArr}){
     return(
     <BrowserRouter>
       <div id= 'Navbar-container'>
@@ -24,10 +24,13 @@ function UnAuthenticatedApp ({ title= "Unauthenticated Site", setTitle, currentU
    
     <Switch>
     <Route 
-      exact path="/login" 
+      path="/login" 
       render={props => <Login setEmail={setEmail} setPassword={setPassword} handleLogin={handleLogin}/>} />
-    
+        <Route 
+      exact path="/" 
+      render={props => <Login setEmail={setEmail} setPassword={setPassword} handleLogin={handleLogin}/>} />
     <Route path="/register" component={Register} />
+    <Route path="/about" component={About} />
 
 
 
@@ -35,9 +38,10 @@ function UnAuthenticatedApp ({ title= "Unauthenticated Site", setTitle, currentU
             <Register setCurrentUser={setCurrentUser} currentUser = {currentUser}/>
         </Route> 
 
-      <Route path="/about" component={About} />
-      <ProductList title={"Welcome to Styles"} setProductArr={productArr}productArr={productArr}/>
+        
 
+      {/* <Route path="/about" component={About} /> */}
+  
 
           <Route path="/sale">
             <AddProduct title={"Deals on Styles"} setTitle={setTitle}/>
@@ -46,7 +50,7 @@ function UnAuthenticatedApp ({ title= "Unauthenticated Site", setTitle, currentU
         </Route>
  
       </Switch>
-      <ProductList title={"Welcome to Styles"} setProductArr={productArr}productArr={productArr}/>
+      <ProductList title={"Welcome to Styles"} setProductArr={productArr} productArr={productArr}/>
 
 
     </BrowserRouter>

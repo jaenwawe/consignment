@@ -25,7 +25,29 @@ function NavBar({title,setTitle, setCurrentUser, currentUser,handleRegister}) {
     <div>
     <Button variant="info"> <img src={logo} className="App-logo" alt="logo" /></Button>{' '}
                 
+     
+    <NavLink
+        to="/login"
+        exact
+        style={linkStyles}
+        activeStyle={{
+          background: "darkblue",
+        }}>
+          Login
+      </NavLink>
+
       <NavLink
+        to="/register"
+        exact
+        style={linkStyles}
+        activeStyle={{
+          background: "darkblue",
+        }}
+      >
+        Sign Up
+      </NavLink>
+      
+         <NavLink
         to="/"
         /* set exact so it knows to only set activeStyle when route is deeply equal to link */
         exact
@@ -38,35 +60,20 @@ function NavBar({title,setTitle, setCurrentUser, currentUser,handleRegister}) {
         Home
       </NavLink>
 
-      <NavLink
+
+<NavLink
         to="/about"
         exact
         style={linkStyles}
         activeStyle={{
           background: "darkblue",
         }}>
-        About
+          About
       </NavLink>
 
-      <NavLink
-        to="/register"
-        exact
-        style={linkStyles}
-        activeStyle={{
-          background: "darkblue",
-        }}>
-        Sign Up
-      </NavLink>
-      
-      <NavLink
-        to="/login"
-        exact
-        style={linkStyles}
-        activeStyle={{
-          background: "darkblue",
-        }}>
-          Login
-      </NavLink>
+
+
+    
     </div>
   );
 }
