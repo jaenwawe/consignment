@@ -17,7 +17,7 @@ import Order from "./OrdersCard.js";
 import App from "./App"
 
 
-function AuthenticatedApp({productArr, setProductArr,currentUser, setCurrentUser, title, setTitle, handleLogOut, handleLogin, setEmail, email, password, setPassword,order, setOrder}) {
+function AuthenticatedApp({addToCart, productArr, setProductArr,currentUser, setCurrentUser, title, setTitle, handleLogOut, handleLogin, setEmail, email, password, setPassword,order, setOrder}) {
    const [product, setProduct] = useState(null)
    // const[order, setOrder]= useState("") move to App where login in
     const [cartProductsArr, setCartProductsArr] = useState([])
@@ -117,7 +117,7 @@ function AuthenticatedApp({productArr, setProductArr,currentUser, setCurrentUser
             
         
         </Switch>
-        <ProductList title={`Welcome to Styles ${currentUser.first_name}`}  productArr={productArr} />
+        <ProductList addToCart={addToCart} title={`Welcome to Styles ${currentUser.first_name}`}  productArr={productArr} />
     </BrowserRouter>
     )
 }

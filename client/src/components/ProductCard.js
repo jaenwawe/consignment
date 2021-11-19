@@ -2,10 +2,15 @@ import React, {useState} from 'react';
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
 
-function ProductCard( {category = "deals",photo= "https://tinyurl.com/u4ffc999",review = "N/A",price}) {
+function ProductCard({data, addToCart}) {
     //  const[product, setProduct]= useState("")
     //  debugger
     // setProduct(props); 
+    const product = data
+
+    function handleClick(e) {
+        addToCart(product.id)
+    }
     
     return (
         // <div className="product">
@@ -20,13 +25,13 @@ function ProductCard( {category = "deals",photo= "https://tinyurl.com/u4ffc999",
 
 
     <Card className="product" style={{ width: '18rem'}}>
-    <Card.Img variant="top" src={photo} />
+    <Card.Img variant="top" src={product.photo} />
     <Card.Body>
-        <Card.Title>{category}</Card.Title>
+        <Card.Title>{product.category}</Card.Title>
         <Card.Text>
-        {review}
+        {product.review}
         </Card.Text>
-        <Button onclick={console.log("Order_Item Clicked")} 
+        <Button onClick={e => handleClick(e)} 
                 variant="primary">Buy
         </Button>
     </Card.Body>

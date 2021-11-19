@@ -4,7 +4,7 @@ import ProductCard from './ProductCard';
 
 
 
-function ProductList({productArr, setProductArr, title}) {
+function ProductList({addToCart, productArr, setProductArr, title}) {
  
     // const [products, setProductArr] = useState([]);
     // products => props object
@@ -14,32 +14,19 @@ function ProductList({productArr, setProductArr, title}) {
     
       // filter what has been added to cart product!=selectedProduct line 28
     
-useEffect(() => {
-    fetch("/styles")
-      .then((response) => response.json())
-      .then((products) => setProductArr)
-      },[])
+// useEffect(() => {
+//     fetch("/styles")
+//       .then((response) => response.json())
+//       .then((products) => setProductArr)
+//       },[])
 
+    let x = productArr.map(p =><ProductCard addToCart={addToCart} data={p}/>)
     
-    return (
-        
-        <div className="product-list">
-            {
-                productArr.map(product => 
-                {
-                    return (
-                        <ProductCard 
-                        product_id={product.id} 
-                        category={product.category}
-                        photo={product.photo}
-                        review={product.review}
-                        price={product.price}
-                        />         
-                    )
-                    })}  
-        </div>
-             
-            );
-        }
+    return (<div className="product-list">
+    {x}
+    </div>
+         
+        );
+    }
 
 export default ProductList;

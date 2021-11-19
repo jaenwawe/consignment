@@ -28,6 +28,13 @@ function App() {
   
   const [orderItemArr, setOrderItemArr] = useState([])
   const [orderItem, setOrderItem] = useState(null)
+
+  const [cart, setCart] = useState([])
+
+  function addToCart(id) {
+    setCart([...cart, id])
+    console.log(cart)
+  }
   
   const history = useHistory()
 
@@ -173,7 +180,7 @@ useEffect(() => {
             <Route path="/">
             {console.log(currentUser)}
             {currentUser ? 
-              (<AuthenticatedApp  setCurrentUser={setCurrentUser} currentUser={currentUser} productArr={productArr} setProductArr={setProductArr}
+              (<AuthenticatedApp  addToCart={addToCart} setCurrentUser={setCurrentUser} currentUser={currentUser} productArr={productArr} setProductArr={setProductArr}
                 handleLogOut={handleLogOut} productArr={productArr} setProductArr={setProductArr} />) 
               : 
               (<UnauthenticatedApp title={title}  setTitle={setTitle}  setCurrentUser={setCurrentUser} productArr={productArr} setProductArr={setProductArr} email= {email} setEmail={setEmail} password= {password} setPassword={setPassword} handleLogin={handleLogin}/>)
