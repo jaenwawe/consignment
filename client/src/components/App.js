@@ -3,9 +3,6 @@ import ReactDOM from 'react-dom'
 import { useState , useEffect} from "react";
 import {BrowserRouter, Route, Switch } from "react-router-dom";
 import { useHistory } from "react-router-dom";
-//import { Route , withRouter} from 'react-router-dom';
-
-
 
 import '../style/App.css'
 import "../style/index.css"
@@ -13,25 +10,26 @@ import "../style/index.css"
 import AuthenticatedApp from "./AuthenticatedApp"
 import UnauthenticatedApp from "./UnAuthenticatedApp"
 
-
-
 function App() {
 
   const [currentUser, setCurrentUser] = useState(null)
   const [authChecked, setAuthChecked] = useState(false)
-  const [title, setTitle] = useState("")
-  const [orderArr, setorderArr] = useState("")
-  const [productArr, setProductArr]=useState([])
-  const [productAdded, setProductAdded] = useState(null)
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
+  
+  const [orderArr, setorderArr] = useState([])
   const [order, setOrder]= useState(null)
   const [pay_method, setPay_method] = useState('')
   const [total, setTotal] = useState(0)
-
-
+  
+  const [productArr, setProductArr]= useState([])
+  const [productAdded, setProductAdded] = useState(null)
+  const [title, setTitle] = useState("")
+  
+  const [orderItemArr, setOrderItemArr] = useState([])
+  const [orderItem, setOrderItem] = useState(null)
+  
   const history = useHistory()
-
 
   useEffect(() => {
     fetch("/me")
@@ -40,7 +38,6 @@ function App() {
           resp.json().then(user => {
             setCurrentUser(user)
             setAuthChecked(true)
-            setOrder(order)
           })
         } else {
           setAuthChecked(true)

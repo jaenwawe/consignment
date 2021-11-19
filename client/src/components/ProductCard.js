@@ -26,7 +26,9 @@ function ProductCard( {category = "deals",photo= "https://tinyurl.com/u4ffc999",
         <Card.Text>
         {review}
         </Card.Text>
-        <Button variant="primary">Buy</Button>
+        <Button onclick={console.log("Order_Item Clicked")} 
+                variant="primary">Buy
+        </Button>
     </Card.Body>
     </Card>
 
