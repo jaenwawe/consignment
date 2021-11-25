@@ -3,7 +3,7 @@ import { useHistory } from 'react-router-dom'
 import { useState,useEffect } from 'react'
 
 
-function Register({setCurrentUser, currentUser}) {
+function Register({setCurrentUser, currentUser, setIsLoggedIn}) {
   const history = useHistory()
   const [first_name, setFirstName] = useState("");
   const [last_name, setLastName] = useState("");
@@ -45,6 +45,7 @@ function Register({setCurrentUser, currentUser}) {
           if (res.ok) {
           res.json().then(user => {
               setCurrentUser(user)
+              setIsLoggedIn(true)
               history.push("/")
           })
           } else {

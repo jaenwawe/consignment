@@ -1,5 +1,6 @@
 
-import NavBar from './NavBar';
+import NavBarLinks from './NavBarLinks';
+
 import AuthBar from './AuthBar';
 
 
@@ -12,7 +13,25 @@ function Header(isLoggedIn, setIsLoggedIn) {
           
           (isLoggedIn)
             ? <div> <AuthBar isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}/></div>  
-            : <div> <NavBar setIsLoggedIn={setIsLoggedIn}/> </div>
+            : <div> 
+                <NavBarContainer 
+                isLoggedIn={isLoggedIn} 
+                setIsLoggedIn={setIsLoggedIn} 
+                currentUser={currentUser} 
+                setCurrentUser={setCurrentUser} 
+                handleLogin={handleLogin} 
+                handleLogOut={handleLogOut}
+                setEmail={setEmail} 
+                email={email} 
+                setPassword={setPassword}
+                password
+                order
+                setOrder
+                setIsLoggedIn={setIsLoggedIn}/>
+              </div> 
+
+
+
          }
       </div>
     );

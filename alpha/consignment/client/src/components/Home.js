@@ -1,10 +1,10 @@
-import Header from "./Header";
+import Header from "./NavBarLinks";
 import React, {useState, useEffect} from 'react'
 import ProductList from "./ProductList";
 
 
 function Home() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false)
+  const [isLoggedIn, setIsLoggedIn] = useState(true)
   const [productIDCartArr, setProductIDInCartArr] = useState([])
   const [productArr, setProductArr]= useState([])
 
@@ -19,8 +19,8 @@ function Home() {
       },[])
 
       function addToProductArr(product) {
-        console.log(productArr)
         setProductArr([...product, ...productArr ])
+        console.log(productArr)
       }
       
 
