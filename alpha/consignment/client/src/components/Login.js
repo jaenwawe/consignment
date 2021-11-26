@@ -8,7 +8,7 @@ function Login({currentUser, setCurrentUser, handleLogin, setEmail, email, setPa
   const history = useHistory()
       
   return (
-    <BrowserRouter>
+
     <div>
       <h1>Login</h1>
     <form  onSubmit={handleLogin}>
@@ -28,16 +28,12 @@ function Login({currentUser, setCurrentUser, handleLogin, setEmail, email, setPa
                 onChange={(e) => setPassword(e.target.value)} className="form-control" id="inputpassword"></input>
             </label>
         </div>
-        {/* <div class="mb-3 form-check">
-            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-            <label class="form-check-label" for="exampleCheck1">Check me out</label>
-        </div> */}
+    
         <button type="submit" className="btn btn-primary">Submit</button>
     </form>
-    <h1> Click here to become a member </h1>
- 
+  
     </div>
-    </BrowserRouter>
+
   )
 }
 
