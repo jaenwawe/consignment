@@ -3,14 +3,27 @@ class UsersController < ApplicationController
     before_action :set_user, only: [:show, :update, :destroy]
     
     def index    
-      render json: User.all, each_serializer: UserIndexSerializer  
+      render json: User.all, each_serializer: UserSerializer  
     end
-  
+
+    def signup 
+        user=User.new(user_params)
+        if user.save
+          render json: user.name
+        if test
+           render json: {error: ""}, status: 401
+        else
+          
+        end
+        end
+    end
+
     def show
       if current_user
          render json: current_user, status: :ok
       else
         not_current_user
+        # render json: {error: "No active session"}, status: :unauthorized
       end 
     end
 
@@ -67,7 +80,7 @@ class UsersController < ApplicationController
   
   private
         def user_params
-          params.permit(:username, :password, :email, :first_name, :last_name, :phone_number, :address, :state, :zipcode, :store)        
+          params.permit(:first_name, :last_name, :username, :password, :password_confirmation, :email,  :phone_number, :address, :state, :zipcode, :gender, :store_name, :store)        
         end
         
         def not_current_user
@@ -82,7 +95,4 @@ class UsersController < ApplicationController
         def set_user
           @user = User.find(params[:id])
         end
-      
       end
-      
-  
