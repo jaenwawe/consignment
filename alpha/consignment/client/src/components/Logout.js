@@ -1,15 +1,8 @@
-// import Button from '@restart/ui/esm/Button'
-// import { useState } from 'react'
   import { useHistory } from 'react-router-dom'
 
-  import NavBar from './NavBar'
-  import ProductContainer from './ProductContainer'
-//   import UnauthenticatedApp from './UnauthenticatedApp' 
-  import App from './App'
-
-function Logout({ setLoggedIn, setCurrentUser,homeButton}) {
+function Logout({setIsLoggedIn, setCurrentUser,currentUser}) {
     const history = useHistory()
-    setLoggedIn(false)
+    setIsLoggedIn(false)
    
     function handleLogOut(event) {
 
@@ -25,7 +18,6 @@ function Logout({ setLoggedIn, setCurrentUser,homeButton}) {
         }else {
             resp.json().then(errors => {
             console.error(errors)
-            homeButton()
             })
         }
   })
@@ -34,8 +26,8 @@ function Logout({ setLoggedIn, setCurrentUser,homeButton}) {
  
 
     return( <div>
-    <h1>Logout</h1>
-          <Home/>
+    <h1>Logged out</h1>
+  
     </div>
 
     )

@@ -7,6 +7,7 @@ import {
 
 
 import NavBarLinks from "./NavBarLinks";
+import NavBarLinksUser from './NavBarLinksUser';
 import Login from "./Login";
 import Register from "./Register";
 
@@ -21,19 +22,10 @@ function NavBarContainer ({setEmail, email, setPassword, password,currentUser,se
       
     return(
       <div>
-   
-            <NavBarLinks setIsLoggedIn={setIsLoggedIn} /> 
+          {isLoggedIn
+          ? <NavBarLinksUser setIsLoggedIn={setIsLoggedIn}/>
+          : <NavBarLinks setIsLoggedIn={setIsLoggedIn} /> }
 
-
-           
-
-          {/* {isLoggedIn
-          ?  <Login 
-          currentUser={currentUser} setCurrentUser={setCurrentUser} 
-          handleLogin={handleLogin} 
-          setEmail={setEmail} email={email} 
-          setPassword={setPassword} password={password} isLoggedIn={false}/> 
-          : null} */}
 
         </div>
         

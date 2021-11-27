@@ -1,7 +1,12 @@
 import ProductCard from './ProductCard';
 
-function ProductContainer({handleProductIDInCartArr, productArr, addToCart}) {
-    let x = productArr.map(p => <ProductCard handleProductIDInCartArr={handleProductIDInCartArr} data={p}/>)
+function ProductContainer({setProductArr,productArr,setCartArr,cartArr}) {
+    let x = productArr.map(p => 
+                    <ProductCard  
+                    cartArr ={cartArr}
+                    productArr={productArr}
+                    setProductArr={setProductArr}
+                    data={p}/>)
     
     return (
         

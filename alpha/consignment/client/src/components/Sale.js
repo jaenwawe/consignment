@@ -5,14 +5,17 @@ import { useState,useEffect } from 'react'
 //I need to add to a product array
 // function Sale({ productArr,setProductArr, user_id, order_id}) {
 
-function Sale({user_id, order_id}) {
-  const history = useHistory()
+function Sale({currentUser, setProductArr, productArr, }) {
+
   const [category, setCategory] = useState("");
   const [size, setSize] = useState("");
   const [price, setPrice] = useState("");
   const [photo, setPhoto] = useState("");
   const [review_stars, setReviewStars] = useState(0);
   const [review, setReview] = useState("");
+
+  const history = useHistory()
+  let user_id = currentUser.id
 
 
   
@@ -26,19 +29,16 @@ function Sale({user_id, order_id}) {
       },
       body: JSON.stringify({
         user_id,
-        order_id, 
         category, 
         size, 
         price, 
-        photo, 
-        review_stars, 
-        review
+        photo
        })
       })
         .then(res => {
           if (res.ok) {
           res.json().then(product => {
-            // upDateProductArr(product)
+              setProductArr([product.id, ...productArr])
               history.push("/")
           })
           } else {

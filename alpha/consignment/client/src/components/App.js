@@ -11,6 +11,9 @@ import About from "./About";
 import Login from './Login';
 import Register from './Register';
 
+import Logout from './Logout';
+import Sale from './Sale';
+
 import ProductContainer from "./ProductContainer";
 
 
@@ -20,7 +23,6 @@ function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false)
   const [productArr, setProductArr]= useState([])
   const [cartArr, setCartArr] = useState([])
-
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [first_name, setFirstName] = useState("");
@@ -38,8 +40,7 @@ function App() {
   const [currentUser, setCurrentUser] = useState(null)
   const [orderArr, setorderArr] = useState([])
   const [order, setOrder]= useState(null)
-
-
+ 
   useEffect(() => {
     fetch("/styles")
       .then((response) => response.json())
@@ -50,13 +51,8 @@ function App() {
         setProductArr([...product, ...productArr ])
         console.log(productArr)
       }
-      
-
-      function handleProductIDInCartArr(product_id) {
-        setCartArr([product_id, ...cartArr ])
-        console.log(cartArr)
-      }
-      
+    
+  
           const handleLogin = (event) => {
           let total=0
           let pay_method=''
@@ -171,79 +167,92 @@ function App() {
         })
       }
       
-     
-  
-
-   
-     
-
-
   return(
-<div> 
-    <NavBarContainer 
-      isLoggedIn={isLoggedIn} 
-      setIsLoggedIn={setIsLoggedIn}
-      setCartArr= {setCartArr} 
-      cartArr= {setCartArr}
-      handleLogin={handleLogin}
-      currentUser={currentUser} 
-      setCurrentUser={setCurrentUser} 
-      setEmail={setEmail} 
-      email={email} 
-      setPassword={setPassword} 
-      password={password}
-      />
-        <Switch>
-                <Route path="/home">
-                    <Home />
-                </Route>
-                <Route path="/about">
-                    <About />
-                </Route>
-                <Route path="/login">
-                    <Login  
-                    handleLogin={handleLogin} 
-                    setIsLoggedIn={setIsLoggedIn}
-                    setEmail={setEmail}
-                    setPassword={setPassword} /> 
-                </Route>
+    <div> 
+          <NavBarContainer 
+            isLoggedIn={isLoggedIn} 
+            setIsLoggedIn={setIsLoggedIn}
+            setCartArr= {setCartArr} 
+            cartArr= {setCartArr}
+            handleLogin={handleLogin}
+            currentUser={currentUser} 
+            setCurrentUser={setCurrentUser} 
+            setEmail={setEmail} 
+            email={email} 
+            setPassword={setPassword} 
+            password={password}
+            />
+              <Switch>
+                      <Route path="/home"> <Home /> </Route>
+                      <Route path="/about"> <About /> </Route>
+                      <Route path="/login">
+                          <Login  
+                          handleLogin={handleLogin} 
+                          setIsLoggedIn={setIsLoggedIn}
+                          setEmail={setEmail}
+                          setPassword={setPassword} /> 
+                      </Route>
 
-                <Route path="/register">
-                  <Register 
-                  handleRegister={handleRegister}
-                  first_name={first_name}
-                  setFirstName={setFirstName}
-                  last_name={last_name}
-                  setLastName={setLastName}
-                  username={username}
-                  setUsername={setUsername}
-                  phone_number={phone_number}
-                  setNumber={setNumber}
-                  address={address}
-                  setAddress={setAddress}
-                  state={state}
-                  setState={setState}
-                  zipcode={zipcode}
-                  setZip={setZip}
-                  gender={gender}
-                  setGender={setGender}
-                  email={email}
-                  setEmail={setEmail}
-                  store={store}
-                  store_name={store_name}
-                  setStoreName={setStoreName}
-                  setIsStore={setIsStore}
-                  setPassword={setPassword}
-                  password={password} 
-                  /> 
-                </Route>
-            </Switch>
+                  
 
-    <ProductContainer 
-      setCartArr= {setCartArr}
-      productArr={productArr}
-      handleProductIDInCartArr={handleProductIDInCartArr}
-    />
-</div>)
+                      <Route path="/register">
+                        <Register 
+                        handleRegister={handleRegister}
+                        first_name={first_name}
+                        setFirstName={setFirstName}
+                        last_name={last_name}
+                        setLastName={setLastName}
+                        username={username}
+                        setUsername={setUsername}
+                        phone_number={phone_number}
+                        setNumber={setNumber}
+                        address={address}
+                        setAddress={setAddress}
+                        state={state}
+                        setState={setState}
+                        zipcode={zipcode}
+                        setZip={setZip}
+                        gender={gender}
+                        setGender={setGender}
+                        email={email}
+                        setEmail={setEmail}
+                        store={store}
+                        store_name={store_name}
+                        setStoreName={setStoreName}
+                        setIsStore={setIsStore}
+                        setPassword={setPassword}
+                        password={password} 
+                        /> 
+                      </Route>
+            
+              if(isLoggedIn && currentUser){
+                      <>
+              
+                      <Route path="/sale">
+                         <Sale  
+                         currentUser={currentUser} 
+                         setProductArr={setProductArr}/> 
+                      </Route>
+
+                      <Route path="/logout">
+                         <Logout  
+                         setCurrentUser={setCurrentUser}
+                         currentUser={currentUser} 
+                         setProductArr={setProductArr}
+                         setIsLoggedIn={setIsLoggedIn}
+                         /> 
+                      </Route> 
+                      </>   
+            }
+            
+                  </Switch>
+
+          <ProductContainer 
+            cartArr ={cartArr}
+            productArr={productArr}
+            setProductArr={setProductArr}
+          />
+
+  </div>)
 }
 export default App;
