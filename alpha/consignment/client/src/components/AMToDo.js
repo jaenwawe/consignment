@@ -1,3 +1,27 @@
+Proxy error: Could not proxy request /register from localhost:4000 to http://localhost:3000/.
+
+Post work via Postman http://localhost:3000/register
+
+{
+  "first_name": "abc",
+   "last_name": "123",
+"password": "abc123",
+   "email" : "j@gmail.com",
+   "username" : "jj",
+   "phone_number" : 213,
+   "address" : "93 m st",
+   "state" : "GA", 
+   "zipcode" : "03934",
+   "gender" : "F",
+   "store_name" : "nope",
+   "store" : false
+}
+
+See https://nodejs.org/api/errors.html#errors_common_system_errors for more information (ECONNRESET).
+
+
+
+
 // ToDo.js
 
 //  setIsLoggedIn
@@ -42,3 +66,12 @@
 
 
  
+
+
+
+<div>
+      {isLoggedIn
+        ? <LogoutButton onClick={this.handleLogoutClick} />
+        : <LoginButton onClick={this.handleLoginClick} />
+      }
+    </div>

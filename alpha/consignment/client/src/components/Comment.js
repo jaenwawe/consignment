@@ -1,19 +1,19 @@
-import React from "react";
-import {made_image} from "../data/Mock"
+// import React from "react";
+// import {made_image} from "../data/Mock"
 
 
-function Comment() {
-    return (
-    <div>
-      <img src={made_image} alt="I made this" />
-          <h2>Comment</h2>
+// function Comment() {
+//     return (
+//     <div>
+//       <img src={made_image} alt="I made this" />
+//           <h2>Comment</h2>
                 
-      </div>    
-    );
-  }
+//       </div>    
+//     );
+//   }
 
 
 
-  //index.js or index.html on in public folder  index.css
+//   //index.js or index.html on in public folder  index.css
   
-  export default Comment;
+//   export default Comment;

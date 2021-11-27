@@ -1,18 +1,19 @@
 import { useState } from 'react'
 import { useHistory } from 'react-router-dom'
-import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 
 
-function Login({currentUser, setCurrentUser, handleLogin, setEmail, email, setPassword, password, order, setOrder }) {
+
+function Login({currentUser, setCurrentUser, handleLogin, setEmail, email, setPassword, password}) {
   const history = useHistory()
       
   return (
 
     <div>
-      <h1>Login</h1>
+
     <form  onSubmit={handleLogin}>
-        <div className="mb-3">
+        <div className="mb-3" >
+
             <label className="form-label">Email address
                 <input type="email" 
                 name="email" 
@@ -33,6 +34,7 @@ function Login({currentUser, setCurrentUser, handleLogin, setEmail, email, setPa
     </form>
   
     </div>
+
 
   )
 }

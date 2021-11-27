@@ -1,5 +1,6 @@
 import React from "react";
-import { NavLink} from "react-router-dom";
+import { Link} from "react-router-dom";
+
 
 import { createBrowserHistory } from 'history';
 
@@ -26,55 +27,42 @@ function NavBarLinks (isLoggedIn, setIsLoggedIn)
     <div>
     <Button variant="info"> <img src={logo} className="App-logo" alt="logo" /></Button>{' '}
                 
-     
-    <NavLink
-        to="/login"
-        exact
-        style={linkStyles}
-        activeStyle={{
-          background: "darkblue",
-        }}>
-          Login
-      </NavLink>
+    <Link
+          to="/"
+          /* set exact so it knows to only set activeStyle when route is deeply equal to link */
+          /* add styling to Navlink */
+          style={linkStyles}
+          /* add prop for activeStyle */
+          activeStyle={{
+            background: "darkblue",
+          }}>
+          Home
+      </Link>
 
-      <NavLink
-        to="/register"
-        exact
-        style={linkStyles}
-        activeStyle={{
-          background: "darkblue",
-        }}
-      >
-        Sign Up
-      </NavLink>
       
-         <NavLink
-        to="/"
-        /* set exact so it knows to only set activeStyle when route is deeply equal to link */
-        exact
-        /* add styling to Navlink */
-        style={linkStyles}
-        /* add prop for activeStyle */
-        activeStyle={{
-          background: "darkblue",
-        }}>
-        Home
-      </NavLink>
-
-
-<NavLink
+    <Link
         to="/about"
-        exact
         style={linkStyles}
         activeStyle={{
           background: "darkblue",
         }}>
           About
-      </NavLink>
+      </Link>
+      
+      <Link to="/login" style={linkStyles} activeStyle={{ background: "darkblue"}}> Login </Link>
 
+      <Link
+        to="/register"
+        style={linkStyles}
+        activeStyle={{
+          background: "darkblue",
+        }}>
+        Sign Up
+      </Link>
+      
+  
 
-
-    
+   
     </div>
   );
 }

@@ -1,9 +1,12 @@
 
 import { useHistory } from 'react-router-dom'
-import { useState,useEffect } from 'react'
+import ReactDOM from 'react-dom'
+import { useState } from 'react'
+
+import NavBarContainer from './NavBarContainer';
 
 
-function Register({setCurrentUser, currentUser, setIsLoggedIn}) {
+function Register({createOrder, setCurrentUser, setIsLoggedIn}) {
   const history = useHistory()
   const [first_name, setFirstName] = useState("");
   const [last_name, setLastName] = useState("");
@@ -17,6 +20,8 @@ function Register({setCurrentUser, currentUser, setIsLoggedIn}) {
   const [gender, setGender] = useState("");
   const [store_name, setStoreName] = useState("");
   const [store, setIsStore] = useState(false);
+  let total=0
+  let pay_method=''
 
   const handleRegister = (event) => 
   {
@@ -44,9 +49,13 @@ function Register({setCurrentUser, currentUser, setIsLoggedIn}) {
         .then(res => {
           if (res.ok) {
           res.json().then(user => {
-              setCurrentUser(user)
-              setIsLoggedIn(true)
-              history.push("/")
+            setCurrentUser(user)
+            console.log(user)
+           // user_id = user.id
+           setIsLoggedIn(true)
+            createOrder(total, pay_method, user.id)        
+             ReactDOM.render(<NavBarContainer/>, document.getElementById('root'))
+
           })
           } else {
             res.json().then(errors => {console.error(errors)})
@@ -85,9 +94,9 @@ function Register({setCurrentUser, currentUser, setIsLoggedIn}) {
     <label className="form-label">Email address  </label>
     <input 
       type="email"
-      // name = "email" 
+       name = "email" 
       value={email}  
-      placeholder="Email@message.com" 
+      placeholder="ms@gmail.com" 
       onChange={(e) => setEmail(e.target.value)} 
       // className="form-label"
       ></input>

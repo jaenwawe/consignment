@@ -1,21 +1,21 @@
-import { useState,useEffect } from 'react'
+// import { useState,useEffect } from 'react'
 
-function ButtonUser (product) {
+// function ButtonUser (product) {
     
-    const [cartProductsArr, setCartProductsArr] =useState([])
+//     const [cartProductsArr, setCartProductsArr] =useState([])
     
-    function handleCart(product) 
-        {
-            setCartProductsArr([...cartProductsArr,product])
-        }
+//     function handleCart(product) 
+//         {
+//             setCartProductsArr([...cartProductsArr,product])
+//         }
 
-    return (
+//     return (
  
-    <button onClick={()=>this.handleCart(product)}>Add to Cart</button>
-  }
+//     <button onClick={()=>this.handleCart(product)}>Add to Cart</button>
+//   }
 
 
 
-  //index.js or index.html on in public folder  index.css
+//   //index.js or index.html on in public folder  index.css
   
-  export default AuthChecked;
+//   export default AuthChecked;

@@ -2,10 +2,9 @@ Rails.application.routes.draw do
   
   
   resources :order_items
-  resources :orders
-  resources :products
-  resources :users
-  # resources :users, only: [:index, :show, :create]
+  resources :products, except: [:index]
+  resources :users, except: [:create, :show]
+ 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
   get "/styles", to: "products#index"
