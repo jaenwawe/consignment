@@ -10,34 +10,33 @@ import NavBarLinks from "./NavBarLinks";
 import Login from "./Login";
 import Register from "./Register";
 
-function NavBarContainer ({handleLogin, cartArr,setCartArr, isLoggedIn,setIsLoggedIn,productIDCart,ArrproductArr}){
-  
-    
+import {Route} from 'react-router'
 
-
-
-    function addToCart(id) {
+function NavBarContainer ({setEmail, email, setPassword, password,currentUser,setCurrentUser,handleLogin, cartArr,setCartArr, isLoggedIn,setIsLoggedIn,productIDCart,ArrproductArr})
+{
+      function addToCart(id) {
         setCartArr([...cartArr, id])
         console.log(cartArr)
       }
       
-    
-
     return(
-        <Router>
-            
-            
-            
-            
-            <div>
-            <NavBarLinks setIsLoggedIn={setIsLoggedIn}/> 
-      
+      <div>
+   
+            <NavBarLinks setIsLoggedIn={setIsLoggedIn} /> 
+
+
+           
+
+          {/* {isLoggedIn
+          ?  <Login 
+          currentUser={currentUser} setCurrentUser={setCurrentUser} 
+          handleLogin={handleLogin} 
+          setEmail={setEmail} email={email} 
+          setPassword={setPassword} password={password} isLoggedIn={false}/> 
+          : null} */}
+
         </div>
-        </Router>)
-
+        
+        )
 };
-
-
-
-
-  export default NavBarContainer;
+export default NavBarContainer;

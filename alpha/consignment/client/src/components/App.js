@@ -11,24 +11,33 @@ import About from "./About";
 import Login from './Login';
 import Register from './Register';
 
-import ProductList from "./ProductList";
+import ProductContainer from "./ProductContainer";
 
 
 
 
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(true)
+  const [isLoggedIn, setIsLoggedIn] = useState(false)
   const [productArr, setProductArr]= useState([])
   const [cartArr, setCartArr] = useState([])
 
   const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')   
+  const [password, setPassword] = useState('')
+  const [first_name, setFirstName] = useState("");
+  const [last_name, setLastName] = useState("");
+  const [username, setUsername] = useState("");
+  const [phone_number, setNumber] = useState("");
+  const [address, setAddress] = useState("");
+  const [state, setState] = useState("");
+  const [zipcode, setZip] = useState("");
+  const [gender, setGender] = useState("");
+  const [store_name, setStoreName] = useState("");
+  const [store, setIsStore] = useState(false);   
 
 
   const [currentUser, setCurrentUser] = useState(null)
   const [orderArr, setorderArr] = useState([])
   const [order, setOrder]= useState(null)
-
 
 
   useEffect(() => {
@@ -44,12 +53,10 @@ function App() {
       
 
       function handleProductIDInCartArr(product_id) {
-        console.log(product_id)
         setCartArr([product_id, ...cartArr ])
         console.log(cartArr)
       }
       
-
           const handleLogin = (event) => {
           let total=0
           let pay_method=''
@@ -63,43 +70,69 @@ function App() {
           })
             .then(res => {
               if (res.ok) {
-                res.json().then(user => {
-                  setCurrentUser(user)
-                  console.log(user)
-                 // user_id = user.id
-                 setIsLoggedIn(true)
-                  createOrder(total, pay_method, user.id)
-                  console.log(order)         
-                   ReactDOM.render(<NavBarContainer/>, document.getElementById('root'))
-      
-      
-                })
-              } else {
+                res.json().then(user => 
+                  loginRegisterInfo(user)
+                )} else {
                 res.json().then(errors => {
                   console.error(errors)
                 })
               }
             })
         }
+
+        const handleRegister = (event) => 
+        {
+            event.preventDefault()
+            fetch('/register', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+              first_name,
+              last_name,
+              email, 
+              password,
+              username,
+              phone_number,
+              address,
+              state,
+              zipcode,
+              gender,
+              store_name,
+              store
+             })
+            })
+            .then(res => {
+              if (res.ok) {
+                res.json().then(user => 
+                  {
+                  loginRegisterInfo(user)
+                  }
+                )} else {
+                  res.json().then(errors => {
+                    console.error(errors)   
+                  })
+                  }
+              })
+            }
       
-      
-       function createOrder(total, pay_method, user_id)
-       {
-        console.log(user_id)
-        console.log(pay_method)
-        console.log(total)
-      
-          // event.preventDefault()
-          // useEffect(() => {
+
+      function loginRegisterInfo(user)
+      {
+        
+          setCurrentUser(user) 
+          console.log(user)
+          setIsLoggedIn(true)          
+          let user_id = user.id
+         
           fetch('/orders', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json'
             },
             body: JSON.stringify({
-              total,
-              pay_method,
-              user_id 
+            user_id
             })
           })
             .then(res => {
@@ -107,6 +140,7 @@ function App() {
                 res.json().then(order => {
                   setOrder(order)
                   console.log(order)
+                  
                 })
               } else {
                 res.json().then(errors => 
@@ -114,14 +148,9 @@ function App() {
                 )
               }
           })
-  
-  
          }
         
-          
       
-      
-          
         function handleLogOut(event) {
       
               // fetch(`/logout/${currentUser.id}`,{
@@ -152,9 +181,18 @@ function App() {
   return(
 <div> 
     <NavBarContainer 
-      isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}
-      setCartArr= {setCartArr} cartArr= {setCartArr}
-      handleLogin={handleLogin}/>
+      isLoggedIn={isLoggedIn} 
+      setIsLoggedIn={setIsLoggedIn}
+      setCartArr= {setCartArr} 
+      cartArr= {setCartArr}
+      handleLogin={handleLogin}
+      currentUser={currentUser} 
+      setCurrentUser={setCurrentUser} 
+      setEmail={setEmail} 
+      email={email} 
+      setPassword={setPassword} 
+      password={password}
+      />
         <Switch>
                 <Route path="/home">
                     <Home />
@@ -163,20 +201,45 @@ function App() {
                     <About />
                 </Route>
                 <Route path="/login">
-                    <Login  handleLogin={handleLogin} 
+                    <Login  
+                    handleLogin={handleLogin} 
                     setIsLoggedIn={setIsLoggedIn}
                     setEmail={setEmail}
-                    setPassword={setPassword}/> 
-                    
+                    setPassword={setPassword} /> 
                 </Route>
 
                 <Route path="/register">
-                  <Register handleLogin={handleLogin} setIsLoggedIn={setIsLoggedIn} createOrder={createOrder}/> 
-            
+                  <Register 
+                  handleRegister={handleRegister}
+                  first_name={first_name}
+                  setFirstName={setFirstName}
+                  last_name={last_name}
+                  setLastName={setLastName}
+                  username={username}
+                  setUsername={setUsername}
+                  phone_number={phone_number}
+                  setNumber={setNumber}
+                  address={address}
+                  setAddress={setAddress}
+                  state={state}
+                  setState={setState}
+                  zipcode={zipcode}
+                  setZip={setZip}
+                  gender={gender}
+                  setGender={setGender}
+                  email={email}
+                  setEmail={setEmail}
+                  store={store}
+                  store_name={store_name}
+                  setStoreName={setStoreName}
+                  setIsStore={setIsStore}
+                  setPassword={setPassword}
+                  password={password} 
+                  /> 
                 </Route>
             </Switch>
 
-    <ProductList 
+    <ProductContainer 
       setCartArr= {setCartArr}
       productArr={productArr}
       handleProductIDInCartArr={handleProductIDInCartArr}

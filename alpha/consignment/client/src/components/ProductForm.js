@@ -36,7 +36,7 @@ function ProductForm({ productArr,setProductArr, user_id, order_id}) {
         .then(res => {
           if (res.ok) {
           res.json().then(product => {
-            setProductArr(product, ...productArr)
+            setProductArr([product, ...productArr])
               history.push("/sale")
           })
           } else {
@@ -46,8 +46,8 @@ function ProductForm({ productArr,setProductArr, user_id, order_id}) {
       }
 
   return (
-
-    <form name=""  className="center-form" onSubmit={handleProductForm}>
+<div className="container">
+    <form className="add-product-form" onSubmit={handleProductForm}>
    
     <label className="form-label" for="formBasicCategory">Category</label>
       <input 
@@ -118,6 +118,7 @@ function ProductForm({ productArr,setProductArr, user_id, order_id}) {
     
       <button type="submit" className="btn btn-primary">Submit</button>
     </form>
+    </div>
 
   )
 }

@@ -1,67 +1,19 @@
 
 import { useHistory } from 'react-router-dom'
-import ReactDOM from 'react-dom'
 import { useState } from 'react'
 
-import NavBarContainer from './NavBarContainer';
+
+function Register({
+  handleRegister, first_name,setFirstName,last_name,setLastName, username,setUsername,phone_number,setNumber, address,setAddress,state,setState, zipcode,setZip,gender,setGender,email, setEmail, store,store_name,setStoreName,setIsStore,setPassword,password 
+
+}) {
+  
 
 
-function Register({createOrder, setCurrentUser, setIsLoggedIn}) {
-  const history = useHistory()
-  const [first_name, setFirstName] = useState("");
-  const [last_name, setLastName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [username, setUsername] = useState("");
-  const [phone_number, setNumber] = useState("");
-  const [address, setAddress] = useState("");
-  const [state, setState] = useState("");
-  const [zipcode, setZip] = useState("");
-  const [gender, setGender] = useState("");
-  const [store_name, setStoreName] = useState("");
-  const [store, setIsStore] = useState(false);
-  let total=0
-  let pay_method=''
 
-  const handleRegister = (event) => 
-  {
-   
-      fetch('/register', {
-      method: 'POST',
-      headers: {
-          'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        first_name,
-        last_name,
-        email, 
-        password,
-        username,
-        phone_number,
-        address,
-        state,
-        zipcode,
-        gender,
-        store_name,
-        store
-       })
-      })
-        .then(res => {
-          if (res.ok) {
-          res.json().then(user => {
-            setCurrentUser(user)
-            console.log(user)
-           // user_id = user.id
-           setIsLoggedIn(true)
-            createOrder(total, pay_method, user.id)        
-             ReactDOM.render(<NavBarContainer/>, document.getElementById('root'))
 
-          })
-          } else {
-            res.json().then(errors => {console.error(errors)})
-            }
-        })
-      }
+     
+
 
       
   return (

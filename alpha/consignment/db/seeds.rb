@@ -39,7 +39,7 @@ type = [
 # generate 10 users
 puts "Seeding users"
 
-10.times do 
+5.times do 
     u= User.create!(
         first_name: Faker::Name.unique.name,
         last_name:  Faker::Name.last_name,
@@ -59,7 +59,7 @@ end
     puts "Done seeding users"
 
     puts "Seeding products"
-    10.times do 
+    40.times do 
         same = rand(0..3) #random hash in type array
     p= Product.create!(
         user_id: users.sample.id,

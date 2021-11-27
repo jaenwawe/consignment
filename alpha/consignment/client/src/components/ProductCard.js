@@ -12,10 +12,9 @@ function ProductCard({data, handleProductIDInCartArr }) {
     }
     
     return (
-            <div> 
- 
+        <div className="card">
                 <Card className="product" style={{ width: '18rem'}}>
-                <Card.Img variant="top" src={product.photo} />
+                <Card.Img variant="top" src={product.photo} className="product-photo"/>
                 <Card.Body>
                     <Card.Title>{product.category}</Card.Title>
                     {/* <Card.Text>

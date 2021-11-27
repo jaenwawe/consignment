@@ -26,10 +26,9 @@ ActiveRecord::Schema.define(version: 2021_11_05_012809) do
   end
 
   create_table "orders", force: :cascade do |t|
+    t.integer "user_id"
     t.string "pay_method", default: " $ "
     t.integer "total"
-    t.integer "user_id"
-    t.integer "products_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

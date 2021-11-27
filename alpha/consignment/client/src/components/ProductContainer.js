@@ -1,10 +1,16 @@
-// import React from "react";
-// import ProductCard from "./ProductCard";
+import ProductCard from './ProductCard';
 
-// function ProductContainer({ products, renderUpdatedProduct }) {
-//   return (
-//     <div className="grid-collection">{products.map(product => <ProductCard handleProductIDInCartArr={handleProductIDInCartArr} product={product} renderUpdatedProduct={renderUpdatedProduct}/>)}</div>
-//   );
-// }
+function ProductContainer({handleProductIDInCartArr, productArr, addToCart}) {
+    let x = productArr.map(p => <ProductCard handleProductIDInCartArr={handleProductIDInCartArr} data={p}/>)
+    
+    return (
+        
+        <div id="product-collection">
+        {x}
 
-// export default ProductContainer;
+        </div>
+             
+            );
+        }
+
+export default ProductContainer;

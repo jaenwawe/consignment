@@ -3,7 +3,7 @@
   import { useHistory } from 'react-router-dom'
 
   import NavBar from './NavBar'
-  import ProductList from './ProductList'
+  import ProductContainer from './ProductContainer'
 //   import UnauthenticatedApp from './UnauthenticatedApp' 
   import App from './App'
 

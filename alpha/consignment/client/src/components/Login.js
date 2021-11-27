@@ -15,18 +15,21 @@ function Login({currentUser, setCurrentUser, handleLogin, setEmail, email, setPa
         <div className="mb-3" >
 
             <label className="form-label">Email address
-                <input type="email" 
+                <input 
+                type="email" 
                 name="email" 
                 value={email}
-                onChange={(e) => setEmail(e.target.value)} className="form-control" id="inputemail" ></input>
+                onChange={(e) => setEmail(e.target.value)}></input>
             </label>
             <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
         </div>
         <div className="mb-3">
             <label  className="form-label">Password
-                <input type="password" name="password" 
+                <input 
+                type="password" 
+                name="password" 
                 value={password}
-                onChange={(e) => setPassword(e.target.value)} className="form-control" id="inputpassword"></input>
+                onChange={(e) => setPassword(e.target.value)}></input>
             </label>
         </div>
     
