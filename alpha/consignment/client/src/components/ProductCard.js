@@ -2,28 +2,44 @@ import React, {useState} from 'react';
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
 
-function ProductCard({data, addToCart, cartArr,removeFromCart }) 
+//function ProductCard({order, setOrder, data, addToCart, cartArr,removeFromCart }) 
+function ProductCard({order, setOrder, product, addToCart, cartArr,removeFromCart,inCart,setInCart }) 
 {
-    const [inCart,setInCart]=useState(false)
+
+   
     const [name, setName]= useState('Add to Cart')
-    const product = data
-    const[product_id, setProductID]=useState(product.id)
+   // const product = data
+   // const[product_id, setProductID]=useState(product.id)
 
         function addChangeButton(e) 
-        { 
+        {
             setInCart(!inCart)
+         
             {(inCart)
                 ? inside ()
                 : outside()
             }
 
+            // function inside(){
+            //     removeFromCart(product_id)
+            //     setName(inCart ? 'Add to Cart' : 'Remove from Cart')
+            //     console.log(cartArr)
+            // }
+            // function outside(){
+            //     addToCart(product_id)
+            //     setName(inCart ? 'Add to Cart' : 'Remove from Cart')
+            //     console.log(cartArr)
+            // }
+
+
             function inside(){
-                removeFromCart(product_id)
+                removeFromCart(product)
                 setName(inCart ? 'Add to Cart' : 'Remove from Cart')
                 console.log(cartArr)
+                
             }
             function outside(){
-                addToCart(product_id)
+                addToCart(product)
                 setName(inCart ? 'Add to Cart' : 'Remove from Cart')
                 console.log(cartArr)
             }

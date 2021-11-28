@@ -1,5 +1,9 @@
 
 
+tml, body {
+  margin:0px;
+  height:100%;
+}
 
 
 /* your class for the div should have 100% height and width */
@@ -8,11 +12,11 @@
   height: 100%!important;
 }
 
+.entire{
+  height:100vh;
+  display: "inline-block";
 
-  .center-form{
-  width: 200px;
-    margin-top: 5%;
-    padding-left:15%;
+  background:red
   }
 
 

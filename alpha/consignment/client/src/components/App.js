@@ -15,7 +15,7 @@ import Logout from './Logout';
 import Sale from './Sale';
 
 import ProductContainer from "./ProductContainer";
-
+import CartContainer from './CartContainer';
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false)
@@ -33,7 +33,8 @@ function App() {
   const [gender, setGender] = useState("");
   const [store_name, setStoreName] = useState("");
   const [store, setIsStore] = useState(false);
-  const [product_id, setProductId] = useState('')
+  const [inCart,setInCart]=useState(false)
+  // const [product_id, setProductId] = useState('')
 
 
   const [currentUser, setCurrentUser] = useState(null)
@@ -147,21 +148,39 @@ function App() {
           console.log(productArr)
         }
       
-         function removeFromProductArr(product_id){}
 
 
-         function addIDinCartArr(product_id) {
-          setCartArr([...cartArr,product_id])        
-          setProductArr([productArr.filter(AllProductID => AllProductID !== product_id)])
+
+         function addIDinCartArr(product) {
+          setCartArr([...cartArr,product])        
+          setProductArr([productArr.filter(AllProduct => AllProduct !== product)])
+          console.log(cartArr)
+        }
+
+  
+      // function handleRemoveProductCarArr(product_id) {
+      //     setProductArr([...product_id, ...productArr])
+      //     setCartArr([cartArr.filter(inCartProductID => inCartProductID !== product_id)])
+      //     console.log(cartArr)
+      //   }
+
+
+        function handleRemoveProductCarArr(product) {
+          setProductArr([...product, ...productArr])
+          setCartArr([cartArr.filter(inCartProduct => inCartProduct !== product)])
           console.log(cartArr)
         }
   
-  
-      function handleRemoveProductCarArr(product_id) {
-          setProductArr([...product_id, ...productArr])
-          setCartArr([cartArr.filter(inCartProductID => inCartProductID !== product_id)])
-          console.log(cartArr)
-        }
+        const display = 
+        <ProductContainer 
+        inCart={inCart}
+        setInCart={setInCart}
+          productArr={productArr}
+          removeFromCart={removeFromCart}  
+          addToCart={addToCart} 
+          cartArr ={cartArr}
+          removeFromCart={removeFromCart} 
+          />
   
          let unregisteredRoutes =
          <>
@@ -172,6 +191,7 @@ function App() {
               setIsLoggedIn={setIsLoggedIn}
               setEmail={setEmail}
               setPassword={setPassword} /> 
+              
         </Route> 
 
          <Route path="/register">
@@ -202,7 +222,8 @@ function App() {
                        setPassword={setPassword}
                        password={password} 
                        /> 
-                     </Route>    
+                     </Route> 
+                     {display}    
          </>
 
      let registeredRoutes =
@@ -224,6 +245,11 @@ function App() {
                          setIsLoggedIn={setIsLoggedIn}
                          /> 
                       </Route> 
+
+
+                   
+
+
                   </>
       
         function handleLogOut(event) {
@@ -248,14 +274,15 @@ function App() {
       
       //setProductArr([product.id, ...productArr])
       //  const [cartArr, setCartArr] = useState([])
-      function removeFromCart(product_id){
+      function removeFromCart(product){
      
-        setCartArr (cartArr.filter(item => item !== product_id))
+        setCartArr (cartArr.filter(item => item !== product))
       }     
 
-      function addToCart(product_id){
-        setCartArr([product_id,...cartArr])
+      function addToCart(product){
+        setCartArr([product,...cartArr])
       }
+     
       
 
   return(
@@ -264,8 +291,8 @@ function App() {
             isLoggedIn={isLoggedIn} 
             setIsLoggedIn={setIsLoggedIn}
 
-            addToCart= {addToCart}
-            cartArr= {cartArr}
+            // addToCart= {addToCart}
+            // cartArr= {cartArr}
             
             handleLogin={handleLogin}
             currentUser={currentUser} 
@@ -281,20 +308,28 @@ function App() {
 
         
                    <Switch>
-                      <Route path="/home"> <Home /> </Route>
-                      <Route path="/about"> <About /> </Route>
+                     <Route exact path="/"> {display}</Route> 
+                      <Route path="/home"> <Home /> {display} </Route>
+                      <Route path="/about"> <About /> {display} </Route>
                      
+                      <Route path="/cart">
+                         <CartContainer 
+                          inCart={inCart}
+                          setInCart={setInCart}
+                          productArr={productArr}
+                          currentUser={currentUser} 
+                          order={order} 
+                          cartArr ={cartArr}
+                          removeFromCart={removeFromCart}  
+                          isLoggedIn={isLoggedIn} 
+                         /> 
+                      </Route>   
+            
             {isLoggedIn ? registeredRoutes : unregisteredRoutes} 
             
                   </Switch>
 
-          <ProductContainer 
-          productArr={productArr}
-             removeFromCart={removeFromCart}  
-             addToCart={addToCart} 
-             cartArr ={cartArr}
-             removeFromCart={removeFromCart} 
-             />
+       
 
   </div>)
 }

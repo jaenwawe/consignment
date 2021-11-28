@@ -1,19 +1,22 @@
 import ProductCard from './ProductCard';
 
-function ProductContainer({productArr, removeFromCart, addToCart, cartArr}) {
-    let x = productArr.map(p => 
+function ProductContainer({isLoggedIn,productArr,addToCart,removeFromCart,cartArr,inCart,setInCart}) {
+    let item = productArr.map(product => 
         <ProductCard
+            inCart={inCart}
+            setInCart={setInCart}
+            cartArr ={cartArr}
             removeFromCart={removeFromCart}  
             addToCart={addToCart}
-            cartArr ={cartArr}
-            removeFromCart={removeFromCart} 
-            data={p}
+            removeFromCart={removeFromCart}
+            isLoggedIn={isLoggedIn} 
+            product={product}
         />)
     
     return (
         
         <div id="product-collection">
-        {x}x
+        {item}
 
         </div>
              

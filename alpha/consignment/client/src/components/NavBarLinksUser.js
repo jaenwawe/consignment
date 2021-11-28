@@ -49,19 +49,29 @@ function NavBarLinksUser (isLoggedIn, setIsLoggedIn)
           About
       </Link>
       
-   
       <Link
         to="/sale"
         style={linkStyles}
         activeStyle={{
           background: "darkblue",
         }}>
-        Sale   sale  sald
+        Sale      
       </Link>
+
+      <Link
+        to="/cart"
+        style={linkStyles}
+        activeStyle={{
+          background: "darkblue",
+        }}>
+        Cart     
+      </Link>
+
 
       <Link to="/logout" style={linkStyles} activeStyle={{ background: "darkblue"}}> Logout </Link>
 
       
+ 
    
    
     </div>

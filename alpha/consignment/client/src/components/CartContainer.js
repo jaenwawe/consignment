@@ -3,25 +3,19 @@ import { useState , useEffect} from "react";
 
  import ProductCard from "./ProductCard";
 
-function CartContainer({ 
-    currentUser, order, 
-    cartArr, removeFromCart,addToProductArr,
-    addToCart, removeFromProductArr,isLoggedIn})
+function CartContainer({ order, setOrder, cartArr, removeFromCart, addToCart})
 {
-    let item = cartArr.map(p => 
+    let item = cartArr.map(product => 
         <ProductCard
-        currentUser={currentUser} 
-        order={order} 
-        cartArr ={cartArr}
+        cartArr={cartArr}
         removeFromCart={removeFromCart}  
         addToCart={addToCart}
-        removeFromCart={removeFromCart}
-        isLoggedIn={isLoggedIn} 
-        data={p}
+        cartArr ={cartArr}
+        product={product}
         />)
 
     return (
-        <div id="product-collection">
+        <div className="entire">
         {item}
         </div>
              
