@@ -34,7 +34,7 @@ function Sale({currentUser, setProductArr, productArr,setIsLoggedIn }) {
         .then(res => {
           if (res.ok) {
           res.json().then(product => {
-              setProductArr([product.id, ...productArr])
+            setProductArr([product,...productArr])
               history.push("/")
           })
           } else {

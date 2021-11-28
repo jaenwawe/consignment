@@ -1,17 +1,18 @@
 import { useState , useEffect} from "react";
  import { useHistory } from 'react-router-dom'
 
- import ProductCard from "./ProductCard";
+ import CartCard from "./CartCard";
 
-function CartContainer({ order, setOrder, cartArr, removeFromCart, addToCart})
+function CartContainer({cartArr, cartClick,setName,name})
+
 {
     let item = cartArr.map(product => 
-        <ProductCard
-        cartArr={cartArr}
-        removeFromCart={removeFromCart}  
-        addToCart={addToCart}
-        cartArr ={cartArr}
+        <CartCard
         product={product}
+        cartClick={cartClick}
+        setName={setName}
+        cartArr={cartArr}
+        name={name}
         />)
 
     return (

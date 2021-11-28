@@ -33,10 +33,7 @@ function App() {
   const [gender, setGender] = useState("");
   const [store_name, setStoreName] = useState("");
   const [store, setIsStore] = useState(false);
-  const [inCart,setInCart]=useState(false)
-  // const [product_id, setProductId] = useState('')
-
-
+ 
   const [currentUser, setCurrentUser] = useState(null)
   const [orderArr, setOrderArr] = useState([])
   const [order, setOrder]= useState(null)
@@ -44,9 +41,9 @@ function App() {
   useEffect(() => {
     fetch("/styles")
       .then((response) => response.json())
-      .then((productArr) => addToProductArr(productArr))
+      .then((productArr) => setProductArr(productArr))
       },[])
-
+  
 
           const handleLogin = (event) => {
           let total=0
@@ -140,46 +137,39 @@ function App() {
               }
           })
          }
-        
 
-
-         function addToProductArr(product) {
-          setProductArr([...product, ...productArr ])
-          console.log(productArr)
+         function removeProduct(product) {      
+          setProductArr(productArr.filter(item => item !== product))
         }
+
+        function removeFromCart(product){
+          setCartArr (cartArr.filter(item => item !== product))
+        }     
+  
+
+      function addToCart(product){
+        setCartArr([product,...cartArr])
+      }
+      function addToProducts(product) {
+    
+        setProductArr([product,...productArr])
+      }
       
+      function cartClick(product){
+        addToProducts(product)
+        removeFromCart(product)
+        
+      }
+      
+        function nonCartProductClick(product){
+          addToCart(product)
+          removeProduct(product) 
+         }
 
-
-
-         function addIDinCartArr(product) {
-          setCartArr([...cartArr,product])        
-          setProductArr([productArr.filter(AllProduct => AllProduct !== product)])
-          console.log(cartArr)
-        }
-
-  
-      // function handleRemoveProductCarArr(product_id) {
-      //     setProductArr([...product_id, ...productArr])
-      //     setCartArr([cartArr.filter(inCartProductID => inCartProductID !== product_id)])
-      //     console.log(cartArr)
-      //   }
-
-
-        function handleRemoveProductCarArr(product) {
-          setProductArr([...product, ...productArr])
-          setCartArr([cartArr.filter(inCartProduct => inCartProduct !== product)])
-          console.log(cartArr)
-        }
-  
         const display = 
         <ProductContainer 
-        inCart={inCart}
-        setInCart={setInCart}
           productArr={productArr}
-          removeFromCart={removeFromCart}  
-          addToCart={addToCart} 
-          cartArr ={cartArr}
-          removeFromCart={removeFromCart} 
+          nonCartProductClick={nonCartProductClick}
           />
   
          let unregisteredRoutes =
@@ -245,11 +235,6 @@ function App() {
                          setIsLoggedIn={setIsLoggedIn}
                          /> 
                       </Route> 
-
-
-                   
-
-
                   </>
       
         function handleLogOut(event) {
@@ -271,28 +256,12 @@ function App() {
             }
         })
       }
-      
-      //setProductArr([product.id, ...productArr])
-      //  const [cartArr, setCartArr] = useState([])
-      function removeFromCart(product){
-     
-        setCartArr (cartArr.filter(item => item !== product))
-      }     
-
-      function addToCart(product){
-        setCartArr([product,...cartArr])
-      }
-     
-      
-
+  
   return(
     <div> 
           <NavBarContainer 
             isLoggedIn={isLoggedIn} 
             setIsLoggedIn={setIsLoggedIn}
-
-            // addToCart= {addToCart}
-            // cartArr= {cartArr}
             
             handleLogin={handleLogin}
             currentUser={currentUser} 
@@ -314,14 +283,8 @@ function App() {
                      
                       <Route path="/cart">
                          <CartContainer 
-                          inCart={inCart}
-                          setInCart={setInCart}
-                          productArr={productArr}
-                          currentUser={currentUser} 
-                          order={order} 
+                          cartClick={cartClick}
                           cartArr ={cartArr}
-                          removeFromCart={removeFromCart}  
-                          isLoggedIn={isLoggedIn} 
                          /> 
                       </Route>   
             
