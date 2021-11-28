@@ -7,15 +7,7 @@ function Register({
   handleRegister, first_name,setFirstName,last_name,setLastName, username,setUsername,phone_number,setNumber, address,setAddress,state,setState, zipcode,setZip,gender,setGender,email, setEmail, store,store_name,setStoreName,setIsStore,setPassword,password 
 
 }) {
-  
-
-
-
-
-     
-
-
-      
+    
   return (
 
    <form name="signup/register"  className="center-form" onSubmit={handleRegister}>
@@ -152,13 +144,10 @@ function Register({
     checked={false}
     className="form-label"></input> 
 
-   {/* <Button onClick={ <Register currentUser={currentUser} setCurrentUser={setCurrentUser}/>
-}>Sign Up</Button> */}
       <button type="submit" className="btn btn-primary">Submit</button>
     </form>
 
   )
 }
-
 
 export default Register;

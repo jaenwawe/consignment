@@ -13,12 +13,10 @@ import Register from "./Register";
 
 import {Route} from 'react-router'
 
-function NavBarContainer ({setEmail, email, setPassword, password,currentUser,setCurrentUser,handleLogin, cartArr,setCartArr, isLoggedIn,setIsLoggedIn,productIDCart,ArrproductArr})
+function NavBarContainer ({setEmail, email, setPassword, password,currentUser,setCurrentUser,handleLogin,  addToCart,cartArr,setCartArr, isLoggedIn,setIsLoggedIn,productIDCart,ArrproductArr})
 {
-      function addToCart(id) {
-        setCartArr([...cartArr, id])
-        console.log(cartArr)
-      }
+
+      
       
     return(
       <div>

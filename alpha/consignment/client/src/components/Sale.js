@@ -5,23 +5,19 @@ import { useState,useEffect } from 'react'
 //I need to add to a product array
 // function Sale({ productArr,setProductArr, user_id, order_id}) {
 
-function Sale({currentUser, setProductArr, productArr, }) {
+function Sale({currentUser, setProductArr, productArr,setIsLoggedIn }) {
 
   const [category, setCategory] = useState("");
   const [size, setSize] = useState("");
   const [price, setPrice] = useState("");
   const [photo, setPhoto] = useState("");
-  const [review_stars, setReviewStars] = useState(0);
-  const [review, setReview] = useState("");
 
   const history = useHistory()
   let user_id = currentUser.id
 
-
-  
   const handleAddProduct = (event) => 
   {
-      // event.preventDefault()
+      event.preventDefault()
       fetch('/products/add', {
       method: 'POST',
       headers: {
@@ -46,9 +42,7 @@ function Sale({currentUser, setProductArr, productArr, }) {
             }
         })
       }
-
-      // const upDateProductArr = (product)=>
-      // {setProductArr(...product,productArr)}
+      setIsLoggedIn(true)  
 
   return (
 
@@ -98,27 +92,6 @@ function Sale({currentUser, setProductArr, productArr, }) {
       onChange={(e) => setPhoto(e.target.value)} 
       className="form-label"></input>
     <br/>
-    <br/>
-    
-    <label className="form-label" for="formBasicReviewStars">Review Stars</label>
-    <input 
-      type="text"
-      name = "reviewstars"  
-      placeholder="ReviewStars"  
-      value={review_stars}
-      onChange={(e) => setReviewStars(e.target.value)} 
-      className="form-label"></input>
-    <br/>
-    <br/>
-   
-    <label className="form-label" for="formBasicReview">Review</label>
-    <input 
-      type="text"
-      name = "review"  
-      placeholder="Review"  
-      value={review}
-      onChange={(e) => setReview(e.target.value)} 
-      className="form-label"></input>
     <br/>
     
       <button type="submit" className="btn btn-primary">Submit</button>

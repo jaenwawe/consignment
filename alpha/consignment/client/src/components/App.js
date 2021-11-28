@@ -17,8 +17,6 @@ import Sale from './Sale';
 import ProductContainer from "./ProductContainer";
 
 
-
-
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false)
   const [productArr, setProductArr]= useState([])
@@ -34,11 +32,12 @@ function App() {
   const [zipcode, setZip] = useState("");
   const [gender, setGender] = useState("");
   const [store_name, setStoreName] = useState("");
-  const [store, setIsStore] = useState(false);   
+  const [store, setIsStore] = useState(false);
+  const [product_id, setProductId] = useState('')
 
 
   const [currentUser, setCurrentUser] = useState(null)
-  const [orderArr, setorderArr] = useState([])
+  const [orderArr, setOrderArr] = useState([])
   const [order, setOrder]= useState(null)
  
   useEffect(() => {
@@ -47,12 +46,7 @@ function App() {
       .then((productArr) => addToProductArr(productArr))
       },[])
 
-      function addToProductArr(product) {
-        setProductArr([...product, ...productArr ])
-        console.log(productArr)
-      }
-    
-  
+
           const handleLogin = (event) => {
           let total=0
           let pay_method=''
@@ -146,6 +140,90 @@ function App() {
           })
          }
         
+
+
+         function addToProductArr(product) {
+          setProductArr([...product, ...productArr ])
+          console.log(productArr)
+        }
+      
+         function removeFromProductArr(product_id){}
+
+
+         function addIDinCartArr(product_id) {
+          setCartArr([...cartArr,product_id])        
+          setProductArr([productArr.filter(AllProductID => AllProductID !== product_id)])
+          console.log(cartArr)
+        }
+  
+  
+      function handleRemoveProductCarArr(product_id) {
+          setProductArr([...product_id, ...productArr])
+          setCartArr([cartArr.filter(inCartProductID => inCartProductID !== product_id)])
+          console.log(cartArr)
+        }
+  
+         let unregisteredRoutes =
+         <>
+         <Route path="/login">
+              <Login  
+              handleLogin={handleLogin} 
+              setIsLoggedIn={setIsLoggedIn}
+              setEmail={setEmail}
+              setPassword={setPassword} /> 
+        </Route> 
+
+         <Route path="/register">
+                       <Register 
+                       handleRegister={handleRegister}
+                       first_name={first_name}
+                       setFirstName={setFirstName}
+                       last_name={last_name}
+                       setLastName={setLastName}
+                       username={username}
+                       setUsername={setUsername}
+                       phone_number={phone_number}
+                       setNumber={setNumber}
+                       address={address}
+                       setAddress={setAddress}
+                       state={state}
+                       setState={setState}
+                       zipcode={zipcode}
+                       setZip={setZip}
+                       gender={gender}
+                       setGender={setGender}
+                       email={email}
+                       setEmail={setEmail}
+                       store={store}
+                       store_name={store_name}
+                       setStoreName={setStoreName}
+                       setIsStore={setIsStore}
+                       setPassword={setPassword}
+                       password={password} 
+                       /> 
+                     </Route>    
+         </>
+
+     let registeredRoutes =
+                 <>
+                    <Route path="/sale">
+                         <Sale  
+                         currentUser={currentUser} 
+                         setProductArr={setProductArr}
+                         setIsLoggedIn={setIsLoggedIn}
+                         productArr={productArr}
+                         /> 
+                      </Route>
+
+                      <Route path="/logout">
+                         <Logout  
+                         setCurrentUser={setCurrentUser}
+                         currentUser={currentUser} 
+                         setProductArr={setProductArr}
+                         setIsLoggedIn={setIsLoggedIn}
+                         /> 
+                      </Route> 
+                  </>
       
         function handleLogOut(event) {
       
@@ -167,91 +245,54 @@ function App() {
         })
       }
       
+      //setProductArr([product.id, ...productArr])
+      //  const [cartArr, setCartArr] = useState([])
+      function removeFromCart(product_id){
+        setCartArr([cartArr.filter(product => product.id != product_id)])
+      }
+
+      function addToCart(product_id){
+        setCartArr([product_id, ...cartArr])
+      }
+      
+
   return(
     <div> 
           <NavBarContainer 
             isLoggedIn={isLoggedIn} 
             setIsLoggedIn={setIsLoggedIn}
-            setCartArr= {setCartArr} 
-            cartArr= {setCartArr}
+
+            addToCart= {addToCart}
+            cartArr= {cartArr}
+            
             handleLogin={handleLogin}
             currentUser={currentUser} 
             setCurrentUser={setCurrentUser} 
+            
             setEmail={setEmail} 
             email={email} 
+            
             setPassword={setPassword} 
             password={password}
             />
-              <Switch>
+
+
+        
+                   <Switch>
                       <Route path="/home"> <Home /> </Route>
                       <Route path="/about"> <About /> </Route>
-                      <Route path="/login">
-                          <Login  
-                          handleLogin={handleLogin} 
-                          setIsLoggedIn={setIsLoggedIn}
-                          setEmail={setEmail}
-                          setPassword={setPassword} /> 
-                      </Route>
-
-                  
-
-                      <Route path="/register">
-                        <Register 
-                        handleRegister={handleRegister}
-                        first_name={first_name}
-                        setFirstName={setFirstName}
-                        last_name={last_name}
-                        setLastName={setLastName}
-                        username={username}
-                        setUsername={setUsername}
-                        phone_number={phone_number}
-                        setNumber={setNumber}
-                        address={address}
-                        setAddress={setAddress}
-                        state={state}
-                        setState={setState}
-                        zipcode={zipcode}
-                        setZip={setZip}
-                        gender={gender}
-                        setGender={setGender}
-                        email={email}
-                        setEmail={setEmail}
-                        store={store}
-                        store_name={store_name}
-                        setStoreName={setStoreName}
-                        setIsStore={setIsStore}
-                        setPassword={setPassword}
-                        password={password} 
-                        /> 
-                      </Route>
-            
-              if(isLoggedIn && currentUser){
-                      <>
-              
-                      <Route path="/sale">
-                         <Sale  
-                         currentUser={currentUser} 
-                         setProductArr={setProductArr}/> 
-                      </Route>
-
-                      <Route path="/logout">
-                         <Logout  
-                         setCurrentUser={setCurrentUser}
-                         currentUser={currentUser} 
-                         setProductArr={setProductArr}
-                         setIsLoggedIn={setIsLoggedIn}
-                         /> 
-                      </Route> 
-                      </>   
-            }
+                     
+            {isLoggedIn ? registeredRoutes : unregisteredRoutes} 
             
                   </Switch>
 
           <ProductContainer 
-            cartArr ={cartArr}
-            productArr={productArr}
-            setProductArr={setProductArr}
-          />
+          productArr={productArr}
+             removeFromCart={removeFromCart}  
+             addToCart={addToCart} 
+             cartArr ={cartArr}
+             removeFromCart={removeFromCart} 
+             />
 
   </div>)
 }

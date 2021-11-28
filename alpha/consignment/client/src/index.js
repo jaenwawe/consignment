@@ -9,21 +9,10 @@ import "jquery";
 import "react-popper";
 import "bootstrap/dist/js/bootstrap"
 import "bootstrap/dist/css/bootstrap.css"
-// import 'styles/index.css';
 import './style/index.css';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-// ReactDOM.render(
-//   <React.StrictMode>
-//     <App />
-//   </React.StrictMode>,
- 
-//   document.getElementById('root')
-// );
-
-
-//llearn-co-students/08-react-router
 
 ReactDOM.render(
   <Router>
