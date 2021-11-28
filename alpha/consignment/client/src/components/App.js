@@ -167,6 +167,7 @@ function App() {
          <>
          <Route path="/login">
               <Login  
+              cartArr={cartArr}
               handleLogin={handleLogin} 
               setIsLoggedIn={setIsLoggedIn}
               setEmail={setEmail}
@@ -248,11 +249,12 @@ function App() {
       //setProductArr([product.id, ...productArr])
       //  const [cartArr, setCartArr] = useState([])
       function removeFromCart(product_id){
-        setCartArr([cartArr.filter(product => product.id != product_id)])
-      }
+     
+        setCartArr (cartArr.filter(item => item !== product_id))
+      }     
 
       function addToCart(product_id){
-        setCartArr([product_id, ...cartArr])
+        setCartArr([product_id,...cartArr])
       }
       
 

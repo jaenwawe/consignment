@@ -4,11 +4,9 @@ import { useHistory } from 'react-router-dom'
 
 
 
-function Login({currentUser, setCurrentUser, handleLogin, setEmail, email, setPassword, password}) {
+function Login({cartArray, currentUser, setCurrentUser, handleLogin, setEmail, email, setPassword, password}) {
   const history = useHistory()
-      
   return (
-
     <div>
 
     <form  onSubmit={handleLogin}>

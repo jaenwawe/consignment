@@ -9,28 +9,28 @@ function ProductCard({data, addToCart, cartArr,removeFromCart })
     const product = data
     const[product_id, setProductID]=useState(product.id)
 
-        function addChangeButton()
+        function addChangeButton(e) 
         { 
             setInCart(!inCart)
-            switchButtonTitle(inCart,product_id)
-            addToCart(product_id)
-        }
+            {(inCart)
+                ? inside ()
+                : outside()
+            }
 
-        function switchButtonTitle(inCart,product_id) 
-        {
-            (inCart 
-                ? addChangeButton()
-                : removeFromCart())  
+            function inside(){
+                removeFromCart(product_id)
+                setName(inCart ? 'Add to Cart' : 'Remove from Cart')
+                console.log(cartArr)
+            }
+            function outside(){
+                addToCart(product_id)
+                setName(inCart ? 'Add to Cart' : 'Remove from Cart')
+                console.log(cartArr)
+            }
+            
+        
         }
-
-    function handleClick(e) {
-        {(inCart)
-        ? removeFromCart()
-        : addChangeButton()
-        }
-        setName(inCart ? 'Add to Cart' : 'Remove from Cart')
-        console.log(cartArr)
-    }
+  
     
     return (
         <div className="card">
@@ -39,7 +39,7 @@ function ProductCard({data, addToCart, cartArr,removeFromCart })
                 <Card.Body>
                     <Card.Title>{product.category}</Card.Title>
         
-                    <Button onClick={e => handleClick(e)} 
+                    <Button onClick={e => addChangeButton(e)} 
                             variant="primary">{name}
                     </Button>
                 </Card.Body>
@@ -47,6 +47,4 @@ function ProductCard({data, addToCart, cartArr,removeFromCart })
             </div>
     )
 }
-
-
 export default ProductCard;

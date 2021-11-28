@@ -13,7 +13,7 @@ function ProductContainer({productArr, removeFromCart, addToCart, cartArr}) {
     return (
         
         <div id="product-collection">
-        {x}
+        {x}x
 
         </div>
              
