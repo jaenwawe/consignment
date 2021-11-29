@@ -58,9 +58,10 @@ function App() {
           })
             .then(res => {
               if (res.ok) {
-                res.json().then(user => 
-                  loginRegisterInfo(user)
-                )} else {
+                res.json()
+                .then(user => loginRegisterInfo(user))
+                .then =(setIsLoggedIn(true))
+                } else {
                 res.json().then(errors => {
                   console.error(errors)
                 })

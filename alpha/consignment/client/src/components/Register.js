@@ -133,16 +133,7 @@ function Register({
         placeholder="Type Store Name" 
         onChange={(e) => setStoreName(e.target.value)}
         className="form-label"></input>
-       
-        
-     <label className="form-label" for="formBasicPassword">Already a retail Merchant?</label>
-    <input
-    type="radio"
-    name="store"
-    value={store}
-    onChange={(e) => setIsStore(e.target.value)}
-    checked={false}
-    className="form-label"></input> 
+      
 
       <button type="submit" className="btn btn-primary">Submit</button>
     </form>
