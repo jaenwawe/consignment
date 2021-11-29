@@ -23,7 +23,7 @@ function App() {
   const [cartArr, setCartArr] = useState([])
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
-  const [first_name, setFirstName] = useState("");
+  const [first_name, setFirstName] = useState(null);
   const [last_name, setLastName] = useState("");
   const [username, setUsername] = useState("");
   const [phone_number, setNumber] = useState("");
@@ -306,7 +306,7 @@ function App() {
             }
         })
       }
-  
+ 
   return(
     <div> 
           <NavBarContainer 

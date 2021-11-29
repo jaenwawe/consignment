@@ -21,8 +21,9 @@ const linkStyles = {
 };
 
 
-function NavBarLinksUser (isLoggedIn, setIsLoggedIn)
+function NavBarLinksUser (isLoggedIn, setIsLoggedIn,currentUser)
 {
+
   return (
     <div>
     <Button variant="info"> <img src={logo} className="App-logo" alt="logo" /></Button>{' '}
@@ -58,24 +59,40 @@ function NavBarLinksUser (isLoggedIn, setIsLoggedIn)
         Sale      
       </Link>
 
-      <Link
+      {/* <Link
         to="/cart"
         style={linkStyles}
         activeStyle={{
           background: "darkblue",
         }}>
         Cart     
-      </Link>
+      </Link> */}
 
-      <Link
+
+   
+               
+
+
+      {/* <Link
         to="/checkout"
         style={linkStyles}
         activeStyle={{
           background: "darkblue",
-        }}>Checkout</Link>
+        }}>Checkout</Link> */}
 
       <Link to="/logout" style={linkStyles} activeStyle={{ background: "darkblue"}}> Logout </Link>
-
+      <Button variant="info">  <Link
+                       to="/checkout"
+                      /* set exact so it knows to only set activeStyle when route is deeply equal to link */
+                      /* add styling to Navlink */
+                      style={linkStyles}
+                      /* add prop for activeStyle */
+                      activeStyle={{
+                        background: "darkblue",
+                      }}>
+                      Checkout
+                  </Link></Button>{' '}
+                
       
  
    

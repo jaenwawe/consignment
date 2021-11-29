@@ -17,11 +17,10 @@ function NavBarContainer ({setEmail, email, setPassword, password,currentUser,se
 {
 
       
-      
     return(
       <div>
           {isLoggedIn
-          ? <NavBarLinksUser setIsLoggedIn={setIsLoggedIn}/>
+          ? <NavBarLinksUser setIsLoggedIn={setIsLoggedIn} currentUser={currentUser} />
           : <NavBarLinks setIsLoggedIn={setIsLoggedIn} /> }
 
 
