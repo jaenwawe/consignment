@@ -1,6 +1,5 @@
-import React, {useHistory, useState, useEffect} from 'react'
+import React, {useState, useEffect} from 'react'
 import { Route, Switch } from "react-router-dom";
-import ReactDOM from 'react-dom'
 import '../style/App.css'
 import "../style/index.css"
 
@@ -16,6 +15,7 @@ import Sale from './Sale';
 
 import ProductContainer from "./ProductContainer";
 import CartContainer from './CartContainer';
+import CheckoutCart from './CheckoutCart';
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false)
@@ -35,8 +35,11 @@ function App() {
   const [store, setIsStore] = useState(false);
  
   const [currentUser, setCurrentUser] = useState(null)
-  const [orderArr, setOrderArr] = useState([])
+  const [priorOrdersArr, setPriorOrderArr] = useState([])
   const [order, setOrder]= useState(null)
+  const [total, setTotal] = useState(0)
+
+  const [orderItemsArr, setOrderItemsArr]= useState([])
  
   useEffect(() => {
     fetch("/styles")
@@ -44,7 +47,7 @@ function App() {
       .then((productArr) => setProductArr(productArr))
       },[])
   
-
+   
           const handleLogin = (event) => {
           let total=0
           let pay_method=''
@@ -105,6 +108,34 @@ function App() {
                   }
               })
             }
+     
+            function addOrderItems(product_id,customer_id,order_id)
+            {   
+                fetch('/order_items', {
+                  method: 'POST',
+                  headers: {
+                    'Content-Type': 'application/json'
+                  },
+                  body: JSON.stringify({
+                      order_id: order_id,
+                      customer_id: customer_id,
+                      product_id: product_id
+                  })
+                })
+                  .then(res => {
+                    if (res.ok) {
+                      res.json().then(order_item => {console.log(order_item)
+                        
+                      })
+                    } else {
+                      res.json().then(errors => 
+                      console.error(errors)
+                      )
+                     
+                    }
+                })
+               }
+
       
 
       function loginRegisterInfo(user)
@@ -227,6 +258,24 @@ function App() {
                          productArr={productArr}
                          /> 
                       </Route>
+                      
+                      <Route>
+                     
+                      </Route>
+
+                    
+                      <Route path="/checkout">
+                         <CheckoutCart
+                         cartArr={cartArr}
+                         order={order}
+                        setOrderItemsArr={setOrderItemsArr}
+                        currentUser={currentUser} 
+                        orderItemsArr={orderItemsArr} 
+                        total={total}
+                        setTotal={setTotal}
+                        cartClick={cartClick}
+                         /> 
+                      </Route>
 
                       <Route path="/logout">
                          <Logout  
@@ -283,11 +332,18 @@ function App() {
                       <Route path="/about"> <About /> {display} </Route>
                      
                       <Route path="/cart">
-                         <CartContainer 
+                        <CartContainer
+                          order={order}
+                          cartArr={cartArr}
+                          orderItemsArr={orderItemsArr}
+                          setOrderItemsArr={setOrderItemsArr}
                           cartClick={cartClick}
-                          cartArr ={cartArr}
-                         /> 
+                          />
+                      
                       </Route>   
+
+
+                      CartContainer
             
             {isLoggedIn ? registeredRoutes : unregisteredRoutes} 
             
