@@ -11,8 +11,8 @@ function CartCard({product,cartArr, cartClick})
         }
         
     return (
-        <div className="card">
-                <Card className="product" style={{ width: '18rem'}}>
+        <div>
+                <Card  className="product" style={{ width: '18rem'}}>
                 <Card.Img variant="top" src={product.photo} className="product-photo"/>
                 <Card.Body>
                     <Card.Title>{product.category}</Card.Title>
