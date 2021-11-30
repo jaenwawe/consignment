@@ -270,42 +270,43 @@ function App() {
                          order={order}
                         setOrderItemsArr={setOrderItemsArr}
                         currentUser={currentUser} 
-                        orderItemsArr={orderItemsArr} 
+                        orderItemsArr={orderItemsArr}
+                        addOrderItems={addOrderItems} 
                         total={total}
                         setTotal={setTotal}
                         cartClick={cartClick}
+                        removeFromCart={removeFromCart}
                          /> 
                       </Route>
 
                       <Route path="/logout">
                          <Logout  
                          setCurrentUser={setCurrentUser}
-                         currentUser={currentUser} 
-                         setProductArr={setProductArr}
+                         setCartArr={setCartArr}
                          setIsLoggedIn={setIsLoggedIn}
                          /> 
                       </Route> 
                   </>
       
-        function handleLogOut(event) {
+      //   function handleLogOut(event) {
       
-              // fetch(`/logout/${currentUser.id}`,{
-                fetch(`/logout`,{
-              method: "DELETE"
-          })
-          .then(resp => {
-              if (resp.ok) {
-                  // setCurrentUser(null)
-                  setCurrentUser({})
+      //         // fetch(`/logout/${currentUser.id}`,{
+      //           fetch(`/logout`,{
+      //         method: "DELETE"
+      //     })
+      //     .then(resp => {
+      //         if (resp.ok) {
+      //             // setCurrentUser(null)
+      //             setCurrentUser({})
          
-              }else {
-              resp.json().then(errors => {
-                console.error(errors)
+      //         }else {
+      //         resp.json().then(errors => {
+      //           console.error(errors)
       
-              })
-            }
-        })
-      }
+      //         })
+      //       }
+      //   })
+      // }
  
   return(
     <div> 

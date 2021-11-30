@@ -1,8 +1,9 @@
   import { useHistory } from 'react-router-dom'
 
-function Logout({setIsLoggedIn, setCurrentUser,currentUser}) {
+function Logout({setIsLoggedIn, setCurrentUser, setCartArr, currentUser}) {
     const history = useHistory()
     setIsLoggedIn(false)
+    setCartArr([])
    
     function handleLogOut(event) {
 
