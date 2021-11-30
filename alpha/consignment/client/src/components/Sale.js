@@ -47,7 +47,7 @@ function Sale({currentUser, setProductArr, productArr,setIsLoggedIn }) {
   return (
 
     <form name=""  className="center-form" onSubmit={handleAddProduct}>
-   
+      <div className="mb-3" >
     <label className="form-label" for="formBasicCategory">Category</label>
       <input 
       type="text"
@@ -57,6 +57,7 @@ function Sale({currentUser, setProductArr, productArr,setIsLoggedIn }) {
       placeholder="Category" 
       className="form-label"
       ></input>
+      </div>
     <br/>
     <br/>
     

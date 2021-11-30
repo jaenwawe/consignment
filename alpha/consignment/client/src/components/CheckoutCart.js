@@ -61,11 +61,11 @@ function CheckoutCart({ removeFromCart,addOrderItems, cartClick, cartArr, setOrd
   return (
     <div className="container">
 
-        <h5>Total ${total}</h5> 
+        <h5><br/>Total ${total}<br/><br/></h5> 
         <form  onSubmit={persistOrderItems}>
             <div className="mb-3" >
-
-                <label className="form-label">Pay Method
+ 
+                <label className="form-label">Pay Method  &nbsp;
                     <input 
                     type="pay_method" 
                     name="pay_method" 
@@ -76,17 +76,18 @@ function CheckoutCart({ removeFromCart,addOrderItems, cartClick, cartArr, setOrd
                 <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
             </div>
             <div className="mb-3">
-                <label  className="form-label">You will be charged {total}
+                <label  className="form-label"> Total for this order &nbsp;  
                     <input 
                     type="total" 
                     name="total" 
                     value={total}
-                    // onChange={(e) => setPassword(e.target.value)}
+                    
                     ></input>
                 </label>
             </div>
         
             <button type="submit" className="btn btn-primary">Submit</button>
+            <br/><br/>
         </form>
         <CartContainer
         cartArr={cartArr} 

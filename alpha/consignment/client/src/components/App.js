@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import { Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Switch,useHistory } from "react-router-dom";
 import '../style/App.css'
 import "../style/index.css"
 
@@ -40,6 +40,8 @@ function App() {
   const [total, setTotal] = useState(0)
 
   const [orderItemsArr, setOrderItemsArr]= useState([])
+  const history = useHistory();
+  
  
   useEffect(() => {
     fetch("/styles")
@@ -47,11 +49,16 @@ function App() {
       .then((productArr) => setProductArr(productArr))
       },[])
   
+
+      const homeleNavigation = () => {
+        history.push("/");
+      };
    
           const handleLogin = (event) => {
           let total=0
           let pay_method=''
           event.preventDefault()
+          
           fetch('/login', {
             method: 'POST',
             headers: {
@@ -101,12 +108,14 @@ function App() {
                   {
                   loginRegisterInfo(user)
                   }
+                  
                 )} else {
                   res.json().then(errors => {
                     console.error(errors)   
                   })
                   }
               })
+               
             }
      
             function addOrderItems(product_id,customer_id,order_id)
@@ -145,6 +154,7 @@ function App() {
           console.log(user)
           setIsLoggedIn(true)          
           let user_id = user.id
+          homeleNavigation()
          
           fetch('/orders', {
             method: 'POST',
