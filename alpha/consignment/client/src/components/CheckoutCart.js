@@ -3,6 +3,8 @@ import Dropdown from 'react-bootstrap/Dropdown';
 
 import CartCard from "./CartCard"
 import OrderItem from "./OrderItem"
+import CartContainer from "./CartContainer"
+
 
 
 function CheckoutCart({ removeFromCart,addOrderItems, cartClick, cartArr, setOrderItemsArr, order, product, currentUser,orderItemsArr,total, setTotal}) {
@@ -86,6 +88,14 @@ function CheckoutCart({ removeFromCart,addOrderItems, cartClick, cartArr, setOrd
         
             <button type="submit" className="btn btn-primary">Submit</button>
         </form>
+        <CartContainer
+        cartArr={cartArr} 
+        setOrderItemsArr={setOrderItemsArr}
+        orderItemsArr={orderItemsArr}
+        cartClick={cartClick}
+        order={order}
+        total={total}
+        setTotal={setTotal}/>
 
                  
         <h5>Checkout select your payment methood and hit submit on the button</h5> 
