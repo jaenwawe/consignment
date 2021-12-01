@@ -49,23 +49,6 @@ class OrderItemsController < ApplicationController
       end 
     end
 
-
-    # def show_else # where do custom methods go w/ authentication
-    #   session[:page_views] ||= 0
-    #   session[:page_views] += 1
-      
-    #   if session[:page_views] < 3
-    #     found_order = OrderItem.find(params[:id])
-    #     render json: found_order, status: :ok
-    #   else
-    #     render json: { error: "Maximum pageview limit reached" }, status: :unauthorized
-    #   end
-    # end
-  
-    
-
-      
-        
   
   private
         def order_item_params

@@ -11,7 +11,7 @@ function Login({cartArray, currentUser, setCurrentUser, handleLogin, setEmail, e
 
     <form  onSubmit={handleLogin}>
         <div className="mb-3" >
-            <label className="form-label">Email address
+            <label className="form-label">Email address 
                 <input 
                 type="email" 
                 name="email" 

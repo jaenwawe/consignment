@@ -55,8 +55,8 @@ function App() {
       };
    
           const handleLogin = (event) => {
-          let total=0
-          let pay_method=''
+          // let total=0
+          // let pay_method=''
           event.preventDefault()
           
           fetch('/login', {
@@ -298,26 +298,6 @@ function App() {
                       </Route> 
                   </>
       
-      //   function handleLogOut(event) {
-      
-      //         // fetch(`/logout/${currentUser.id}`,{
-      //           fetch(`/logout`,{
-      //         method: "DELETE"
-      //     })
-      //     .then(resp => {
-      //         if (resp.ok) {
-      //             // setCurrentUser(null)
-      //             setCurrentUser({})
-         
-      //         }else {
-      //         resp.json().then(errors => {
-      //           console.error(errors)
-      
-      //         })
-      //       }
-      //   })
-      // }
- 
   return(
     <div> 
           <NavBarContainer 

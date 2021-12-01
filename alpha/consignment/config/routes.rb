@@ -1,13 +1,15 @@
 Rails.application.routes.draw do
   
   
-  resources :order_items, only: [:create, :show]
-  patch "/order_item/:id", to: "order_items#update"
-
+  resources :order_items, except: [:create, :show]
   resources :products, except: [:index]
   resources :users, except: [:create, :show]
  
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+
+
+  post "/sold", to: "order_items#create"
+
 
   get "/styles", to: "products#index"
 

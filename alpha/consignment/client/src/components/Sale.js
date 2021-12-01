@@ -46,22 +46,21 @@ function Sale({currentUser, setProductArr, productArr,setIsLoggedIn }) {
 
   return (
 
-    <form name=""  className="center-form" onSubmit={handleAddProduct}>
+    <form   onSubmit={handleAddProduct}>
       <div className="mb-3" >
-    <label className="form-label" for="formBasicCategory">Category</label>
+    <label className="form-label" for="formBasicCategory">Category  &nbsp;  &nbsp;</label>
       <input 
       type="text"
       value={category} 
       onChange={(e) => setCategory(e.target.value)}   
       name = "category"
       placeholder="Category" 
-      className="form-label"
-      ></input>
+      className="form-label"></input>
       </div>
     <br/>
     <br/>
     
-    <label className="form-label" for="formBasicSize">Size</label>    
+    <label className="form-label" for="formBasicSize">Size  &nbsp;  &nbsp;</label>    
       <input 
       type="text"
       name = "size" 
@@ -72,20 +71,19 @@ function Sale({currentUser, setProductArr, productArr,setIsLoggedIn }) {
     <br/>
     <br/>
 
-    <label className="form-label"   for="formBasicPrice">Price</label>
+    <label className="form-label"   for="formBasicPrice">Price &nbsp;  &nbsp;</label>
     <input 
       type="price"
-      // name = "price" 
+       name = "price" 
       value={price}  
       placeholder="price" 
       onChange={(e) => setPrice(e.target.value)} 
-      // className="form-label"
-      ></input>
+      className="form-label"></input>
     <br/>
     <br/>
   
-    <label className="form-label" for="formBasicPhoto">Photo</label>
-    <input 
+    <label className="form-label" for="formBasicPhoto">Photo &nbsp;  &nbsp;</label>
+    <input className="mb-3"
       type="photo"
       name = "photo"
       value={photo}  

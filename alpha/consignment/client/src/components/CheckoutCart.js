@@ -1,44 +1,72 @@
 import React, {useState} from "react";
-import Dropdown from 'react-bootstrap/Dropdown';
+// import Dropdown from 'react-bootstrap/Dropdown';
 
-import CartCard from "./CartCard"
+// import CartCard from "./CartCard"
 import OrderItem from "./OrderItem"
 import CartContainer from "./CartContainer"
 
 
 
-function CheckoutCart({ removeFromCart,addOrderItems, cartClick, cartArr, setOrderItemsArr, order, product, currentUser,orderItemsArr,total, setTotal}) {
-    setTotal(cartArr.reduce((a, {price}) => a + price, 0))
+//function CheckoutCart({ removeFromCart,addOrderItems, cartClick, cartArr, setOrderItemsArr, order, product, currentUser,orderItemsArr,total, setTotal}) {
+  function CheckoutCart({ cartClick, cartArr, setOrderItemsArr, order,currentUser,orderItemsArr,total, setTotal}) {
+        setTotal(cartArr.reduce((a, {price}) => a + price, 0))
 
-    const [pay_method, setPayMethod]= useState(order.pay_method)
+    const [pay_method, setPayMethod]= useState(null)
     let display
+    let order_id=order.id
+    let customer_id = order.user_id
+    let product_id
 
 
-    const checkout =(pay_method,cartArr) =>{
-        persistOrderItems(cartArr)
-        persistTotalPayMethod(order.id)
+    const checkout =(cartArr, pay_method,customer_id,order_id) =>{
+      
+        persistOrderItems(cartArr, order_id,customer_id)
+        persistTotalPayMethod(customer_id,pay_method, order_id, total) 
     }
 
+    function persistOrderItems (cartArr, customer_id, order_id) {
+        function postOneOrderItem (product_id,customer_id,order_id){
+            
+            fetch("/sold", {
+                method: "POST",
+                headers: {
+                "Content-Type": "application/json",
+                "Accept": "application/json"
+                },
+                body: JSON.stringify({
+                    order_id,
+                    product_id,
+                    customer_id
+                
+                // "order_id" : order_id,
+                // "product_id" : product_id,
+                // "customer_id":  customer_id,
+                })
+            })
+            .then(res => {
+                if (!res.ok) 
+                  res.json().then(errors => {console.error(errors)})
+                  }
+              )
+        }
 
-    const persistOrderItems = (cartArr,order)=> {cartArr.map (product => {
-        <div id="collection">
-            <>
-            <OrderItem setOrderItemsArr={setOrderItemsArr} order={order} product={product} currentUser={currentUser} orderItemsArr={orderItemsArr} total={total}/>
-                addOrderItems(product_id=product.id,user_id=currentUser.id, order_id=order.id)
-                removeFromCart(product)
-            </>
-         </div> })
-    }
+    cartArr.map(product => {
+        product_id = product.id
+        postOneOrderItem (product_id,customer_id,order_id)
+    })
+}
 
-    function persistTotalPayMethod(pay_method, order, total) 
+
+    function persistTotalPayMethod(pay_method, order_id, total) 
     {
-        fetch(`/order_items/${order.id}`, {
+        fetch(`/orders/${order_id}`, {
             method: 'PATCH',
             headers: {
             'Content-Type': 'application/json'
             },
             body: JSON.stringify({
-            pay_method
+            pay_method, 
+            total
             })
         })
         .then(res => {
@@ -61,22 +89,22 @@ function CheckoutCart({ removeFromCart,addOrderItems, cartClick, cartArr, setOrd
   return (
     <div className="container">
 
-        <h5><br/>Total ${total}<br/><br/></h5> 
-        <form  onSubmit={persistOrderItems}>
+        <h5><br/> Total ${total}<br/><br/></h5> 
+        <form  onSubmit={()=>checkout(cartArr, pay_method,customer_id,order_id)}>
             <div className="mb-3" >
  
-                <label className="form-label">Pay Method  &nbsp;
+                <label className="form-label">Pay Method
                     <input 
                     type="pay_method" 
                     name="pay_method" 
-                    value={order.pay_method}
-                    // onChange={(e) => setEmail(e.target.value)}
+                    value={pay_method}
+                     onChange={(e) => setPayMethod(e.target.value)}
                     ></input>
                 </label>
                 <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
             </div>
             <div className="mb-3">
-                <label  className="form-label"> Total for this order &nbsp;  
+                <label  className="form-label"> Total for this order is $ &nbsp;  
                     <input 
                     type="total" 
                     name="total" 
@@ -89,14 +117,14 @@ function CheckoutCart({ removeFromCart,addOrderItems, cartClick, cartArr, setOrd
             <button type="submit" className="btn btn-primary">Submit</button>
             <br/><br/>
         </form>
-        <CartContainer
+        {/* <CartContainer
         cartArr={cartArr} 
         setOrderItemsArr={setOrderItemsArr}
         orderItemsArr={orderItemsArr}
         cartClick={cartClick}
         order={order}
         total={total}
-        setTotal={setTotal}/>
+        setTotal={setTotal}/> */}
 
                  
         <h5>Checkout select your payment methood and hit submit on the button</h5> 
