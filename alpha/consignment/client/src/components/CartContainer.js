@@ -24,8 +24,13 @@ let items = cartArr.map(product =>
             </>)
         
     return (
-        <div className="entire">
+        <div className="ifExist">
+
+        { (cartArr.length < 1) 
+              ?<>There are no items in your</>
+              :<div className="entire">
         {items}
+        </div>}
         </div>
              
             )}

@@ -1,11 +1,9 @@
 import React, {useState} from "react";
-// import Dropdown from 'react-bootstrap/Dropdown';
 
  import CartCard from "./CartCard"
 
 
 function CheckoutCart({ removeFromCart,addOrderItems, cartClick, cartArr, setOrderItemsArr, order, product, currentUser,orderItemsArr,total, setTotal,pay_method,setPayMethod}) {
-//  function CheckoutCart({ cartClick, cartArr, setOrderItemsArr, order,currentUser,orderItemsArr,total, setTotal}) {
         setTotal(cartArr.reduce((a, {price}) => a + price, 0))
 
     let display
@@ -54,7 +52,7 @@ function persistTotalPayMethod()
     console.log(pay_method)
     console.log(total)
     console.log(order_id)
-        debugger
+
     
         fetch(`/orders/${order_id}`, {
             method: 'PATCH',
@@ -84,9 +82,13 @@ function persistTotalPayMethod()
 
 
   return (
-    <div className="container">
+    <div className="ifExist">
 
-        <h5><br/> Total ${total}<br/><br/></h5> 
+{ (cartArr.length < 1) 
+      ?<>There are no items in your</>
+      :<div className="container" className="form">
+
+        {/* <h5><br/> Total ${total}<br/><br/></h5>  */}
         <form  onSubmit={checkout}>      <div className="mb-3" >
  
                 <label className="form-label">Pay Method &nbsp;  
@@ -100,13 +102,11 @@ function persistTotalPayMethod()
        
             </div>
             <div className="mb-3">
-                <label  className="form-label"> Total for this order is $ &nbsp;  
-                    <input 
+                <label  className="form-label"> Total for this order is $ {total} &nbsp;  
+                    {/* <input 
                     type="total" 
                     name="total" 
-                    value={total}
-                    
-                    ></input>
+                    value={total}></input> */}
                 </label>
             </div>
         
@@ -123,6 +123,7 @@ function persistTotalPayMethod()
                 </>
             )} 
             </div>
+    </div>}
     </div>
     );
 }

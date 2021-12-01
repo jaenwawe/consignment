@@ -7,8 +7,8 @@ function Login({cartArray, currentUser, setCurrentUser, handleLogin, setEmail, e
     history.push("/");
   };
   return (
-    <div>
-
+    <div className="form">   
+    <h5> Already a member? Enter your email address and password to login</h5>
     <form  onSubmit={handleLogin}>
         <div className="mb-3" >
             <label className="form-label">Email address 
@@ -18,9 +18,8 @@ function Login({cartArray, currentUser, setCurrentUser, handleLogin, setEmail, e
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}></input>
             </label>
-            <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
-        
         </div>
+
         <div className="mb-3">
             <label  className="form-label">Password
                 <input 
@@ -33,9 +32,8 @@ function Login({cartArray, currentUser, setCurrentUser, handleLogin, setEmail, e
     
         <button type="submit" className="btn btn-primary">Submit</button>
     </form>
-{homePage}
-  
-    </div>
+  {homePage}
+</div>
   )
 }
 

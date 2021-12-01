@@ -10,9 +10,11 @@ function Register({
     
   return (
 
+ <div className="form">   
+       <h5> Not a member? Complete the form to start buying and selling immediately!</h5>
    <form name="signup/register"  className="center-form" onSubmit={handleRegister}>
    
-    <label className="form-label" for="formBasicPassword">First Name</label>
+    <label className="form-label" for="formBasicPassword">First Name  &nbsp;  &nbsp; </label>
       <input 
       type="text"
       value={first_name} 
@@ -22,9 +24,8 @@ function Register({
       className="form-label"
       ></input>
     <br/>
-    <br/>
     
-    <label className="form-label" for="formBasicPassword">Last Name</label>    
+    <label className="form-label" for="formBasicPassword">Last Name  &nbsp;  &nbsp; </label>    
       <input 
       type="text"
       name = "last_name" 
@@ -35,7 +36,7 @@ function Register({
     <br/>
     <br/>
 
-    <label className="form-label">Email address  </label>
+    <label className="form-label">Email address    &nbsp;  &nbsp; </label>
     <input 
       type="email"
        name = "email" 
@@ -45,9 +46,8 @@ function Register({
       // className="form-label"
       ></input>
     <br/>
-    <br/>
   
-    <label className="form-label" for="formBasicPassword">Password</label>
+    <label className="form-label" for="formBasicPassword">Password  &nbsp;  &nbsp; </label>
     <input 
       type="password"
       name = "password"
@@ -56,9 +56,8 @@ function Register({
       onChange={(e) => setPassword(e.target.value)} 
       className="form-label"></input>
     <br/>
-    <br/>
     
-    <label className="form-label" for="formBasicPassword">User Name</label>
+    <label className="form-label" for="formBasicPassword">User Name  &nbsp;  &nbsp; </label>
     <input 
       type="text"
       name = "username"  
@@ -67,9 +66,8 @@ function Register({
       onChange={(e) => setUsername(e.target.value)} 
       className="form-label"></input>
     <br/>
-    <br/>
    
-    <label className="form-label">Phone Number</label>
+    <label className="form-label">Phone Number  &nbsp;  &nbsp; </label>
     <input 
       type="text"
       name = "phone_number" 
@@ -78,9 +76,8 @@ function Register({
       onChange={(e) => setNumber(e.target.value)} 
       className="form-label"></input>
    <br/>
-   <br/>
 
-   <label className="form-label">Adress</label>
+   <label className="form-label">Adress  &nbsp;  &nbsp; </label>
       <input 
       type="text"
       name = "address" 
@@ -89,9 +86,8 @@ function Register({
       onChange={(e) => setAddress(e.target.value)} 
       className="form-label"></input>
     <br/>
-    <br/>
 
-    <label className="form-label">State</label>
+    <label className="form-label">State  &nbsp;  &nbsp; </label>
       <input 
       type="text"
       name = "state" 
@@ -100,9 +96,8 @@ function Register({
       onChange={(e) => setState(e.target.value)} 
       className="form-label"></input>
     <br/>
-    <br/>
 
-    <label htmlFor="exampleZipChange" className="form-label">ZipCode</label>
+    <label htmlFor="exampleZipChange" className="form-label">ZipCode  &nbsp;  &nbsp; </label>
     <input 
         type="text"
         name = "zipcode" 
@@ -111,9 +106,8 @@ function Register({
         onChange={(e) => setZip(e.target.value)} 
         className="form-label"></input>
         <br/>
-        <br/>
 
-    <label htmlFor="exampleInputGenderChange" className="form-label">Gender</label>
+    <label htmlFor="exampleInputGenderChange" className="form-label">Gender  &nbsp;  &nbsp; </label>
     <input 
       type="text"
       name = "gender" 
@@ -122,10 +116,9 @@ function Register({
        onChange={(e) => setGender(e.target.value)}
        className="form-label"></input>
     <br/>
-    <br/>
 
 
-    <label htmlFor="exampleInputStoreNameChange" className="form-label">Store Name </label>
+    <label htmlFor="exampleInputStoreNameChange" className="form-label">Store Name  &nbsp;  &nbsp; </label>
     <input
         type="text"
         name = "store_name" 
@@ -137,6 +130,7 @@ function Register({
 
       <button type="submit" className="btn btn-primary">Submit</button>
     </form>
+    </div>
 
   )
 }
