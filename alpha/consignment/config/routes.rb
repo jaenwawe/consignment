@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
   
-  
-
   resources :products, except: [:index]
   resources :users, except: [:create, :show]
  
@@ -29,7 +27,4 @@ Rails.application.routes.draw do
 
   post "/products/add", to: "products#create" 
 
-   #get "sale/:id", to: "products#show"
-   # get "/orders", to: "orders#current_order"
-    # post "/sale", to: "products#create" 
 end

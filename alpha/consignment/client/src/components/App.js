@@ -38,6 +38,7 @@ function App() {
   const [priorOrdersArr, setPriorOrderArr] = useState([])
   const [order, setOrder]= useState(null)
   const [total, setTotal] = useState(0)
+  const [pay_method, setPayMethod] = useState('$')
 
   const [orderItemsArr, setOrderItemsArr]= useState([])
   const history = useHistory();
@@ -55,8 +56,6 @@ function App() {
       };
    
           const handleLogin = (event) => {
-          // let total=0
-          // let pay_method=''
           event.preventDefault()
           
           fetch('/login', {
@@ -189,20 +188,19 @@ function App() {
         }     
   
 
-      function addToCart(product){
-         setCartArr([product,...cartArr])
-      }
-      function addToProducts(product) {
-    
-        setProductArr([product,...productArr])
-      }
+        function addToCart(product){
+          setCartArr([product,...cartArr])
+        }
+        function addToProducts(product) {
       
-      function cartClick(product){
-        addToProducts(product)
-        removeFromCart(product)
+          setProductArr([product,...productArr])
+        }
         
-      }
-      
+        function cartClick(product){
+          addToProducts(product)
+          removeFromCart(product)          
+        }
+        
         function nonCartProductClick(product){
           addToCart(product)
           removeProduct(product) 
@@ -268,11 +266,6 @@ function App() {
                          productArr={productArr}
                          /> 
                       </Route>
-                      
-                      <Route>
-                     
-                      </Route>
-
                     
                       <Route path="/checkout">
                          <CheckoutCart
@@ -284,6 +277,8 @@ function App() {
                         addOrderItems={addOrderItems} 
                         total={total}
                         setTotal={setTotal}
+                        pay_method={pay_method}
+                        setPayMethod={setPayMethod}
                         cartClick={cartClick}
                         removeFromCart={removeFromCart}
                          /> 
