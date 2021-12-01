@@ -190,7 +190,7 @@ function App() {
   
 
       function addToCart(product){
-        setCartArr([product,...cartArr])
+         setCartArr([product,...cartArr])
       }
       function addToProducts(product) {
     

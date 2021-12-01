@@ -9,8 +9,8 @@ class OrderItemsController < ApplicationController
     def create
         new_order_item = OrderItem.new(order_item_params)
           if new_order_item.save
-            session[:order_id] = new_order_item.id
-            render json: new_order_item, status: :created
+            # session[:order_id] = new_order_item.id
+            render json: new_order_item
           else render json: new_order_item.errors.full_messages, status: :unprocessable_entity
           end
         end

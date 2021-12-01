@@ -1,84 +1,77 @@
 import React, {useState} from "react";
 // import Dropdown from 'react-bootstrap/Dropdown';
 
-// import CartCard from "./CartCard"
-import OrderItem from "./OrderItem"
-import CartContainer from "./CartContainer"
+ import CartCard from "./CartCard"
+// import OrderItem from "./OrderItem"
+// import CartContainer from "./CartContainer"
 
 
 
-//function CheckoutCart({ removeFromCart,addOrderItems, cartClick, cartArr, setOrderItemsArr, order, product, currentUser,orderItemsArr,total, setTotal}) {
-  function CheckoutCart({ cartClick, cartArr, setOrderItemsArr, order,currentUser,orderItemsArr,total, setTotal}) {
+function CheckoutCart({ removeFromCart,addOrderItems, cartClick, cartArr, setOrderItemsArr, order, product, currentUser,orderItemsArr,total, setTotal}) {
+ // function CheckoutCart({ cartClick, cartArr, setOrderItemsArr, order,currentUser,orderItemsArr,total, setTotal}) {
         setTotal(cartArr.reduce((a, {price}) => a + price, 0))
 
     const [pay_method, setPayMethod]= useState(null)
     let display
-    let order_id=order.id
-    let customer_id = order.user_id
+    let order_id
+    let customer_id  = currentUser.id
     let product_id
 
 
-    const checkout =(cartArr, pay_method,customer_id,order_id) =>{
+    const checkout =(total) =>{
       
         persistOrderItems(cartArr, order_id,customer_id)
-        persistTotalPayMethod(customer_id,pay_method, order_id, total) 
+        persistTotalPayMethod(customer_id== currentUser.id, pay_method, order_id, total) 
     }
 
-    function persistOrderItems (cartArr, customer_id, order_id) {
-        function postOneOrderItem (product_id,customer_id,order_id){
-            
-            fetch("/sold", {
-                method: "POST",
-                headers: {
-                "Content-Type": "application/json",
-                "Accept": "application/json"
-                },
-                body: JSON.stringify({
-                    order_id,
-                    product_id,
-                    customer_id
-                
-                // "order_id" : order_id,
-                // "product_id" : product_id,
-                // "customer_id":  customer_id,
-                })
-            })
-            .then(res => {
-                if (!res.ok) 
-                  res.json().then(errors => {console.error(errors)})
-                  }
-              )
-        }
+    function persistOrderItems (cartArr, customer_id = currentUser.id, order_id=order.id) {
+        cartArr.map(product => {
+            product_id = product.id
+            postOneOrderItem (product_id,customer_id = currentUser.id,order_id=order.id)
+        })
+    }
 
-    cartArr.map(product => {
-        product_id = product.id
-        postOneOrderItem (product_id,customer_id,order_id)
-    })
-}
-
-
-    function persistTotalPayMethod(pay_method, order_id, total) 
-    {
-        fetch(`/orders/${order_id}`, {
-            method: 'PATCH',
+    function postOneOrderItem (product_id ,customer_id=currentUser.id,order_id=order.id){
+        fetch("/sold", {
+            method: 'POST',
             headers: {
-            'Content-Type': 'application/json'
+                'Content-Type': 'application/json'
             },
-            body: JSON.stringify({
-            pay_method, 
-            total
+        body: JSON.stringify({
+                order_id,
+                product_id,
+                customer_id
             })
         })
         .then(res => {
-            if (res.ok) {
-                res.json().then(order =>   endCheckout (total, pay_method, order))
-            } else {
-                res.json().then(errors => 
-                console.error(errors)
-            )
+            if (!res.ok) 
+            res.json().then(errors => {console.error(errors)})
             }
-        })
+        )
     }
+
+function persistTotalPayMethod(pay_method, order_id, total) 
+{
+    fetch(`/orders/${order_id}`, {
+        method: 'PATCH',
+        headers: {
+        'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+        pay_method, 
+        total
+        })
+    })
+    .then(res => {
+        if (res.ok) {
+            res.json().then(order =>   endCheckout (total, pay_method, order))
+        } else {
+            res.json().then(errors => 
+            console.error(errors)
+        )
+        }
+    })
+}
 
     function endCheckout (total, pay_method, order){
         <p>For order{display} the pay_method{pay_method}  will be charged {total}</p>
@@ -90,8 +83,7 @@ import CartContainer from "./CartContainer"
     <div className="container">
 
         <h5><br/> Total ${total}<br/><br/></h5> 
-        <form  onSubmit={()=>checkout(cartArr, pay_method,customer_id,order_id)}>
-            <div className="mb-3" >
+        <form  onSubmit={()=>checkout(total)}>      <div className="mb-3" >
  
                 <label className="form-label">Pay Method
                     <input 
@@ -130,9 +122,19 @@ import CartContainer from "./CartContainer"
         <h5>Checkout select your payment methood and hit submit on the button</h5> 
 
 
-            
+            <div id="collection">
+                {cartArr.map (product => 
+                <>
+                    <CartCard product={product} cartClick={cartClick}/>
+                {/* <OrderItem setOrderItemsArr={setOrderItemsArr} order={order} product={product} currentUser={currentUser} orderItemsArr={orderItemsArr} total={total}/> */}
+                </>
+
+            )} 
+            </div>
+    </div>
         
-    </div>);
+
+    );
 }
 
 export default CheckoutCart;

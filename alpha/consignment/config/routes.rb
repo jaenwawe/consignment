@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   
   
-  resources :order_items, except: [:create, :show]
+
   resources :products, except: [:index]
   resources :users, except: [:create, :show]
  
@@ -9,6 +9,7 @@ Rails.application.routes.draw do
 
 
   post "/sold", to: "order_items#create"
+  get "/everything_sold", to: "order_items#index"
 
 
   get "/styles", to: "products#index"
